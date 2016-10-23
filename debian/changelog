@@ -1,0 +1,262 @@
+kdeclarative (5.27.0-1+rpi1) stretch-staging; urgency=medium
+
+  [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
+  * Add symbols file hack for raspbian.
+
+ -- Raspbian forward porter <root@raspbian.org>  Sun, 23 Oct 2016 21:46:21 +0000
+
+kdeclarative (5.27.0-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+  * Update symbols files from buildds logs (5.26.0-1).
+
+  [ Maximiliano Curia ]
+  * New upstream release (5.27)
+  * Bump group breaks (5.27)
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 15 Oct 2016 17:06:13 +0200
+
+kdeclarative (5.26.0-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+  * Update symbols files with the buildds logs.
+
+  [ Maximiliano Curia ]
+  * Bump group breaks (5.26)
+  * Replace dbus-launch with dbus-run-session in tests
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 29 Sep 2016 12:01:52 +0200
+
+kdeclarative (5.25.0-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+
+  [ Maximiliano Curia ]
+  * Bump group breaks (5.25)
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 20 Aug 2016 16:48:58 +0200
+
+kdeclarative (5.23.0-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+
+  [ Maximiliano Curia ]
+  * Force building against qt 5.6
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 22 Jun 2016 17:54:09 +0200
+
+kdeclarative (5.22.0-1) unstable; urgency=medium
+
+  [ Maximiliano Curia ]
+  * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
+  * Add upstream metadata (DEP-12)
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+  * Drop qt5-qmltooling-plugins build dependency
+  * Update acc test script
+  * uscan no longer supports more than one main upstream tarball being listed
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+  * Bump Standards-Version to 3.9.8
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 25 May 2016 11:54:32 +0200
+
+kdeclarative (5.19.0-1) experimental; urgency=medium
+
+  * New upstream release (5.19.0).
+  * (Experimental specific) Add qt5-qmltooling-plugins as a build-dep,
+    missing dependency of qtdeclarative5-dev
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 13 Feb 2016 15:15:59 +0100
+
+kdeclarative (5.18.0-1) experimental; urgency=medium
+
+  * New upstream release (5.17.0).
+  * Add new calendar events lib.
+  * New upstream release (5.18.0).
+  * Update symbols files.
+
+  [ Dmitry Shachnev ]
+  * Fix description of qtdeclarative5-kf5declarative transitional package.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 27 Jan 2016 13:33:35 +0100
+
+kdeclarative (5.16.0-1) unstable; urgency=medium
+
+  * New upstream release (5.16.0).
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 30 Nov 2015 12:12:48 +0100
+
+kdeclarative (5.15.0-1) unstable; urgency=medium
+
+  * New upstream release (5.15.0).
+  * Update symbols files from buildds logs (5.14.0-1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 09 Oct 2015 19:16:04 +0200
+
+kdeclarative (5.14.0-1) unstable; urgency=medium
+
+  * New upstream release (5.14.0).
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 15 Sep 2015 13:48:17 +0200
+
+kdeclarative (5.13.0-1) unstable; urgency=medium
+
+  * New upstream release (5.13.0).
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 01 Sep 2015 00:17:24 +0200
+
+kdeclarative (5.12.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols files for armel differences
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 16 Jul 2015 22:54:39 -0400
+
+kdeclarative (5.12.0-1) unstable; urgency=medium
+
+  * New upstream release (5.12.0).
+  * Update install files.
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 09 Jul 2015 12:43:09 +0200
+
+kdeclarative (5.11.0-1) unstable; urgency=medium
+
+  * New upstream release (5.10.0).
+  * New upstream release (5.11.0).
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 29 Jun 2015 10:13:38 +0200
+
+kdeclarative (5.9.0-1) experimental; urgency=medium
+
+  * New upstream release (5.9.0).
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 23 Apr 2015 08:25:25 +0200
+
+kdeclarative (5.9.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 13 Apr 2015 22:26:36 +0200
+
+kdeclarative (5.8.0-1) experimental; urgency=medium
+
+  * New upstream release (5.8.0).
+  * Remove upstream applied patch: kubuntu_fix_epoxy_vs_qopengl.diff
+  * Update symbols files.
+  * Update copyright information.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 22 Mar 2015 11:38:54 +0100
+
+kdeclarative (5.8.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 17 Mar 2015 15:36:18 +0100
+
+kdeclarative (5.7.0-1) experimental; urgency=medium
+
+  * New upstream release (5.7.0).
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 06 Mar 2015 22:57:48 +0100
+
+kdeclarative (5.7.0-0ubuntu3) vivid; urgency=medium
+
+  * Refine kubuntu_fix_epoxy_vs_qopengl.diff to prevent Qt from
+    doing a second typedef on GLdouble
+
+ -- Harald Sitter <sitter@kde.org>  Fri, 13 Feb 2015 16:49:06 +0100
+
+kdeclarative (5.7.0-0ubuntu2) vivid; urgency=medium
+
+  * Add kubuntu_fix_epoxy_vs_qopengl.diff in an attempt to fix
+    armhf builds failing from conflicting typedefs between epoxy
+    and qopengl
+
+ -- Harald Sitter <sitter@kde.org>  Fri, 13 Feb 2015 16:11:45 +0100
+
+kdeclarative (5.7.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Harald Sitter <sitter@kde.org>  Tue, 10 Feb 2015 16:48:37 +0100
+
+kdeclarative (5.6.0-1) experimental; urgency=medium
+
+  * Prepare initial Debian release.
+  * Update build dependencies to build against experimental and to
+    follow cmake.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+  * Add acc autopkgtests.
+  * Update copyright information.
+  * Update install files.
+  * Update watch file.
+  * Update symbols files.
+  * Add missing dev dependency (thanks to acc headers check)
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 30 Jan 2015 14:13:38 +0100
+
+kdeclarative (5.6.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 06 Jan 2015 20:09:25 +0100
+
+kdeclarative (5.5.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 15 Dec 2014 12:19:18 +0100
+
+kdeclarative (5.4.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 07 Nov 2014 15:03:22 +0100
+
+kdeclarative (5.3.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 07 Oct 2014 11:12:58 +0100
+
+kdeclarative (5.2.0-0ubuntu1) utopic; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New upstream release
+  * Use pkg-kde-tools version 3 scripts
+
+  [ Scarlett Clark ]
+  * Update install paths for all qml packages. 
+  * Add new qml package for kio
+  * Revert to original install paths. Upstream Review:120229
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 22 Sep 2014 19:43:32 +0200
+
+kdeclarative (5.1.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Tue, 05 Aug 2014 17:13:34 +0200
+
+kdeclarative (5.0.0-0ubuntu2) utopic; urgency=medium
+
+  * Add implicit depends on qml modules from libkf5declarative5
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 23 Jul 2014 17:57:46 +0200
+
+kdeclarative (5.0.0-0ubuntu1) utopic; urgency=medium
+
+  * Initial stable upstream release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Tue, 22 Jul 2014 15:38:08 +0200
