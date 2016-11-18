@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
+
+override_dh_strip:
+	$(overridden_command) --dbgsym-migration='libkf5declarative5-dbg (<= 5.19.0-1~~)'
+
+override_dh_auto_test:
+	# Disable dh_auto_test at build time
+	:
