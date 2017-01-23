@@ -5,19 +5,19 @@ Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.12),
                debhelper (>= 9),
-               extra-cmake-modules (>= 5.27.0~),
+               extra-cmake-modules (>= 5.28.0~),
                kio-dev (>= 5.26.0~),
                libepoxy-dev,
-               libkf5config-dev (>= 5.27.0~),
-               libkf5globalaccel-dev (>= 5.27.0~),
-               libkf5guiaddons-dev (>= 5.27.0~),
-               libkf5i18n-dev (>= 5.27.0~),
-               libkf5iconthemes-dev (>= 5.27.0~),
+               libkf5config-dev (>= 5.28.0~),
+               libkf5globalaccel-dev (>= 5.28.0~),
+               libkf5guiaddons-dev (>= 5.28.0~),
+               libkf5i18n-dev (>= 5.28.0~),
+               libkf5iconthemes-dev (>= 5.28.0~),
                libkf5itemviews-dev (>= 5.7.0),
-               libkf5kio-dev (>= 5.27.0~),
-               libkf5package-dev (>= 5.27.0~),
-               libkf5widgetsaddons-dev (>= 5.27.0~),
-               libkf5windowsystem-dev (>= 5.27.0~),
+               libkf5kio-dev (>= 5.28.0~),
+               libkf5package-dev (>= 5.28.0~),
+               libkf5widgetsaddons-dev (>= 5.28.0~),
+               libkf5windowsystem-dev (>= 5.28.0~),
                pkg-config,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qtbase5-dev (>= 5.6.0~),
@@ -40,7 +40,7 @@ Architecture: any
 Depends: kio-dev (>= 5.26.0~),
          libkf5calendarevents5 (= ${binary:Version}),
          libkf5declarative5 (= ${binary:Version}),
-         libkf5package-dev (>= 5.27.0~),
+         libkf5package-dev (>= 5.28.0~),
          libkf5quickaddons5 (= ${binary:Version}),
          qtbase5-dev (>= 5.6.0~),
          qtdeclarative5-dev (>= 5.6.0~),
@@ -61,9 +61,9 @@ Multi-Arch: same
 Description: provides integration of QML and KDE frameworks
  Framework providing integration of QML and other KDE frameworks such
  as making i18n available and using kio.
-Breaks: libkf5plasma5 (<< 5.27),
-        libkf5plasmaquick5 (<< 5.27),
-        plasma-framework (<< 5.27)
+Breaks: libkf5plasma5 (<< 5.28),
+        libkf5plasmaquick5 (<< 5.28),
+        plasma-framework (<< 5.28)
 
 Package: libkf5declarative-data
 Architecture: all
@@ -133,7 +133,7 @@ Depends: libkf5declarative5 (>= ${source:Version}),
          qml-module-qtquick2,
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: plasma-framework (<< 5.27),
+Breaks: plasma-framework (<< 5.28),
         qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
         qtdeclarative5-kf5declarative-5.0
 Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
@@ -148,7 +148,7 @@ Multi-arch: same
 Depends: libkf5declarative5 (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: plasma-framework (<< 5.27),
+Breaks: plasma-framework (<< 5.28),
         qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
         qtdeclarative5-kf5declarative-5.0
 Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
@@ -181,9 +181,9 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Multi-Arch: same
 Description: provides integration of QML and KDE frameworks -- quickaddons
  Framework providing optimized image texture caching.
-Breaks: libkf5kcmutils5 (<< 5.27),
-        libkf5plasmaquick5 (<< 5.27),
-        plasma-framework (<< 5.27)
+Breaks: libkf5kcmutils5 (<< 5.28),
+        libkf5plasmaquick5 (<< 5.28),
+        plasma-framework (<< 5.28)
 
 Package: libkf5calendarevents5
 Architecture: any
@@ -192,4 +192,4 @@ Multi-Arch: same
 Description: provides integration of QML and KDE frameworks -- calendarevents
  Framework providing integration of QML and other KDE frameworks such
  as making i18n available and using kio
-Breaks: plasma-framework (<< 5.27)
+Breaks: plasma-framework (<< 5.28)
