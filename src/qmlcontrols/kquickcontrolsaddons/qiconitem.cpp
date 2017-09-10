@@ -122,10 +122,10 @@ QSGNode* QIconItem::updatePaintNode(QSGNode* node, QQuickItem::UpdatePaintNodeDa
 {
     if (m_icon.isNull()) {
         delete node;
-        return Q_NULLPTR;
+        return nullptr;
     }
 
-    if (m_changed || node == 0) {
+    if (m_changed || node == nullptr) {
         m_changed = false;
 
         ManagedTextureNode* mNode = dynamic_cast<ManagedTextureNode*>(node);

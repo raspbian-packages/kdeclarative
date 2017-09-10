@@ -25,11 +25,6 @@
 
 
 #include <epoxy/gl.h>
-//This to prevent a redefinition of GLdouble by qopengl.h
-#include <QtGlobal>
-#if QT_VERSION < QT_VERSION_CHECK(5, 4, 0)
-#define GLdouble GLdouble
-#endif
 
 #include <QSGTexture>
 #include <QSGSimpleTextureNode>
@@ -74,7 +69,7 @@ class PlotData : public QObject
     Q_PROPERTY(qreal min READ min NOTIFY minChanged)
 
 public:
-    PlotData(QObject *parent = 0);
+    PlotData(QObject *parent = nullptr);
 
     void setColor(const QColor &color);
     QColor color() const;
@@ -170,7 +165,7 @@ class Plotter : public QQuickItem
     //Q_CLASSINFO("DefaultProperty", "dataSets")
 
 public:
-    Plotter(QQuickItem *parent = 0);
+    Plotter(QQuickItem *parent = nullptr);
     ~Plotter();
 
     qreal max() const;

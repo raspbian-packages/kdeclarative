@@ -31,7 +31,7 @@ DeclarativeDragDropEvent::DeclarativeDragDropEvent(QDropEvent* e, DeclarativeDro
     m_y(e->pos().y()),
     m_buttons(e->mouseButtons()),
     m_modifiers(e->keyboardModifiers()),
-    m_data(Q_NULLPTR),
+    m_data(nullptr),
     m_event(e)
 {
 }
@@ -42,8 +42,8 @@ DeclarativeDragDropEvent::DeclarativeDragDropEvent(QDragLeaveEvent* e, Declarati
     m_y(0),
     m_buttons(Qt::NoButton),
     m_modifiers(Qt::NoModifier),
-    m_data(Q_NULLPTR),
-    m_event(0)
+    m_data(nullptr),
+    m_event(nullptr)
 {
     Q_UNUSED(e);
 }
@@ -65,7 +65,7 @@ DeclarativeMimeData* DeclarativeDragDropEvent::mimeData()
     if (!m_data && m_event) {
 //         TODO This should be using MimeDataWrapper eventually, although this is an API break,
 //         so will need to be done carefully.
-        m_data = new DeclarativeMimeData(m_event->mimeData());
+        m_data.reset(new DeclarativeMimeData(m_event->mimeData()));
     }
-    return m_data;
+    return m_data.data();
 }

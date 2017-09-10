@@ -40,13 +40,13 @@ namespace KDeclarative {
 class QmlObjectPrivate;
 
 /**
- * @class QmlObject plasma/declarativewidget.h <Plasma/QmlObject>
+ * @class KDeclarative::QmlObject qmlobject.h KDeclarative/QmlObject
  *
  * @author Marco Martin <mart@kde.org>
  *
  * @short An object that instantiates an entire QML context, with its own declarative engine
  *
- * Plasma::QmlObject provides a class for conveniently use QML based
+ * KDeclarative::QmlObject provides a class for conveniently use QML based
  * declarative user interfaces inside Plasma widgets.
  * To one QmlObject corresponds one QML file (that can eventually include others)
  * tere will be its own QQmlEngine with a single root object,
@@ -69,7 +69,7 @@ public:
      *
      * @param parent the parent of this object
      */
-    explicit QmlObject(QObject *parent = 0);
+    explicit QmlObject(QObject *parent = nullptr);
 
     /**
      * Constructs a new QmlObject
@@ -77,7 +77,7 @@ public:
      * @param engine a QQmlEngine we want to use
      * @param parent the parent of this object
      */
-    explicit QmlObject(QQmlEngine *engine, QObject *parent = 0);
+    explicit QmlObject(QQmlEngine *engine, QObject *parent = nullptr);
 
     /**
      * Constructs a new QmlObject
@@ -86,7 +86,7 @@ public:
      * @param rootContext the root context we want to use for objects creation
      * @param parent the parent of this object
      */
-    explicit QmlObject(QQmlEngine *engine, QQmlContext *rootContext, QObject *parent = 0);
+    explicit QmlObject(QQmlEngine *engine, QQmlContext *rootContext, QObject *parent = nullptr);
     ~QmlObject();
 
     /**
@@ -204,7 +204,7 @@ public:
      *             the object when created (and before Component.onCompleted
      *             gets emitted
      */
-    QObject *createObjectFromSource(const QUrl &source, QQmlContext *context = 0, const QVariantHash &initialProperties = QVariantHash());
+    QObject *createObjectFromSource(const QUrl &source, QQmlContext *context = nullptr, const QVariantHash &initialProperties = QVariantHash());
 
     /**
      * Creates and returns an object based on the provided QQmlComponent
@@ -217,7 +217,7 @@ public:
      *             the object when created (and before Component.onCompleted
      *             gets emitted
      */
-    QObject *createObjectFromComponent(QQmlComponent *component, QQmlContext *context = 0, const QVariantHash &initialProperties = QVariantHash());
+    QObject *createObjectFromComponent(QQmlComponent *component, QQmlContext *context = nullptr, const QVariantHash &initialProperties = QVariantHash());
 
 public Q_SLOTS:
     /**

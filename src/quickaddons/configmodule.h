@@ -45,6 +45,8 @@ namespace KQuickAddons {
 class ConfigModulePrivate;
 
 /**
+ * @class KQuickAddons::ConfigModule configmodule.h KQuickAddons/ConfigModule
+ *
  * The base class for configuration modules.
  *
  * Configuration modules are realized as plugins that are loaded only when
@@ -136,7 +138,6 @@ class QUICKADDONS_EXPORT ConfigModule : public QObject
 {
     Q_OBJECT
 
-    Q_FLAGS(Buttons)
     Q_PROPERTY(QQuickItem *mainUi READ mainUi CONSTANT)
     Q_PROPERTY(KQuickAddons::ConfigModule::Buttons buttons READ buttons WRITE setButtons NOTIFY buttonsChanged)
     Q_PROPERTY(bool needsSave READ needsSave WRITE setNeedsSave NOTIFY needsSaveChanged)
@@ -160,8 +161,9 @@ public:
         Default = 2,
         Apply = 4
     };
-    Q_ENUMS(Button)
+    Q_ENUM(Button)
     Q_DECLARE_FLAGS(Buttons, Button)
+    Q_FLAG(Buttons)
 
     /**
      * Base class for all KControlModules.
@@ -170,7 +172,7 @@ public:
      *       to any slot.
      * @param aboutData becomes owned by the ConfigModule
      */
-    explicit ConfigModule(const KAboutData *aboutData, QObject *parent = 0, const QVariantList &args = QVariantList());
+    explicit ConfigModule(const KAboutData *aboutData, QObject *parent = nullptr, const QVariantList &args = QVariantList());
 
     /**
      * @note do not emit changed signals here, since they are not yet connected
@@ -178,7 +180,7 @@ public:
      * @param metaData description for the plugin: it will generate a KAboutData from that
      * @since 5.11
      */
-    explicit ConfigModule(const KPluginMetaData &metaData, QObject *parent = 0, const QVariantList &args = QVariantList());
+    explicit ConfigModule(const KPluginMetaData &metaData, QObject *parent = nullptr, const QVariantList &args = QVariantList());
 
     /**
      * Base class for all KControlModules.
@@ -186,7 +188,7 @@ public:
      * @note do not emit changed signals here, since they are not yet connected
      *       to any slot.
      */
-    explicit ConfigModule(QObject *parent = 0, const QVariantList &args = QVariantList());
+    explicit ConfigModule(QObject *parent = nullptr, const QVariantList &args = QVariantList());
 
     /**
      * Destroys the module.

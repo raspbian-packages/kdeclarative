@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-05-08 07:20+0000\n"
+"POT-Creation-Date: 2017-06-30 03:05+0200\n"
 "PO-Revision-Date: 2016-04-30 12:50+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -19,23 +19,28 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: kde\n"
 
+#, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "GunChleoc"
 
+#, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "fios@foramnagaidhlig.net"
 
 #: kpackagelauncherqml/main.cpp:43
+#, kde-format
 msgid "KPackage QML application shell"
 msgstr "Shell aplacaid KPackage QML"
 
 #: kpackagelauncherqml/main.cpp:51
+#, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "Ainm sònraichte na h-aplacaid (riatanach)"
 
 #: qmlcontrols/kquickcontrols/KeySequenceItem.qml:38
+#, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
@@ -46,10 +51,12 @@ msgstr ""
 "air \"A\"."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
+#, kde-format
 msgid "Reserved Shortcut"
 msgstr "Ath-ghoirid ghlèidhte"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
+#, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
 "shortcut.\n"
@@ -60,6 +67,7 @@ msgstr ""
 "Feuch an tagh thu tè eile."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
+#, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Còmhstri le ath-ghoirid thùsail na h-aplacaid"
 
@@ -76,23 +84,28 @@ msgstr ""
 "choitcheann cuideachd?"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
+#, kde-format
 msgid "Reassign"
 msgstr "Sònraich às ùr"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:379
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
+#, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ion-chur"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:386
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
+#, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Chan eil gin"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
+#, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "Cha chuir Qt taic ris an iuchair a tha thu air a bhrùthadh."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
+#, kde-format
 msgid "Unsupported Key"
 msgstr "Iuchair ris nach eil taic"

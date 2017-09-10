@@ -37,8 +37,6 @@ class KeySequenceHelper : public QObject
 {
     Q_OBJECT
 
-    Q_FLAGS(ShortcutTypes)
-
     Q_PROPERTY(
         QKeySequence keySequence
         READ keySequence
@@ -68,11 +66,12 @@ public:
         GlobalShortcuts = 0x02      //!< Check against global shortcuts. @see KGlobalAccel
     };
     Q_DECLARE_FLAGS(ShortcutTypes, ShortcutType)
+    Q_FLAG(ShortcutTypes)
 
     /**
     * Constructor.
     */
-    explicit KeySequenceHelper(QObject* parent = 0);
+    explicit KeySequenceHelper(QObject* parent = nullptr);
 
     /**
     * Destructs the widget.

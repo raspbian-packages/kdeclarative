@@ -38,6 +38,11 @@ namespace KQuickAddons {
 
 class QuickViewSharedEnginePrivate;
 
+/**
+ * @class KQuickAddons::QuickViewSharedEngine quickviewsharedengine.h KQuickAddons/QuickViewSharedEngine
+ *
+ * TODO
+ */
 class QUICKADDONS_EXPORT QuickViewSharedEngine : public QQuickWindow
 {
     Q_OBJECT
@@ -45,15 +50,15 @@ class QUICKADDONS_EXPORT QuickViewSharedEngine : public QQuickWindow
     Q_PROPERTY(ResizeMode resizeMode READ resizeMode WRITE setResizeMode NOTIFY resizeModeChanged)
     Q_PROPERTY(QQmlComponent::Status status READ status NOTIFY statusChanged)
     Q_PROPERTY(QUrl source READ source WRITE setSource NOTIFY sourceChanged)
-    Q_ENUMS(ResizeMode)
 
 public:
     enum ResizeMode {
         SizeViewToRootObject,
         SizeRootObjectToView
     };
+    Q_ENUM(ResizeMode)
 
-    explicit QuickViewSharedEngine(QWindow *parent = 0);
+    explicit QuickViewSharedEngine(QWindow *parent = nullptr);
     ~QuickViewSharedEngine();
 
     /**
@@ -92,7 +97,7 @@ public:
     void setResizeMode(ResizeMode);
 
 protected:
-    void resizeEvent(QResizeEvent *e);
+    void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     void setSource(const QUrl &url);

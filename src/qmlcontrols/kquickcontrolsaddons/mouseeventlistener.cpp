@@ -32,8 +32,8 @@
 MouseEventListener::MouseEventListener(QQuickItem *parent)
     : QQuickItem(parent),
     m_pressed(false),
-    m_pressAndHoldEvent(0),
-    m_lastEvent(0),
+    m_pressAndHoldEvent(nullptr),
+    m_lastEvent(nullptr),
     m_containsMouse(false),
     m_acceptedButtons(Qt::LeftButton)
 {
@@ -132,7 +132,7 @@ void MouseEventListener::hoverMoveEvent(QHoverEvent * event)
         screenPos = w->mapToGlobal(event->pos());
     }
 
-    KDeclarativeMouseEvent dme(event->pos().x(), event->pos().y(), screenPos.x(), screenPos.y(), Qt::NoButton, Qt::NoButton, event->modifiers(), 0);
+    KDeclarativeMouseEvent dme(event->pos().x(), event->pos().y(), screenPos.x(), screenPos.y(), Qt::NoButton, Qt::NoButton, event->modifiers(), nullptr);
     emit positionChanged(&dme);
 }
 
@@ -167,15 +167,11 @@ void MouseEventListener::mousePressEvent(QMouseEvent *me)
         m_pressAndHoldEvent = new KDeclarativeMouseEvent(me->pos().x(), me->pos().y(), me->screenPos().x(), me->screenPos().y(), me->button(), me->buttons(), me->modifiers(), screenForGlobalPos(me->globalPos()));
     }
 
-    emit pressed(&dme);
     m_pressed = true;
+    emit pressed(&dme);
     emit pressedChanged();
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     m_pressAndHoldTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
-#else
-    m_pressAndHoldTimer->start(1000);
-#endif
 }
 
 void MouseEventListener::mouseMoveEvent(QMouseEvent *me)
@@ -227,7 +223,7 @@ void MouseEventListener::handlePressAndHold()
         emit pressAndHold(m_pressAndHoldEvent);
 
         delete m_pressAndHoldEvent;
-        m_pressAndHoldEvent = 0;
+        m_pressAndHoldEvent = nullptr;
     }
 }
 
@@ -260,15 +256,11 @@ bool MouseEventListener::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
         //qDebug() << "pressed in sceneEventFilter";
         m_buttonDownPos = me->screenPos();
-        emit pressed(&dme);
         m_pressed = true;
+        emit pressed(&dme);
         emit pressedChanged();
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
         m_pressAndHoldTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
-#else
-        m_pressAndHoldTimer->start(1000);
-#endif
         break;
     }
     case QEvent::HoverMove: {
@@ -285,7 +277,7 @@ bool MouseEventListener::childMouseEventFilter(QQuickItem *item, QEvent *event)
             screenPos = w->mapToGlobal(myPos.toPoint());
         }
 
-        KDeclarativeMouseEvent dme(myPos.x(), myPos.y(), screenPos.x(), screenPos.y(), Qt::NoButton, Qt::NoButton, he->modifiers(), 0);
+        KDeclarativeMouseEvent dme(myPos.x(), myPos.y(), screenPos.x(), screenPos.y(), Qt::NoButton, Qt::NoButton, he->modifiers(), nullptr);
         //qDebug() << "positionChanged..." << dme.x() << dme.y();
         emit positionChanged(&dme);
         break;
@@ -333,6 +325,7 @@ bool MouseEventListener::childMouseEventFilter(QQuickItem *item, QEvent *event)
     }
     case QEvent::UngrabMouse: {
         m_lastEvent = event;
+        handleUngrab();
         break;
     }
     case QEvent::Wheel: {
@@ -357,7 +350,7 @@ QScreen* MouseEventListener::screenForGlobalPos(const QPoint& globalPos)
             return screen;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 void MouseEventListener::mouseUngrabEvent()
@@ -376,10 +369,12 @@ void MouseEventListener::touchUngrabEvent()
 
 void MouseEventListener::handleUngrab()
 {
-    m_pressAndHoldTimer->stop();
+    if (m_pressed) {
+        m_pressAndHoldTimer->stop();
 
-    m_pressed = false;
-    emit pressedChanged();
+        m_pressed = false;
+        emit pressedChanged();
 
-    emit canceled();
+        emit canceled();
+    }
 }

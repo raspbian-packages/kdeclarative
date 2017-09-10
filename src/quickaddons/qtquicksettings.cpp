@@ -21,17 +21,21 @@
 #include "renderersettings.h"
 
 #include <QSurfaceFormat>
+#include <QQuickWindow>
 
 void KQuickAddons::QtQuickSettings::init()
 {
     PlasmaQtQuickSettings::RendererSettings s;
-    if (!s.renderLoop().isNull()) {
+    if (!s.renderLoop().isEmpty()) {
         qputenv("QSG_RENDER_LOOP", s.renderLoop().toLatin1());
     }
 
     if (!s.sceneGraphBackend().isNull()) {
-        qputenv("QMLSCENE_DEVICE", s.sceneGraphBackend().toLatin1());
-        //TODO Qt5.8 - QQuickWindow::setSceneGraphBackend(..)
+#if QT_VERSION >= QT_VERSION_CHECK(5,8,0)
+     QQuickWindow::setSceneGraphBackend(s.sceneGraphBackend());
+#else
+    qputenv("QMLSCENE_DEVICE", s.sceneGraphBackend().toLatin1());
+#endif
     }
     if (s.forceGlCoreProfile()) {
         QSurfaceFormat format;

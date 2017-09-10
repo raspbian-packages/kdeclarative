@@ -36,15 +36,15 @@ class EventGenerator : public QObject
             MouseButtonRelease,
             MouseMove
         };
-        Q_ENUMS(MouseEvent)
+        Q_ENUM(MouseEvent)
 
         enum GrabEvent {
             GrabMouse,
             UngrabMouse
         };
-        Q_ENUMS(GrabEvent)
+        Q_ENUM(GrabEvent)
 
-        EventGenerator(QObject *parent = 0);
+        EventGenerator(QObject *parent = nullptr);
         ~EventGenerator();
 
         /**

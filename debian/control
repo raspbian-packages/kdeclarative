@@ -3,27 +3,31 @@ Section: libs
 Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Maximiliano Curia <maxy@debian.org>
-Build-Depends: cmake (>= 2.8.12),
+Build-Depends: cmake (>= 3.0~),
                debhelper (>= 9),
-               extra-cmake-modules (>= 5.28.0~),
+               doxygen,
+               extra-cmake-modules (>= 5.37.0~),
+               graphviz,
                kio-dev (>= 5.26.0~),
                libepoxy-dev,
-               libkf5config-dev (>= 5.28.0~),
-               libkf5globalaccel-dev (>= 5.28.0~),
-               libkf5guiaddons-dev (>= 5.28.0~),
-               libkf5i18n-dev (>= 5.28.0~),
-               libkf5iconthemes-dev (>= 5.28.0~),
+               libkf5config-dev (>= 5.37.0~),
+               libkf5globalaccel-dev (>= 5.37.0~),
+               libkf5guiaddons-dev (>= 5.37.0~),
+               libkf5i18n-dev (>= 5.37.0~),
+               libkf5iconthemes-dev (>= 5.37.0~),
                libkf5itemviews-dev (>= 5.7.0),
-               libkf5kio-dev (>= 5.28.0~),
-               libkf5package-dev (>= 5.28.0~),
-               libkf5widgetsaddons-dev (>= 5.28.0~),
-               libkf5windowsystem-dev (>= 5.28.0~),
+               libkf5kio-dev (>= 5.37.0~),
+               libkf5package-dev (>= 5.37.0~),
+               libkf5widgetsaddons-dev (>= 5.37.0~),
+               libkf5windowsystem-dev (>= 5.37.0~),
+               libqt5sql5-sqlite,
                pkg-config,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
-               qtbase5-dev (>= 5.6.0~),
-               qtdeclarative5-dev (>= 5.6.0~),
-               qtscript5-dev (>= 5.6)
-Standards-Version: 3.9.8
+               qtbase5-dev (>= 5.7.0~),
+               qtdeclarative5-dev (>= 5.7.0~),
+               qtscript5-dev (>= 5.6),
+               qttools5-dev-tools,
+Standards-Version: 4.1.0
 Homepage: https://projects.kde.org/projects/frameworks/kdeclarative
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/frameworks/kdeclarative.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/frameworks/kdeclarative.git
@@ -34,95 +38,132 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: commandline tool for launching kpackage QML application
  A small commandline tool to launch KPackages (QML applications).
 
-Package: libkf5declarative-dev
-Section: libdevel
+Package: libkf5calendarevents5
 Architecture: any
-Depends: kio-dev (>= 5.26.0~),
-         libkf5calendarevents5 (= ${binary:Version}),
-         libkf5declarative5 (= ${binary:Version}),
-         libkf5package-dev (>= 5.28.0~),
-         libkf5quickaddons5 (= ${binary:Version}),
-         qtbase5-dev (>= 5.6.0~),
-         qtdeclarative5-dev (>= 5.6.0~),
-         ${misc:Depends}
-Description: development files for kdeclarative
- Framework providing integration of QML and other KDE frameworks such
- as making i18n available and using kio.
- .
- Contains development files for kdeclarative.
-
-Package: libkf5declarative5
-Architecture: any
-Depends: libkf5declarative-data (= ${source:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: kpackagelauncherqml
 Multi-Arch: same
-Description: provides integration of QML and KDE frameworks
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: plasma-framework (<< 5.37)
+Description: provides integration of QML and KDE frameworks -- calendarevents
  Framework providing integration of QML and other KDE frameworks such
- as making i18n available and using kio.
-Breaks: libkf5plasma5 (<< 5.28),
-        libkf5plasmaquick5 (<< 5.28),
-        plasma-framework (<< 5.28)
+ as making i18n available and using kio
 
 Package: libkf5declarative-data
 Architecture: all
-Depends: ${misc:Depends}, ${shlibs:Depends}
 Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: provides integration of QML and KDE frameworks
  Framework providing integration of QML and other KDE frameworks such
  as making i18n available and using kio.
  .
  This package contains the translation files.
 
-Package: qtdeclarative5-kf5declarative
-Architecture: all
-Depends: qml-module-org-kde-draganddrop,
-         qml-module-org-kde-kcoreaddons,
-         qml-module-org-kde-kquickcontrols,
-         qml-module-org-kde-kquickcontrolsaddons,
+Package: libkf5declarative-dev
+Section: libdevel
+Architecture: any
+Depends: kio-dev (>= 5.26.0~),
+         libkf5calendarevents5 (= ${binary:Version}),
+         libkf5declarative5 (= ${binary:Version}),
+         libkf5package-dev (>= 5.37.0~),
+         libkf5quickaddons5 (= ${binary:Version}),
+         qtbase5-dev (>= 5.7.0~),
+         qtdeclarative5-dev (>= 5.7.0~),
          ${misc:Depends},
-         ${shlibs:Depends}
-Section: oldlibs
-Priority: extra
-Description: transitional package for new QML module packages
- This is a transitional dummy package for the new QML module packages
- provided by kf5declarative, which can be safely removed.
+Recommends: libkf5declarative-doc (= ${source:Version})
+Description: development files for kdeclarative
+ Framework providing integration of QML and other KDE frameworks such
+ as making i18n available and using kio.
+ .
+ Contains development files for kdeclarative.
+
+Package: libkf5declarative-doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: provides integration of QML and KDE frameworks (documentation)
+ Framework providing integration of QML and other KDE frameworks such
+ as making i18n available and using kio.
+ .
+ This package contains the qch documentation files.
+Section: doc
+
+Package: libkf5declarative5
+Architecture: any
+Multi-Arch: same
+Depends: libkf5declarative-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: libkf5plasma5 (<< 5.28),
+        libkf5plasmaquick5 (<< 5.37),
+        plasma-framework (<< 5.37),
+Recommends: kpackagelauncherqml
+Description: provides integration of QML and KDE frameworks
+ Framework providing integration of QML and other KDE frameworks such
+ as making i18n available and using kio.
+
+Package: libkf5quickaddons5
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: provides integration of QML and KDE frameworks -- quickaddons
+ Framework providing optimized image texture caching.
+Breaks: libkf5kcmutils5 (<< 5.37),
+        libkf5plasmaquick5 (<< 5.37),
+        plasma-framework (<< 5.37),
 
 Package: qml-module-org-kde-draganddrop
 Architecture: any
 Multi-arch: same
 Depends: libkf5declarative5 (>= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Breaks: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-        qtdeclarative5-kf5declarative-5.0
+        qtdeclarative5-kf5declarative-5.0,
 Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-          qtdeclarative5-kf5declarative-5.0
+          qtdeclarative5-kf5declarative-5.0,
 Description: provides integration of QML and KDE frameworks - draganddrop
  Provides QML draganddrop functionality.
+
+Package: qml-module-org-kde-kconfig
+Architecture: any
+Multi-arch: same
+Depends: libkf5declarative5 (>= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: provides integration of QML and KDE Frameworks - kconfig
+ This import contains KDE extras that are visually similar to Qt Quick
+ Controls.
+ .
+ This package contains the QML files used by libkf5declarative.
+Breaks: plasma-framework (<< 5.37)
 
 Package: qml-module-org-kde-kcoreaddons
 Architecture: any
 Multi-arch: same
 Depends: libkf5declarative5 (>= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Breaks: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-        qtdeclarative5-kf5declarative-5.0
+        qtdeclarative5-kf5declarative-5.0,
 Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-          qtdeclarative5-kf5declarative-5.0
+          qtdeclarative5-kf5declarative-5.0,
 Description: provides integration of QML and KDE frameworks - kcoreaddons
  Provides access from QML to libkf5coreaddons classes.
 
-Package: qml-module-org-kde-kwindowsystem
+Package: qml-module-org-kde-kio
 Architecture: any
 Multi-arch: same
 Depends: libkf5declarative5 (>= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
-Description: provides integration of QML and KDE frameworks - kwindowsystem
- Provides access from QML to libkf5windowsystem classes.
+         ${shlibs:Depends},
+Breaks: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
+        qtdeclarative5-kf5declarative-5.0,
+Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
+          qtdeclarative5-kf5declarative-5.0,
+Description: provides integration of QML and KDE Frameworks - kio
+ This import contains KDE extras that are visually similar to Qt Quick
+ Controls.
+ .
+ This package contains the QML files used by libkf5declarative.
 
 Package: qml-module-org-kde-kquickcontrols
 Architecture: any
@@ -132,12 +173,12 @@ Depends: libkf5declarative5 (>= ${source:Version}),
          qml-module-qtquick-layouts,
          qml-module-qtquick2,
          ${misc:Depends},
-         ${shlibs:Depends}
-Breaks: plasma-framework (<< 5.28),
+         ${shlibs:Depends},
+Breaks: plasma-framework (<< 5.37),
         qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-        qtdeclarative5-kf5declarative-5.0
+        qtdeclarative5-kf5declarative-5.0,
 Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-          qtdeclarative5-kf5declarative-5.0
+          qtdeclarative5-kf5declarative-5.0,
 Description: provides integration of QML and KDE frameworks - kquickcontrols
  This import contains KDE extras that are visually similar to Qt Quick
  Controls.
@@ -147,49 +188,38 @@ Architecture: any
 Multi-arch: same
 Depends: libkf5declarative5 (>= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
-Breaks: plasma-framework (<< 5.28),
+         ${shlibs:Depends},
+Breaks: plasma-framework (<< 5.37),
+        qml-module-org-kde-kirigami2 (<< 5.37),
         qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-        qtdeclarative5-kf5declarative-5.0
+        qtdeclarative5-kf5declarative-5.0,
 Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-          qtdeclarative5-kf5declarative-5.0
+          qtdeclarative5-kf5declarative-5.0,
 Description: provides integration of QML and KDE Frameworks - kquickcontrolsaddons
  This import contains KDE extras that are visually similar to Qt Quick
  Controls.
  .
  This package contains the QML files used by libkf5declarative.
 
-Package: qml-module-org-kde-kio
+Package: qml-module-org-kde-kwindowsystem
 Architecture: any
 Multi-arch: same
 Depends: libkf5declarative5 (>= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
-Breaks: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-        qtdeclarative5-kf5declarative-5.0
-Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
-          qtdeclarative5-kf5declarative-5.0
-Description: provides integration of QML and KDE Frameworks - kio
- This import contains KDE extras that are visually similar to Qt Quick
- Controls.
- .
- This package contains the QML files used by libkf5declarative.
+         ${shlibs:Depends},
+Description: provides integration of QML and KDE frameworks - kwindowsystem
+ Provides access from QML to libkf5windowsystem classes.
 
-Package: libkf5quickaddons5
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Multi-Arch: same
-Description: provides integration of QML and KDE frameworks -- quickaddons
- Framework providing optimized image texture caching.
-Breaks: libkf5kcmutils5 (<< 5.28),
-        libkf5plasmaquick5 (<< 5.28),
-        plasma-framework (<< 5.28)
-
-Package: libkf5calendarevents5
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Multi-Arch: same
-Description: provides integration of QML and KDE frameworks -- calendarevents
- Framework providing integration of QML and other KDE frameworks such
- as making i18n available and using kio
-Breaks: plasma-framework (<< 5.28)
+Package: qtdeclarative5-kf5declarative
+Section: oldlibs
+Priority: optional
+Architecture: all
+Depends: qml-module-org-kde-draganddrop,
+         qml-module-org-kde-kcoreaddons,
+         qml-module-org-kde-kquickcontrols,
+         qml-module-org-kde-kquickcontrolsaddons,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: transitional package for new QML module packages
+ This is a transitional dummy package for the new QML module packages
+ provided by kf5declarative, which can be safely removed.

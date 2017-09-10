@@ -211,14 +211,10 @@ PlotTexture::PlotTexture(QOpenGLContext *ctx) : QSGTexture()
 {
     QPair<int, int> version = ctx->format().version();
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     if (ctx->isOpenGLES()) {
         m_haveTexStorage = version >= qMakePair(3, 0) || ctx->hasExtension("GL_EXT_texture_storage");
         m_internalFormat = m_haveTexStorage ? GL_RGBA8 : GL_RGBA;
     } else {
-#else
-    {
-#endif
         m_haveTexStorage = version >= qMakePair(4, 2) || ctx->hasExtension("GL_ARB_texture_storage");
         m_internalFormat = GL_RGBA8;
     }
@@ -505,7 +501,7 @@ void Plotter::dataSet_clear(QQmlListProperty<PlotData> *list)
 
 QQmlListProperty<PlotData> Plotter::dataSets()
 {
-    return QQmlListProperty<PlotData>(this, 0, Plotter::dataSet_append, Plotter::dataSet_count, Plotter::dataSet_at, Plotter::dataSet_clear);
+    return QQmlListProperty<PlotData>(this, nullptr, Plotter::dataSet_append, Plotter::dataSet_count, Plotter::dataSet_at, Plotter::dataSet_clear);
 }
 
 
@@ -716,14 +712,14 @@ QSGNode *Plotter::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData *updateP
     Q_UNUSED(updatePaintNodeData)
     if (!window()->openglContext()) {
         delete oldNode;
-        return Q_NULLPTR;
+        return nullptr;
     }
 
     QSGSimpleTextureNode *n = static_cast<QSGSimpleTextureNode *>(oldNode);
 
     if (width() == 0 && height() == 0) {
         delete oldNode;
-        return Q_NULLPTR;
+        return nullptr;
     }
 
     if (!n) {
@@ -745,16 +741,12 @@ QSGNode *Plotter::updatePaintNode(QSGNode *oldNode, UpdatePaintNodeData *updateP
         QOpenGLContext *ctx = window()->openglContext();
         QPair<int, int> version = ctx->format().version();
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
         if (ctx->isOpenGLES()) {
             m_haveMSAA = version >= qMakePair(3, 0) || ctx->hasExtension("GL_NV_framebuffer_multisample");
             m_haveFramebufferBlit = version >= qMakePair(3, 0) || ctx->hasExtension("GL_NV_framebuffer_blit");
             m_haveInternalFormatQuery = version >= qMakePair(3, 0);
             m_internalFormat = version >= qMakePair(3, 0) ? GL_RGBA8 : GL_RGBA;
         } else {
-#else
-        {
-#endif
             m_haveMSAA = version >= qMakePair(3, 2) || ctx->hasExtension("GL_ARB_framebuffer_object") ||
                 ctx->hasExtension("GL_EXT_framebuffer_multisample");
             m_haveFramebufferBlit = version >= qMakePair(3, 0) || ctx->hasExtension("GL_ARB_framebuffer_object") ||
@@ -830,7 +822,7 @@ void Plotter::normalizeData()
     qreal adjustedMin = m_min;
     m_mutex.lock();
     if (m_stacked) {
-        PlotData *previousData = 0;
+        PlotData *previousData = nullptr;
         auto i = m_plotData.constEnd();
         do {
             --i;

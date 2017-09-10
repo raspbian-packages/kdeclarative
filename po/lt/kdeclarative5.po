@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-05-08 07:20+0000\n"
+"POT-Creation-Date: 2017-06-30 03:05+0200\n"
 "PO-Revision-Date: 2015-12-30 18:08+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -24,23 +24,28 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Lokalize 1.5\n"
 
+#, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
+#, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
 #: kpackagelauncherqml/main.cpp:43
+#, kde-format
 msgid "KPackage QML application shell"
 msgstr ""
 
 #: kpackagelauncherqml/main.cpp:51
+#, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr ""
 
 #: qmlcontrols/kquickcontrols/KeySequenceItem.qml:38
+#, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
@@ -50,10 +55,12 @@ msgstr ""
 "Pavyzdžiui kombinacijai Vald+A: laikykite Vald ir spauskite A."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
+#, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervuotas klavišų derinys"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
+#, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
 "shortcut.\n"
@@ -64,6 +71,7 @@ msgstr ""
 "Prašome pasirinkti kitą."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
+#, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konfliktas su standartiniu programos iššaukimo klavišų deriniu"
 
@@ -79,47 +87,28 @@ msgstr ""
 "Ar tikrai norite jį naudoti ir kaip globalųjį spartųjį klavišų derinį?"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
+#, kde-format
 msgid "Reassign"
 msgstr "Priskirti iš naujo"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:379
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
+#, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Įvestis"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:386
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
+#, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Jokio"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
+#, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "Klavišas, kurį nuspaudėte, nepalaikomas Qt sistemoje."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
+#, kde-format
 msgid "Unsupported Key"
 msgstr "Nepalaikomas klavišas"
-
-#~ msgid "Undo"
-#~ msgstr "Atšaukti"
-
-#~ msgid "Redo"
-#~ msgstr "Pakartoti"
-
-#~ msgid "Cut"
-#~ msgstr "Iškirpti"
-
-#~ msgid "Copy"
-#~ msgstr "Kopijuoti"
-
-#~ msgid "Paste"
-#~ msgstr "Padėti"
-
-#~ msgid "Delete"
-#~ msgstr "Trinti"
-
-#~ msgid "Clear"
-#~ msgstr "Išvalyti"
-
-#~ msgid "Select All"
-#~ msgstr "Pažymėti viską"

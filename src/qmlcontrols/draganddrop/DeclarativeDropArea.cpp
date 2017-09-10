@@ -34,9 +34,6 @@ DeclarativeDropArea::DeclarativeDropArea(QQuickItem *parent)
       m_containsDrag(false)
 {
     setFlag(ItemAcceptsDrops, m_enabled);
-    setFlag(ItemHasContents, m_enabled);
-    setAcceptHoverEvents(m_enabled);
-
 }
 
 void DeclarativeDropArea::temporaryInhibitParent(bool inhibit)
@@ -47,7 +44,7 @@ void DeclarativeDropArea::temporaryInhibitParent(bool inhibit)
         if (DeclarativeDropArea *da = qobject_cast<DeclarativeDropArea *>(candidate)) {
             da->m_temporaryInhibition = inhibit;
             if (inhibit) {
-                emit da->dragLeaveEvent(0);
+                emit da->dragLeaveEvent(nullptr);
             }
         }
         candidate = candidate->parentItem();
@@ -137,7 +134,6 @@ void DeclarativeDropArea::setEnabled(bool enabled)
     }
 
     m_enabled = enabled;
-    setAcceptHoverEvents(m_enabled);
     setFlag(ItemAcceptsDrops, m_enabled);
     emit enabledChanged();
 }

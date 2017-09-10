@@ -26,8 +26,7 @@
 
 #include <QObject>
 #include "DeclarativeDropArea.h"
-
-class DeclarativeMimeData;
+#include "DeclarativeMimeData.h"
 
 class DeclarativeDragDropEvent : public QObject
 {
@@ -95,8 +94,8 @@ class DeclarativeDragDropEvent : public QObject
 
 public:
 
-    DeclarativeDragDropEvent(QDropEvent* e, DeclarativeDropArea* parent = 0);
-    DeclarativeDragDropEvent(QDragLeaveEvent* e, DeclarativeDropArea* parent = 0);
+    DeclarativeDragDropEvent(QDropEvent* e, DeclarativeDropArea* parent = nullptr);
+    DeclarativeDragDropEvent(QDragLeaveEvent* e, DeclarativeDropArea* parent = nullptr);
 
     int x() const { return m_x; }
     int y() const { return m_y; }
@@ -115,7 +114,7 @@ private:
     int m_y;
     Qt::MouseButtons m_buttons;
     Qt::KeyboardModifiers m_modifiers;
-    DeclarativeMimeData* m_data;
+    QScopedPointer<DeclarativeMimeData> m_data;
     QDropEvent* m_event;
 };
 

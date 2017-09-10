@@ -28,7 +28,7 @@
 
 IconDialog::IconDialog(QObject *parent)
     : QObject(parent)
-    , m_dialog(Q_NULLPTR)
+    , m_dialog(nullptr)
     , m_iconSize(0)
     , m_user(false)
     , m_modality(Qt::WindowModal)
@@ -161,7 +161,7 @@ void IconDialog::open()
 
     m_dialog->setWindowModality(m_modality);
 
-    m_dialog->setup(KIconLoader::NoGroup, KIconLoader::Application, false, m_iconSize, m_user);
+    m_dialog->setup(KIconLoader::Desktop, KIconLoader::Application, false, m_iconSize, m_user);
 
     m_dialog->show();
 }
