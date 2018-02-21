@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-06-30 03:05+0200\n"
+"POT-Creation-Date: 2017-11-30 03:07+0100\n"
 "PO-Revision-Date: 2016-12-20 23:02+0100\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -32,7 +32,7 @@ msgstr "alministradores@softastur.org"
 msgid "KPackage QML application shell"
 msgstr "Shell d'aplicaciones QML de KPackage "
 
-#: kpackagelauncherqml/main.cpp:51
+#: kpackagelauncherqml/main.cpp:50
 #, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "El nome únicu de l'aplicación (obligatorio)"

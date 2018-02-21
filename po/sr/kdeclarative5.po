@@ -1,14 +1,14 @@
 # Translation of kdeclarative5.po into Serbian.
 # Marko Rosic <roske@kde.org.yu>, 2003.
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
-# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-06-30 03:05+0200\n"
-"PO-Revision-Date: 2015-03-07 13:10+0100\n"
+"POT-Creation-Date: 2017-11-30 03:07+0100\n"
+"PO-Revision-Date: 2017-09-28 17:57+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
@@ -37,7 +37,7 @@ msgstr "caslav.ilic@gmx.net"
 msgid "KPackage QML application shell"
 msgstr "КуМЛ програмска шкољка за KPackage"
 
-#: kpackagelauncherqml/main.cpp:51
+#: kpackagelauncherqml/main.cpp:50
 #, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "Јединствено име програма (обавезно)"
@@ -79,8 +79,8 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"Комбинација тастера <shortcut>%1</shortcut> већ је додељена стандардној "
-"радњи „%2“, коју користе неки програми.\n"
+"Комбинација тастера %1 већ је додељена стандардној радњи „%2“, коју користе "
+"неки програми.\n"
 "Желите ли заиста да је користите и као глобалну пречицу?"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339

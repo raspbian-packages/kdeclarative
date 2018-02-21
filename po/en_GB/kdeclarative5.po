@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-06-30 03:05+0200\n"
+"POT-Creation-Date: 2017-11-30 03:07+0100\n"
 "PO-Revision-Date: 2015-03-14 14:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "andrew_coles@yahoo.co.uk"
 msgid "KPackage QML application shell"
 msgstr "KPackage QML application shell"
 
-#: kpackagelauncherqml/main.cpp:51
+#: kpackagelauncherqml/main.cpp:50
 #, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "The unique name of the application (mandatory)"

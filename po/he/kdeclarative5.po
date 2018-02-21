@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-06-30 03:05+0200\n"
+"POT-Creation-Date: 2017-11-30 03:07+0100\n"
 "PO-Revision-Date: 2017-05-16 06:49-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "kde-l10n-he@kde.org"
 msgid "KPackage QML application shell"
 msgstr ""
 
-#: kpackagelauncherqml/main.cpp:51
+#: kpackagelauncherqml/main.cpp:50
 #, fuzzy, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "מגדיר את הגופן של התכנית"

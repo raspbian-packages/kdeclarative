@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-06-30 03:05+0200\n"
+"POT-Creation-Date: 2017-11-30 03:07+0100\n"
 "PO-Revision-Date: 2015-03-14 06:28+0100\n"
 "Last-Translator: Adrián Chaves Fernández <adriyetichaves@gmail.com>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
@@ -36,14 +36,14 @@ msgstr "Xabier García Feal, marce villarino, Xosé Calvo"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "xosecalvo@gmail.com, mvillarino@gmail.com, proxecto@trasno.net"
+msgstr "xosecalvo@gmail.com, mvillarino@gmail.com, proxecto@trasno.gal"
 
 #: kpackagelauncherqml/main.cpp:43
 #, kde-format
 msgid "KPackage QML application shell"
 msgstr "Shell de aplicativos en QML de KPackage"
 
-#: kpackagelauncherqml/main.cpp:51
+#: kpackagelauncherqml/main.cpp:50
 #, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "Nome único para o aplicativo (obrigatorio)"
@@ -54,7 +54,7 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"Prema o botón, logo indique o atallo que desexe ter no programa.\n"
+"Prema o botón, logo insira o atallo que desexe ter no programa.\n"
 "Exemplo para Ctrl+A: manteña premida a tecla Ctrl e prema A."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
@@ -70,7 +70,7 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"A tecla F12 está reservada en Windows polo que non é posíbel empregala como "
+"A tecla F12 está reservada en Windows polo que non se pode empregar como "
 "atallo global.\n"
 "Escolla outro."
 
@@ -88,7 +88,7 @@ msgid ""
 msgstr ""
 "A combinación de teclas «%1» tamén está asignada á acción estándar «%2», que "
 "é usada por algúns aplicativos.\n"
-"Está seguro de que quere empregala tamén como atallo global?"
+"Seguro que quere empregala tamén como atallo global?"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
 #, kde-format

@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(KF5_VERSION "5.37.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.37.0") # handled by release scripts
+set(KF5_VERSION "5.42.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.42.0") # handled by release scripts
 project(KDeclarative VERSION ${KF5_VERSION})
 
 # Dependencies
 include(FeatureSummary)
-find_package(ECM 5.37.0  NO_MODULE)
+find_package(ECM 5.42.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -37,7 +37,7 @@ add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0)
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
-remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FROM_BYTEARRAY -DQT_NO_KEYWORDS)
+remove_definitions(-DQT_STRICT_ITERATORS -DQT_NO_KEYWORDS)
 
 
 
@@ -126,9 +126,7 @@ install(FILES
   COMPONENT Devel
 )
 
-if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
-endif()
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 if(KF5Config_FOUND AND KF5I18n_FOUND AND KF5IconThemes_FOUND AND KF5KIO_FOUND)
   message("Dependencies for libkdeclarative found: it will be built")

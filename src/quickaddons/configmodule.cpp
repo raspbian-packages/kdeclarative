@@ -36,7 +36,7 @@
 
 #include <kaboutdata.h>
 #include <klocalizedstring.h>
-#include <kdeclarative/qmlobject.h>
+#include <kdeclarative/qmlobjectsharedengine.h>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -55,14 +55,12 @@ public:
         _needsAuthorization(false),
         _needsSave(false)
     {
-        qmlRegisterUncreatableType<ConfigModule>("org.kde.kcm", 1, 0, "ConfigModule",
-            QLatin1String("Do not create objects of type ConfigModule"));
     }
 
     void authStatusChanged(int status);
 
     ConfigModule *_q;
-    KDeclarative::QmlObject *_qmlObject;
+    KDeclarative::QmlObjectSharedEngine *_qmlObject;
     ConfigModule::Buttons _buttons;
     const KAboutData *_about;
     QString _rootOnlyMessage;
@@ -103,7 +101,10 @@ ConfigModule::ConfigModule(QObject *parent, const QVariantList &)
 
 ConfigModule::~ConfigModule()
 {
-    ConfigModulePrivate::s_rootObjects.remove(d->_qmlObject->engine());
+    //in case mainUi was never called
+    if (d->_qmlObject) {
+        ConfigModulePrivate::s_rootObjects.remove(d->_qmlObject->rootContext());
+    }
 
     delete d->_qmlObject;
     delete d->_about;
@@ -116,8 +117,19 @@ ConfigModule *ConfigModule::qmlAttachedProperties(QObject *object)
 {
     //at the moment of the attached object creation, the root item is the only one that hasn't a parent
     //only way to avoid creation of this attached for everybody but the root item
-    if (!object->parent() && ConfigModulePrivate::s_rootObjects.contains(QtQml::qmlEngine(object))) {
-        return ConfigModulePrivate::s_rootObjects.value(QtQml::qmlEngine(object));
+    const QQmlEngine *engine = QtQml::qmlEngine(object);
+    QQmlContext *cont = QQmlEngine::contextForObject(object);
+
+    //Search the qml context that is the "root" for the sharedqmlobject, which
+    //is an ancestor of QQmlEngine::contextForObject(object) and the direct child
+    //of the engine's root context: we can do this assumption on the internals as
+    //we are distributed on the same repo.
+    while (cont->parentContext() && cont->parentContext() != engine->rootContext()) {
+        cont = cont->parentContext();
+    }
+
+    if (!object->parent() && ConfigModulePrivate::s_rootObjects.contains(cont)) {
+        return ConfigModulePrivate::s_rootObjects.value(cont);
     } else {
         return nullptr;
     }
@@ -128,18 +140,18 @@ QQuickItem *ConfigModule::mainUi()
     if (d->_qmlObject) {
         return qobject_cast<QQuickItem *>(d->_qmlObject->rootObject());
     }
-    d->_qmlObject = new KDeclarative::QmlObject(this);
-    ConfigModulePrivate::s_rootObjects[d->_qmlObject->engine()] = this;
+    d->_qmlObject = new KDeclarative::QmlObjectSharedEngine(this);
+    ConfigModulePrivate::s_rootObjects[d->_qmlObject->rootContext()] = this;
     d->_qmlObject->setTranslationDomain(aboutData()->componentName());
     d->_qmlObject->setInitializationDelayed(true);
 
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
-    package.setDefaultPackageRoot("kpackage/kcms");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
+    package.setDefaultPackageRoot(QStringLiteral("kpackage/kcms"));
     package.setPath(aboutData()->componentName());
 
     if (!package.filePath("mainscript").isEmpty()) {
         d->_qmlObject->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
-        d->_qmlObject->engine()->rootContext()->setContextProperty("kcm", this);
+        d->_qmlObject->engine()->rootContext()->setContextProperty(QStringLiteral("kcm"), this);
         d->_qmlObject->completeInitialization();
 
         return qobject_cast<QQuickItem *>(d->_qmlObject->rootObject());
@@ -172,7 +184,7 @@ void ConfigModule::setNeedsAuthorization(bool needsAuth)
 
     d->_needsAuthorization = needsAuth;
     if (needsAuth && d->_about) {
-        d->_authActionName = QString("org.kde.kcontrol." + d->_about->componentName() + ".save");
+        d->_authActionName = QStringLiteral("org.kde.kcontrol.") + d->_about->componentName() + QStringLiteral(".save");
         d->_needsAuthorization = true;
 
     } else {
@@ -186,6 +198,16 @@ void ConfigModule::setNeedsAuthorization(bool needsAuth)
 bool ConfigModule::needsAuthorization() const
 {
     return d->_needsAuthorization;
+}
+
+QString ConfigModule::name() const
+{
+    return d->_about->displayName();
+}
+
+QString ConfigModule::description() const
+{
+    return d->_about->shortDescription();
 }
 
 void ConfigModule::setAuthActionName(const QString &name)

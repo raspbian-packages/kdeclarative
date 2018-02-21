@@ -2,14 +2,15 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdelibs4 package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-06-30 03:05+0200\n"
-"PO-Revision-Date: 2014-06-23 21:09+0700\n"
-"Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
+"POT-Creation-Date: 2017-11-30 03:07+0100\n"
+"PO-Revision-Date: 2017-12-11 22:03+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +33,7 @@ msgstr "andhika.padmawan@gmail.com"
 msgid "KPackage QML application shell"
 msgstr ""
 
-#: kpackagelauncherqml/main.cpp:51
+#: kpackagelauncherqml/main.cpp:50
 #, fuzzy, kde-format
 #| msgid "defines the application font"
 msgid "The unique name of the application (mandatory)"
@@ -44,14 +45,14 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"Klik pada tombol, lalu masukkan jalan pintas seperti yang anda inginkan di "
+"Klik pada tombol, lalu masukkan pintasan seperti yang anda inginkan di "
 "program.\n"
 "Misalnya untuk Ctrl+A: tahan tombol Ctrl lalu tekan A."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
 #, kde-format
 msgid "Reserved Shortcut"
-msgstr "Jalan Pintas Dipesan"
+msgstr "Pintasan Dipesan"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
 #, kde-format
@@ -60,14 +61,14 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"Tombol F12 dipesan di Windows, sehingga tidak dapat digunakan untuk jalan "
-"pintas global.\n"
+"Tombol F12 dipesan di Windows, sehingga tidak dapat digunakan untuk pintasan "
+"global.\n"
 "Silakan pilih yang lain"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
-msgstr "Konflik dengan Jalan Pintas Aplikasi Standar"
+msgstr "Konflik dengan Pintasan Aplikasi Standar"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:334
 #, kde-format
@@ -78,7 +79,7 @@ msgid ""
 msgstr ""
 "Kombinasi tombol '%1' digunakan pula untuk aksi standar \"%2\" yang "
 "digunakan oleh beberapa aplikasi.\n"
-"Anda yakin ingin menggunakannya sebagai jalan pintas global juga?"
+"Anda yakin ingin menggunakannya sebagai pintasan global juga?"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
 #, kde-format
