@@ -1,9 +1,23 @@
-kdeclarative (5.44.0-1+rpi1) buster-staging; urgency=medium
+kdeclarative (5.45.0-1+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 29 Mar 2018 19:42:48 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Tue, 15 May 2018 06:03:10 +0000
+
+kdeclarative (5.45.0-1) unstable; urgency=medium
+
+  * New upstream release (5.45.0).
+  * Update build-deps and deps with the info from cmake
+
+  [ Manuel A. Fernandez Montecelo ]
+  * riscv64: symbols update (Closes: 897649)
+
+  [ Maximiliano Curia ]
+  * Bump group breaks (5.45)
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 05 May 2018 08:10:15 +0200
 
 kdeclarative (5.44.0-1) sid; urgency=medium
 
