@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(KF5_VERSION "5.47.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.47.0") # handled by release scripts
+set(KF5_VERSION "5.49.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.49.0") # handled by release scripts
 project(KDeclarative VERSION ${KF5_VERSION})
 
 # Dependencies
 include(FeatureSummary)
-find_package(ECM 5.47.0  NO_MODULE)
+find_package(ECM 5.49.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -34,8 +34,6 @@ find_package(KF5Package ${KF5_DEP_VERSION} REQUIRED)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0)
 
 #add_definitions(-Wno-deprecated)
-add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 remove_definitions(-DQT_STRICT_ITERATORS -DQT_NO_KEYWORDS)
 
@@ -80,9 +78,9 @@ if(epoxy_FOUND)
     set(HAVE_EPOXY 1)
 endif()
 
-add_subdirectory(autotests)
 add_subdirectory(src)
-if(KF5Config_FOUND AND KF5I18n_FOUND AND KF5IconThemes_FOUND AND KF5KIO_FOUND)
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
     add_subdirectory(tests)
 endif()
 

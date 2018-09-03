@@ -6,19 +6,19 @@ Uploaders: Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 3.0~),
                debhelper (>= 11~),
                doxygen,
-               extra-cmake-modules (>= 5.47.0~),
+               extra-cmake-modules (>= 5.49.0~),
                graphviz,
                libepoxy-dev,
-               libkf5config-dev (>= 5.47.0~),
-               libkf5globalaccel-dev (>= 5.47.0~),
-               libkf5guiaddons-dev (>= 5.47.0~),
-               libkf5i18n-dev (>= 5.47.0~),
-               libkf5iconthemes-dev (>= 5.47.0~),
+               libkf5config-dev (>= 5.49.0~),
+               libkf5globalaccel-dev (>= 5.49.0~),
+               libkf5guiaddons-dev (>= 5.49.0~),
+               libkf5i18n-dev (>= 5.49.0~),
+               libkf5iconthemes-dev (>= 5.49.0~),
                libkf5itemviews-dev (>= 5.7.0),
-               libkf5kio-dev (>= 5.47.0~),
-               libkf5package-dev (>= 5.47.0~),
-               libkf5widgetsaddons-dev (>= 5.47.0~),
-               libkf5windowsystem-dev (>= 5.47.0~),
+               libkf5kio-dev (>= 5.49.0~),
+               libkf5package-dev (>= 5.49.0~),
+               libkf5widgetsaddons-dev (>= 5.49.0~),
+               libkf5windowsystem-dev (>= 5.49.0~),
                libqt5sql5-sqlite,
                pkg-config,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
@@ -36,13 +36,13 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: commandline tool for launching kpackage QML application
  A small commandline tool to launch KPackages (QML applications).
-Breaks: kirigami-gallery (<< 5.47)
+Breaks: kirigami-gallery (<< 5.49)
 
 Package: libkf5calendarevents5
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: plasma-framework (<< 5.47)
+Breaks: plasma-framework (<< 5.49)
 Description: provides integration of QML and KDE frameworks -- calendarevents
  Framework providing integration of QML and other KDE frameworks such
  as making i18n available and using kio
@@ -62,8 +62,8 @@ Section: libdevel
 Architecture: any
 Depends: libkf5calendarevents5 (= ${binary:Version}),
          libkf5declarative5 (= ${binary:Version}),
-         libkf5kio-dev (>= 5.47.0~),
-         libkf5package-dev (>= 5.47.0~),
+         libkf5kio-dev (>= 5.49.0~),
+         libkf5package-dev (>= 5.49.0~),
          libkf5quickaddons5 (= ${binary:Version}),
          qtbase5-dev (>= 5.8.0~),
          qtdeclarative5-dev (>= 5.8.0~),
@@ -93,8 +93,8 @@ Depends: libkf5declarative-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
 Breaks: libkf5plasma5 (<< 5.42),
-        libkf5plasmaquick5 (<< 5.47),
-        plasma-framework (<< 5.47),
+        libkf5plasmaquick5 (<< 5.49),
+        plasma-framework (<< 5.49),
 Recommends: kpackagelauncherqml
 Description: provides integration of QML and KDE frameworks
  Framework providing integration of QML and other KDE frameworks such
@@ -106,9 +106,9 @@ Multi-Arch: same
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: provides integration of QML and KDE frameworks -- quickaddons
  Framework providing optimized image texture caching.
-Breaks: libkf5kcmutils5 (<< 5.47),
-        libkf5plasmaquick5 (<< 5.47),
-        plasma-framework (<< 5.47),
+Breaks: libkf5kcmutils5 (<< 5.49),
+        libkf5plasmaquick5 (<< 5.49),
+        plasma-framework (<< 5.49),
 
 Package: qml-module-org-kde-draganddrop
 Architecture: any
@@ -127,7 +127,7 @@ Package: qml-module-org-kde-kcm
 Architecture: any
 Multi-arch: same
 Depends: libkf5declarative5 (>= ${source:Version}),
-         qml-module-org-kde-kirigami2 (>= 5.47),
+         qml-module-org-kde-kirigami2 (>= 5.49),
          ${misc:Depends},
          ${shlibs:Depends},
 Description: provides integration of QML and KDE Frameworks - kcm
@@ -147,7 +147,7 @@ Description: provides integration of QML and KDE Frameworks - kconfig
  Controls.
  .
  This package contains the QML files used by libkf5declarative.
-Breaks: plasma-framework (<< 5.47)
+Breaks: plasma-framework (<< 5.49)
 
 Package: qml-module-org-kde-kcoreaddons
 Architecture: any
@@ -187,7 +187,7 @@ Depends: libkf5declarative5 (>= ${source:Version}),
          qml-module-qtquick2,
          ${misc:Depends},
          ${shlibs:Depends},
-Breaks: plasma-framework (<< 5.47),
+Breaks: plasma-framework (<< 5.49),
         qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
         qtdeclarative5-kf5declarative-5.0,
 Replaces: qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
@@ -202,9 +202,9 @@ Multi-arch: same
 Depends: libkf5declarative5 (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
-Breaks: libkf5purpose-bin (<< 5.47),
-        libkf5purpose5 (<< 5.47),
-        plasma-framework (<< 5.47),
+Breaks: libkf5purpose-bin (<< 5.49),
+        libkf5purpose5 (<< 5.49),
+        plasma-framework (<< 5.49),
         qml-module-org-kde-kirigami2 (<< 5.44),
         qtdeclarative5-kf5declarative (<< 5.0.0-0ubuntu1),
         qtdeclarative5-kf5declarative-5.0,

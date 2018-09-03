@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2017-11-30 03:07+0100\n"
-"PO-Revision-Date: 2018-01-26 18:53+0700\n"
+"PO-Revision-Date: 2018-06-16 08:03+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -89,7 +90,7 @@ msgstr "Tugaskan Ulang"
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr "Masukan"
+msgstr "Input"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
 #, kde-format
@@ -105,4 +106,4 @@ msgstr "Tombol yang baru anda tekan tidak didukung oleh Qt."
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
 #, kde-format
 msgid "Unsupported Key"
-msgstr "Tombol Tak Didukung"
+msgstr "Tuts Tak Didukung"
