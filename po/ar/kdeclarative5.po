@@ -16,13 +16,13 @@
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2009.
 # hanny <hannysabbagh@hotmail.com>, 2012.
 # Abderrahim Kitouni <a.kitouni@gmail.com>, 2012.
-# Safa Alfulaij <safaalfulaij@hotmail.com>, 2013, 2017.
+# Safa Alfulaij <safaalfulaij@hotmail.com>, 2013, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-11-30 03:07+0100\n"
-"PO-Revision-Date: 2017-11-30 12:15+0300\n"
+"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"PO-Revision-Date: 2018-06-09 19:24+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -47,12 +47,12 @@ msgstr ""
 #: kpackagelauncherqml/main.cpp:43
 #, kde-format
 msgid "KPackage QML application shell"
-msgstr "صدفة تطبيقات «خدمتك» لِ‍QML"
+msgstr "صدفة تطبيقات «حزمتك» لِ‍QML"
 
 #: kpackagelauncherqml/main.cpp:50
 #, kde-format
 msgid "The unique name of the application (mandatory)"
-msgstr "اسم التّطبيق الفريد (إلزاميّ)"
+msgstr "اسم التطبيق الفريد (إلزامي)"
 
 #: qmlcontrols/kquickcontrols/KeySequenceItem.qml:38
 #, kde-format
@@ -60,8 +60,8 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"انقر الزّرّ ثمّ أدخل الاختصار الذي تريد في البرنامج.\n"
-"فمثلًا ل‍ Ctrl+A: أبقِ مفتاح Ctrl مضغوطًا واضغط A."
+"انقر الزر ثمّ أدخل الاختصار الذي تريد في البرنامج.\n"
+"فمثلًا إن أردت Ctrl+A: أبقِ مفتاح Ctrl مضغوطًا واضغط A."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
 #, kde-format
@@ -75,13 +75,13 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"مفتاح F12 محجوز في «وندوز»، لذا لا يمكن استخدامه كاختصار عموميّ.\n"
+"مفتاح F12 محجوز في «وندوز»، لذا لا يمكن استخدامه كاختصار عمومي.\n"
 "رجاءً اختر غيره."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
-msgstr "تضارب مع اختصار تطبيق قياسيّ"
+msgstr "تضارب مع اختصار تطبيق قياسي"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:334
 #, kde-format
@@ -90,20 +90,20 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"تجميعة الأزرار ’%1‘ يستخدمها الإجراء القياسيّ ”%2“ أيضًا، والذي تستخدمه بعض "
-"التّطبيقات.\n"
-"أمتأكّد من استخدامه كاختصار عموميّ أيضًا؟"
+"تجميعة الأزرار ’%1‘ يستخدمها الإجراء القياسي ”%2“ أيضًا، والذي تستخدمه بعض "
+"التطبيقات.\n"
+"أمتأكّد من استخدامه كاختصار عمومي أيضًا؟"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
 #, kde-format
 msgid "Reassign"
-msgstr "أعد التّعيين"
+msgstr "أعد التعيين"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr "الدّخل"
+msgstr "الدخل"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "بلا"
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
-msgstr "المفتاح الذي ضغطته لا تدعمه كيوت."
+msgstr "المفتاح الذي ضغطته لا تدعمه «كيوت»."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
 #, kde-format

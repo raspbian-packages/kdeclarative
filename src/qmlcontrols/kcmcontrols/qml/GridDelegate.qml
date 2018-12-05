@@ -16,7 +16,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-import QtQuick 2.1
+import QtQuick 2.8
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as Controls
 import QtQuick.Templates 2.2 as T2
@@ -175,7 +175,8 @@ T2.ItemDelegate {
                 }
             }
         }
-        layer.enabled: true
+        // Bug 397367: explicitly using "delegate" as otherwise it crashes when switching between KCMs
+        layer.enabled: delegate.GraphicsInfo.api === GraphicsInfo.OpenGL
         layer.effect: DropShadow {
             horizontalOffset: 0
             verticalOffset: 2

@@ -89,7 +89,8 @@ ConfigModule::ConfigModule(const KPluginMetaData &metaData, QObject *parent, con
 {
     KAboutData *aboutData = new KAboutData(metaData.pluginId(), metaData.name(), metaData.version(), metaData.description(), KAboutLicense::byKeyword(metaData.license()).key());
 
-    for (auto author : metaData.authors()) {
+    const auto authors = metaData.authors();
+    for (auto& author : authors) {
         aboutData->addAuthor(author.name(), author.task(), author.emailAddress(), author.webAddress(), author.ocsUsername());
     }
     setAboutData(aboutData);
@@ -165,7 +166,7 @@ QQuickItem *ConfigModule::mainUi()
 
     if (!package.filePath("mainscript").isEmpty()) {
         d->_qmlObject->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
-        d->_qmlObject->engine()->rootContext()->setContextProperty(QStringLiteral("kcm"), this);
+        d->_qmlObject->rootContext()->setContextProperty(QStringLiteral("kcm"), this);
         d->_qmlObject->completeInitialization();
 
         return qobject_cast<QQuickItem *>(d->_qmlObject->rootObject());
