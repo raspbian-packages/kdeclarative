@@ -1,9 +1,30 @@
-kdeclarative (5.51.0-1+rpi1) buster-staging; urgency=medium
+kdeclarative (5.51.0-2+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Wed, 05 Dec 2018 07:24:57 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sat, 29 Dec 2018 17:08:30 +0000
+
+kdeclarative (5.51.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols files. (Closes: #916153)
+  * Remove trailing whitespaces in changelog.
+  * Remove the 'testsuite' autopkgtest, as it does not test the package
+    available in the archive.
+  * Update lintian overrides.
+  * Run the unit tests at build time:
+    - add the qml-module-qtquick2, xauth, and xvfb build dependencies
+    - run xvfb-run with the proper arguments
+    - do not run the tests in parallel, since some of them conflict with each
+      other
+  * Remove the unused ${shlibs:Depends} substvar from libkf5declarative-data,
+    libkf5declarative-doc, and qtdeclarative5-kf5declarative.
+  * Drop the transitional qtdeclarative5-kf5declarative, no more needed now.
+  * Drop the old breaks/replaces of qtdeclarative5-kf5declarative, and
+    qtdeclarative5-kf5declarative-5.0.
+
+ -- Pino Toscano <pino@debian.org>  Wed, 26 Dec 2018 19:09:01 +0100
 
 kdeclarative (5.51.0-1) unstable; urgency=medium
 
@@ -411,7 +432,7 @@ kdeclarative (5.2.0-0ubuntu1) utopic; urgency=medium
   * Use pkg-kde-tools version 3 scripts
 
   [ Scarlett Clark ]
-  * Update install paths for all qml packages. 
+  * Update install paths for all qml packages.
   * Add new qml package for kio
   * Revert to original install paths. Upstream Review:120229
 

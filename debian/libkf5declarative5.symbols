@@ -1,5 +1,6 @@
-# SymbolsHelper-Confirmed: 5.45.0 amd64
+# SymbolsHelper-Confirmed: 5.51.0 m68k powerpc ppc64 sparc64
 libKF5Declarative.so.5 libkf5declarative5 #MINVER#
+* Build-Depends-Package: libkf5declarative-dev
  _ZN12KDeclarative12KDeclarative10initializeEv@Base 4.96.0
  _ZN12KDeclarative12KDeclarative11setupEngineEP10QQmlEngine@Base 5.45.0
  _ZN12KDeclarative12KDeclarative12setupContextEv@Base 5.45.0
@@ -91,7 +92,6 @@ libKF5Declarative.so.5 libkf5declarative5 #MINVER#
  (arch=!armel !riscv64)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
  (arch=armel riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
  (arch=!armel !riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
- _ZTISt19_Sp_make_shared_tag@Base 5.12.0
  (arch=armel riscv64)_ZTISt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
  (arch=!armel !riscv64)_ZTISt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
  _ZTSN12KDeclarative17ConfigPropertyMapE@Base 4.96.0
@@ -110,3 +110,4 @@ libKF5Declarative.so.5 libkf5declarative5 #MINVER#
  _ZTVN12KDeclarative9QmlObjectE@Base 4.96.0
  (arch=armel riscv64)_ZTVSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
  (arch=!armel !riscv64)_ZTVSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
+ _ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag@Base 5.51.0
