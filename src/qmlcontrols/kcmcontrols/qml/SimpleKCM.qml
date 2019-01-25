@@ -17,6 +17,7 @@
 */
 
 import QtQuick 2.7
+import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.2 as Kirigami
 import org.kde.kcm 1.1 as KCM
 
@@ -49,6 +50,51 @@ Kirigami.ScrollablePage {
     implicitWidth: Kirigami.Units.gridUnit * 20
     implicitHeight: Math.min(flickable.contentHeight, Kirigami.Units.gridUnit * 20)
 
+    leftPadding: Kirigami.Settings.isMobile ? 0 : 4
+    topPadding: headerParent.contentItem ? 0 : (Kirigami.Settings.isMobile ? 0 : 4)
+    rightPadding: (Kirigami.Settings.isMobile ? 0 : 4)
+    bottomPadding: footerParent.contentItem ? 0 : (Kirigami.Settings.isMobile ? 0 : 4)
+
+    header: QtControls.Control {
+        id: headerParent
+        visible: root.contentItem && root.contentItem.visible
+        height: visible ? implicitHeight : 0
+        leftPadding: 4
+        topPadding: 4
+        rightPadding: 4
+        bottomPadding: 4
+    }
+
+    footer: QtControls.Control {
+        id: footerParent
+        visible: root.contentItem && root.contentItem.visible
+        height: visible ? implicitHeight : 0
+        leftPadding: 4
+        topPadding: 4
+        rightPadding: 4
+        bottomPadding: 4
+    }
+
+    Component.onCompleted: {
+        if (footer && footer != footerParent) {
+            var f = footer
+
+            footerParent.contentItem = f
+            footer = footerParent
+            f.visible = true
+            f.parent = footerParent
+        }
+
+        if (header && header != headerParent) {
+            var h = header
+
+            headerParent.contentItem = h
+            header = headerParent
+            h.visible = true
+            h.parent = headerParent
+        }
+    }
+
     children: [
         Kirigami.Separator {
             z: 999
@@ -58,7 +104,7 @@ Kirigami.ScrollablePage {
                 top: parent.top
                 topMargin: root.header ? root.header.height : 0
             }
-            visible: !root.flickable.atYBeginning
+            visible: !root.flickable.atYBeginning && !Kirigami.Settings.isMobile
         },
         Kirigami.Separator {
             z: 999
@@ -68,7 +114,7 @@ Kirigami.ScrollablePage {
                 bottom: parent.bottom
                 bottomMargin: root.footer ? root.footer.height : 0
             }
-            visible: !root.flickable.atYEnd
+            visible: !root.flickable.atYEnd && !Kirigami.Settings.isMobile
         }
     ]
 }

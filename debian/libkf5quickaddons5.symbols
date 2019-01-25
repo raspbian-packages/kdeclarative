@@ -1,18 +1,25 @@
-# SymbolsHelper-Confirmed: 5.41.0 amd64
+# SymbolsHelper-Confirmed: 5.54.0 amd64
 libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
 * Build-Depends-Package: libkf5declarative-dev
+ _ZN12KQuickAddons12ConfigModule10pagePushedEP10QQuickItem@Base 5.53.0
  _ZN12KQuickAddons12ConfigModule10setButtonsE6QFlagsINS0_6ButtonEE@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule11pageRemovedEv@Base 5.53.0
  _ZN12KQuickAddons12ConfigModule11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule11qt_metacastEPKc@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule12depthChangedEi@Base 5.54.0
  _ZN12KQuickAddons12ConfigModule12setAboutDataEPK10KAboutData@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule12setNeedsSaveEb@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule12setQuickHelpERK7QString@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule14buttonsChangedEv@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule14setColumnWidthEi@Base 5.53.0
+ _ZN12KQuickAddons12ConfigModule15setCurrentIndexEi@Base 5.54.0
  _ZN12KQuickAddons12ConfigModule16needsSaveChangedEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule16quickHelpChangedEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule16staticMetaObjectE@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule17setAuthActionNameERK7QString@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule18columnWidthChangedEi@Base 5.53.0
  _ZN12KQuickAddons12ConfigModule18setRootOnlyMessageERK7QString@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule19currentIndexChangedEi@Base 5.54.0
  _ZN12KQuickAddons12ConfigModule21authActionNameChangedEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule21qmlAttachedPropertiesEP7QObject@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule21setNeedsAuthorizationEb@Base 5.8.0+git20150324.0130+15.04
@@ -20,7 +27,10 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZN12KQuickAddons12ConfigModule22rootOnlyMessageChangedEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule25needsAuthorizationChangedEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule25useRootOnlyMessageChangedEv@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule3popEv@Base 5.53.0
  _ZN12KQuickAddons12ConfigModule4loadEv@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule4pushEP10QQuickItem@Base 5.54.0
+ _ZN12KQuickAddons12ConfigModule4pushERK7QStringRK4QMapIS1_8QVariantE@Base 5.53.0
  _ZN12KQuickAddons12ConfigModule4saveEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule6mainUiEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule8defaultsEv@Base 5.8.0+git20150324.0130+15.04
@@ -60,12 +70,15 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZN18ManagedTextureNodeC1Ev@Base 5.3.0+git20141016.0334
  _ZN18ManagedTextureNodeC2Ev@Base 5.3.0+git20141016.0334
  _ZNK12KQuickAddons12ConfigModule10metaObjectEv@Base 5.8.0+git20150324.0130+15.04
+ _ZNK12KQuickAddons12ConfigModule11columnWidthEv@Base 5.53.0
  _ZNK12KQuickAddons12ConfigModule11descriptionEv@Base 5.41.0
+ _ZNK12KQuickAddons12ConfigModule12currentIndexEv@Base 5.54.0
  _ZNK12KQuickAddons12ConfigModule14authActionNameEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule15rootOnlyMessageEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule18needsAuthorizationEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule18useRootOnlyMessageEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule4nameEv@Base 5.41.0
+ _ZNK12KQuickAddons12ConfigModule5depthEv@Base 5.54.0
  _ZNK12KQuickAddons12ConfigModule6engineEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule7buttonsEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule9aboutDataEv@Base 5.8.0+git20150324.0130+15.04

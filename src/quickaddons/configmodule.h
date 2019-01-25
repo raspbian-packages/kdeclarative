@@ -147,6 +147,9 @@ class QUICKADDONS_EXPORT ConfigModule : public QObject
     Q_PROPERTY(QString rootOnlyMessage READ rootOnlyMessage WRITE setRootOnlyMessage NOTIFY rootOnlyMessageChanged)
     Q_PROPERTY(bool useRootOnlyMessage READ useRootOnlyMessage WRITE setUseRootOnlyMessage NOTIFY useRootOnlyMessageChanged)
     Q_PROPERTY(bool needsAuthorization READ needsAuthorization WRITE setNeedsAuthorization NOTIFY needsAuthorizationChanged)
+    Q_PROPERTY(int columnWidth READ columnWidth WRITE setColumnWidth NOTIFY columnWidthChanged)
+    Q_PROPERTY(int depth READ depth NOTIFY depthChanged)
+    Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
 
 public:
 
@@ -386,6 +389,39 @@ public:
      */
     QString description() const;
 
+    /**
+     * returns the width the kcm wants in column mode.
+     * If a columnWidth is valid ( > 0 ) and less than the systemsettings' view width,
+     * more than one will be visible at once, and the first page will be a sidebar to the last page pushed.
+     * As default, this is -1 which will make the shell always show only one page at a time.
+     * @since 5.50
+     */
+    int columnWidth() const;
+
+    /**
+     * Sets the column width we want.
+     * @since 5.50
+     */
+    void setColumnWidth(int width);
+
+    /**
+     * @returns how many pages this kcm has.
+     * It is guaranteed to be at least 1 9the main ui) plus how many times a new page has been pushed without pop
+     */
+    int depth() const;
+
+    /**
+     * Sets the current page index this kcm should display
+     * @since 5.53
+     */
+    void setCurrentIndex(int index);
+
+    /**
+     * @returns the index of the page this kcm should display
+     * @since 5.53
+     */
+    int currentIndex() const;
+
     static ConfigModule *qmlAttachedProperties(QObject *object);
 
 public Q_SLOTS:
@@ -428,6 +464,22 @@ public Q_SLOTS:
      */
     virtual void defaults();
 
+    /**
+     * Push a new sub page in the KCM hyerarchy: pages will be seen as a Kirigami PageRow
+     * @since 5.50
+     */
+    void push(const QString &fileName, const QVariantMap &propertyMap = QVariantMap());
+
+    /**
+     * 
+     */
+    void push(QQuickItem *item);
+
+    /**
+     * pop the last page of the KCM hyerarchy
+     * @since 5.50
+     */
+    void pop();
 
 Q_SIGNALS:
 
@@ -478,6 +530,37 @@ Q_SIGNALS:
      * Emits this signal whenever the root only message gets used or discarded.
      */
     void useRootOnlyMessageChanged();
+
+    /**
+     * Emitted when a new sub page is pushed
+     * @since 5.50
+     */
+    void pagePushed(QQuickItem *page);
+
+    /**
+     * Emitted when a sub page is popped
+     * @since 5.50
+     */
+    //RFC: page argument?
+    void pageRemoved();
+
+    /**
+     * Emitted when the wanted column width of the kcm changes
+     * @since 5.50
+     */
+    void columnWidthChanged(int width);
+
+    /**
+     * Emitted when the current page changed
+     * @since 5.53
+     */
+    void currentIndexChanged(int index);
+
+    /**
+     * Emitted when the number of pages changed
+     * @since 5.53
+     */
+    void depthChanged(int index);
 
 private:
     ConfigModulePrivate *const d;

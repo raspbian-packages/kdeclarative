@@ -1,4 +1,4 @@
-kdeclarative (5.51.0-2+rpi1) buster-staging; urgency=medium
+kdeclarative (5.54.0-1+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
   * Add symbols file hack for raspbian.
@@ -6,7 +6,25 @@ kdeclarative (5.51.0-2+rpi1) buster-staging; urgency=medium
   [changes introduced in version 5.27.0-1+rpi1 by Peter Michael Green]
   * Disable testsuite.
 
- -- Peter Michael Green <plugwash@raspbian.org>  Sat, 29 Dec 2018 17:08:30 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 25 Jan 2019 23:11:01 +0000
+
+kdeclarative (5.54.0-1) unstable; urgency=medium
+
+  [ Maximiliano Curia ]
+  * New upstream release (5.52.0).
+  * New upstream release (5.53.0).
+  * Update build-deps and deps with the info from cmake
+  * Update symbols files.
+  * New upstream release (5.54.0).
+  * Update build-deps and deps with the info from cmake
+  * Update symbols files.
+  * Bump group breaks (5.54)
+  * Release to unstable
+
+  [ Scarlett Gately Moore ]
+  * Add missing qml runtime dependency.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 17 Jan 2019 19:26:37 -0300
 
 kdeclarative (5.51.0-2) unstable; urgency=medium
 
