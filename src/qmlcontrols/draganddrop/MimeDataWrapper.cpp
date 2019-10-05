@@ -23,7 +23,6 @@
 #include "MimeDataWrapper.h"
 #include <QMimeData>
 #include <QUrl>
-#include <QColor>
 
 MimeDataWrapper::MimeDataWrapper(const QMimeData* data, QObject* parent)
     : QObject(parent)
@@ -56,7 +55,8 @@ bool MimeDataWrapper::hasUrls() const
 QJsonArray MimeDataWrapper::urls() const
 {
     QJsonArray varUrls;
-    foreach (const QUrl &url, m_data->urls()) {
+    const auto urls = m_data->urls();
+    for (const QUrl &url : urls) {
         varUrls.append(url.toString());
     }
     return varUrls;

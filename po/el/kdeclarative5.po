@@ -18,8 +18,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-08-09 02:54+0200\n"
 "PO-Revision-Date: 2015-10-27 00:12+0100\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -60,12 +60,12 @@ msgstr ""
 "πρόγραμμα.\n"
 "Παράδειγμα για Ctrl+A: κρατήστε πατημένο το Ctrl και πιέστε το A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:273
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Δεσμευμένη συντόμευση"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -76,12 +76,12 @@ msgstr ""
 "για καθολική συντόμευση.\n"
 "Παρακαλώ επιλέξτε μία άλλη."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:330
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Σύγκρουση με πρότυπη συντόμευση εφαρμογής"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:334
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -92,29 +92,29 @@ msgstr ""
 "%2 » η οποία είναι σε χρήση από διάφορες εφαρμογές.\n"
 "Επιθυμείτε πραγματικά τη χρήση της ως καθολική συντόμευση επίσης;"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:336
 #, kde-format
 msgid "Reassign"
 msgstr "Επανάθεση"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:378
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Είσοδος"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:385
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Καμία"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:406
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "Το πλήκτρο που μόλις πιέσατε δεν υποστηρίζεται από την Qt."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Μη υποστηριζόμενο πλήκτρο"

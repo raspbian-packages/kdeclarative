@@ -24,7 +24,6 @@
 #include "DeclarativeDropArea.h"
 #include "DeclarativeDragDropEvent.h"
 
-#include <QMimeData>
 
 DeclarativeDropArea::DeclarativeDropArea(QQuickItem *parent)
     : QQuickItem(parent),
@@ -89,18 +88,17 @@ void DeclarativeDropArea::dragLeaveEvent(QDragLeaveEvent *event)
 void DeclarativeDropArea::dragMoveEvent(QDragMoveEvent *event)
 {
     if (!m_enabled || m_temporaryInhibition) {
+        event->ignore();
         return;
     }
-
+    event->accept();
     //if the position we export didn't change, don't generate the move event
     if (event->pos() == m_oldDragMovePos) {
-        event->setAccepted(false);
         return;
     }
 
     m_oldDragMovePos = event->pos();
     DeclarativeDragDropEvent dde(event, this);
-    event->accept();
     emit dragMove(&dde);
 }
 

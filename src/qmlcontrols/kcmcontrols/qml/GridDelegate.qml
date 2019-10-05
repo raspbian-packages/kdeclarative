@@ -48,7 +48,8 @@ T2.ItemDelegate {
     /**
      * thumbnailAvailable: bool
      * Set it to true when a thumbnail is actually available: when false,
-     * a default icon will be shown instead of the actual thumbnail.
+     * only an icon will be shown instead of the actual thumbnail
+     * ("edit-none" if pluginName is "None", otherwise it uses "view-preview").
      */
     property bool thumbnailAvailable: false
 
@@ -67,10 +68,12 @@ T2.ItemDelegate {
         id: thumbnail
         anchors {
            centerIn: parent
-           verticalCenterOffset: -label.height/2
+           verticalCenterOffset: Math.ceil(-label.height/2)
         }
         width: Kirigami.Settings.isMobile ? delegate.width - Kirigami.Units.gridUnit : Math.min(delegate.GridView.view.implicitCellWidth, delegate.width - Kirigami.Units.gridUnit)
-        height: width / 1.6
+        height: Kirigami.Settings.isMobile ? Math.round((delegate.width - Kirigami.Units.gridUnit) / 1.6)
+                                           : Math.min(delegate.GridView.view.implicitCellHeight - Kirigami.Units.gridUnit * 2,
+                                                      delegate.height - Kirigami.Units.gridUnit)
         radius: Kirigami.Units.smallSpacing
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.View
@@ -105,7 +108,7 @@ T2.ItemDelegate {
                 anchors.centerIn: parent
                 width: Kirigami.Units.iconSizes.large
                 height: width
-                source: "view-preview"
+                source: typeof pluginName === "string" && pluginName === "None" ? "edit-none" : "view-preview"
             }
         }
 
@@ -113,11 +116,8 @@ T2.ItemDelegate {
             anchors.fill: thumbnailArea
             visible: actionsRow.children.length > 0
             opacity: Kirigami.Settings.isMobile || delegate.hovered || (actionsScope.focus) ? 1 : 0
-            radius: Kirigami.Units.smallSpacing
+            radius: delegate.thumbnailAvailable ? 0 : thumbnailArea.radius
             color: Kirigami.Settings.isMobile ? "transparent" : Qt.rgba(1, 1, 1, 0.2)
-
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
 
             Behavior on opacity {
                 PropertyAnimation {
@@ -126,41 +126,25 @@ T2.ItemDelegate {
                 }
             }
 
-            Rectangle {
-                visible: actionsRow.children.length > 1
-                anchors {
-                    left: parent.left
-                    top: actionsScope.top
-                    right: parent.right
-                    bottom: parent.bottom
-                }
-                gradient: Gradient {
-                    GradientStop { position: 0.0; color: "transparent" }
-                    GradientStop { position: 1.0; color: Qt.rgba(0, 0, 0, 0.4) }
-                }
-            }
             FocusScope {
                 id: actionsScope
+
                 anchors {
                     right: parent.right
+                    rightMargin: Kirigami.Units.smallSpacing
                     bottom: parent.bottom
+                    bottomMargin: Kirigami.Units.smallSpacing
                 }
                 width: actionsRow.width
                 height: actionsRow.height
+
                 RowLayout {
                     id: actionsRow
-                    
+
                     Repeater {
                         model: delegate.actions
-                        delegate: Controls.ToolButton {
-                            Kirigami.Icon {
-                                Kirigami.Theme.inherit: false
-                                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                                anchors.centerIn: parent
-                                width: Kirigami.Units.iconSizes.smallMedium
-                                height: width
-                                source: modelData.iconName
-                            }
+                        delegate: Controls.Button {
+                            icon.name: modelData.iconName
                             activeFocusOnTab: focus || delegate.focus
                             onClicked: modelData.trigger()
                             enabled: modelData.enabled
@@ -189,8 +173,8 @@ T2.ItemDelegate {
     Controls.Label {
         id: label
         anchors {
-            left: parent.left
-            right: parent.right
+            left: thumbnail.left
+            right: thumbnail.right
             top: thumbnail.bottom
             topMargin: Kirigami.Units.smallSpacing
         }

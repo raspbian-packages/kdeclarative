@@ -13,13 +13,13 @@
 # Kristof Bal <kristof.bal@gmail.com>, 2008, 2009.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2012.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2013, 2014, 2015.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2013, 2014, 2015, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-16 09:05+0200\n"
-"PO-Revision-Date: 2015-03-05 14:54+0100\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-08-09 02:54+0200\n"
+"PO-Revision-Date: 2019-02-04 10:18+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Files: kfarch.cpp kfdird.cpp kfind.cpp kfindtop.cpp kfoptions.cpp kfsave.cpp "
 "kftabdlg.cpp kftypes.cpp kfwin.cpp main.cpp mkfdird.cpp mkfind.cpp\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 18.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -37,7 +37,7 @@ msgid "Your names"
 msgstr ""
 "Rinse de Vries - 2000 t/m 2008,Wilbert Berendsen - 2003; 2004,Bram "
 "Schoenmakers - 2004 t/m 2007,Tom Albers - 2004,Tijmen Baarda - 2005,Sander "
-"Koning - 2005, Freek de Kruijf - 2009 t/m 2012"
+"Koning - 2005, Freek de Kruijf - 2009 t/m 2019"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -66,12 +66,12 @@ msgstr ""
 "programma.\n"
 "Voorbeeld voor Ctrl+A: houdt de Ctrl-toets in en druk op A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:273
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Gereserveerde snelkoppeling"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -82,12 +82,12 @@ msgstr ""
 "voor een globale sneltoets.\n"
 "Graag een andere kiezen."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:330
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Conflict met standaard-sneltoets"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:334
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -98,29 +98,29 @@ msgstr ""
 "Deze actie wordt door enkele programma's gebruikt.\n"
 "Wilt u de combinatie ook gebruiken als globale toetsencombinatie?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:336
 #, kde-format
 msgid "Reassign"
 msgstr "Opnieuw toewijzen"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:378
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Invoer"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:385
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Geen"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:406
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "De toets die u net indrukte wordt niet door Qt ondersteund."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Niet ondersteunde sleutel"

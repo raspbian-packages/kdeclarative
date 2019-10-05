@@ -22,8 +22,6 @@
 #include "kquickcontrolsaddonsplugin.h"
 #include "config-kquickcontrolsaddons.h"
 
-#include <QtQml>
-#include <QDebug>
 
 #include "qpixmapitem.h"
 #include "qimageitem.h"
@@ -31,6 +29,7 @@
 #include "mouseeventlistener.h"
 #include "columnproxymodel.h"
 #include "clipboard.h"
+#include "fallbacktaphandler.h"
 #include "mimedatabase.h"
 #include "kcmshell.h"
 #include "icondialog.h"
@@ -62,6 +61,8 @@ void KQuickControlsAddonsPlugin::registerTypes(const char *uri)
     qmlRegisterSingletonType<KCMShell>(uri, 2, 0, "KCMShell", kcmshell_singleton_provider);
     qmlRegisterType<IconDialog>(uri, 2, 0, "IconDialog");
     qmlRegisterType<EventGenerator>(uri, 2, 0, "EventGenerator");
+    qmlRegisterUncreatableType<FallbackTapHandlerMouseEvent>(uri, 2, 1, "FallbackTapHandlerMouseEvent", QStringLiteral("Cannot create items of type FallbackTapHandlerMouseEvent"));
+    qmlRegisterType<FallbackTapHandler>(uri, 2, 1, "FallbackTapHandler");
 
 #if HAVE_EPOXY
     qmlRegisterType<PlotData>(uri, 2, 0, "PlotData");

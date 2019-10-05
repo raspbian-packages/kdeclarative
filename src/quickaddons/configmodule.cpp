@@ -26,7 +26,6 @@
 
 #include "configmodule.h"
 
-#include <QTimer>
 #include <QDebug>
 #include <QUrl>
 #include <QQmlEngine>
@@ -167,8 +166,13 @@ QQuickItem *ConfigModule::mainUi()
     package.setDefaultPackageRoot(QStringLiteral("kpackage/kcms"));
     package.setPath(aboutData()->componentName());
 
+    if (!package.isValid()) {
+        qWarning() << "Error loading the module" << aboutData()->componentName() << ": invalid KPackage";
+        return nullptr;
+    }
+
     if (!package.filePath("mainscript").isEmpty()) {
-        d->_qmlObject->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+        d->_qmlObject->setSource(package.fileUrl("mainscript"));
         d->_qmlObject->rootContext()->setContextProperty(QStringLiteral("kcm"), this);
         d->_qmlObject->completeInitialization();
 
@@ -191,7 +195,14 @@ void ConfigModule::push(const QString &fileName, const QVariantMap &propertyMap)
     package.setDefaultPackageRoot(QStringLiteral("kpackage/kcms"));
     package.setPath(aboutData()->componentName());
 
-    QObject *object = d->_qmlObject->createObjectFromSource(QUrl::fromLocalFile(package.filePath("ui", fileName)), d->_qmlObject->rootContext());//TODO:propertyMap
+    QVariantHash propertyHash;
+    for (auto it = propertyMap.begin(), end = propertyMap.end(); it != end; ++it) {
+        propertyHash.insert(it.key(), it.value());
+    }
+
+    QObject *object = d->_qmlObject->createObjectFromSource(QUrl::fromLocalFile(package.filePath("ui", fileName)),
+                                                            d->_qmlObject->rootContext(),
+                                                            propertyHash);
 
     QQuickItem *item = qobject_cast<QQuickItem *>(object);
     if (!item) {
@@ -254,7 +265,7 @@ void ConfigModule::setNeedsAuthorization(bool needsAuth)
 
     d->_needsAuthorization = needsAuth;
     if (needsAuth && d->_about) {
-        d->_authActionName = QStringLiteral("org.kde.kcontrol.") + d->_about->componentName() + QStringLiteral(".save");
+        d->_authActionName = QLatin1String("org.kde.kcontrol.") + d->_about->componentName() + QLatin1String(".save");
         d->_needsAuthorization = true;
 
     } else {

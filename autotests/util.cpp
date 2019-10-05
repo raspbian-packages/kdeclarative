@@ -38,8 +38,8 @@
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QTextStream>
-#include <QDebug>
 #include <QMutexLocker>
+#include <QTest>
 
 QQmlDataTest *QQmlDataTest::m_instance = nullptr;
 
@@ -91,8 +91,8 @@ QByteArray QQmlDataTest::msgComponentError(const QQmlComponent &c,
         if (QQmlContext *context = c.creationContext())
             engine = context->engine();
     if (engine) {
-        str << " Import paths: (" << engine->importPathList().join(QStringLiteral(", "))
-            << ") Plugin paths: (" << engine->pluginPathList().join(QStringLiteral(", "))
+        str << " Import paths: (" << engine->importPathList().join(QLatin1String(", "))
+            << ") Plugin paths: (" << engine->pluginPathList().join(QLatin1String(", "))
             << ')';
     }
     return result.toLocal8Bit();

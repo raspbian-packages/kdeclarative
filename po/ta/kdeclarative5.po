@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-08-09 02:54+0200\n"
 "PO-Revision-Date: 2012-03-25 21:39+0530\n"
 "Last-Translator: Sri Ramadoss M <amachu@yavarkkum.org>\n"
 "Language-Team: Tamil <podhu@madaladal.yavarkkum.org>\n"
@@ -53,12 +53,12 @@ msgstr ""
 "பொத்தனைச் சொடுக்கி, நிரலில் நீங்கள் விரும்பும் சுருக்கு வழியை இடவும்.\n"
 "Ctrl+a க்கான உதாரணம்: Ctrl விசையை அழுத்தியபடிய a தட்டவும்"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:273
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "ஒதுக்கப்பட்ட சுருக்குவழி"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -69,12 +69,12 @@ msgstr ""
 "முடியாது.\n"
 "எனவே வோறொன்றை தேர்வு செய்யவும்."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:330
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "வழக்கமான பயன்பாட்டு சுருக்கு வழியுடன் முரண்"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:334
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -85,29 +85,29 @@ msgstr ""
 "பணிக்கப்பட்டுள்ளது. \n"
 "இருப்பினும் இதனைத் தாங்கள் பொது சுருக்குவழியாகவும் பயன்படுத்த விழைகிறீர்களா?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:336
 #, kde-format
 msgid "Reassign"
 msgstr "மீளமர்த்துக"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:378
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "உள்ளீடு"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:385
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "ஏதுமற்ற"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:406
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "நீங்கள் இப்போடு தட்டிய விசை Qt யால் ஆதரிக்கப்படவில்லை."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
 #, kde-format
 msgid "Unsupported Key"
 msgstr "ஆதரிக்கப்படாத துப்பு"

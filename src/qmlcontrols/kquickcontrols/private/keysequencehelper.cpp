@@ -24,17 +24,14 @@
 #include "keysequencehelper.h"
 
 #include <QAction>
-#include <QKeyEvent>
 #include <QTimer>
 #include <QHash>
 #include <QToolButton>
-#include <QApplication>
 #include <QDebug>
 
 #include <KStandardShortcut>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KKeyServer>
 #include <KGlobalAccel/KGlobalShortcutInfo>
 #include <KGlobalAccel/KGlobalAccel>
 
@@ -272,7 +269,7 @@ bool KeySequenceHelperPrivate::conflictWithGlobalShortcuts(const QKeySequence &k
 {
 #ifdef Q_OS_WIN
     //on windows F12 is reserved by the debugger at all times, so we can't use it for a global shortcut
-    if (KeySequenceHelper::GlobalShortcuts && keySequence.toString().contains(QStringLiteral("F12"))) {
+    if (KeySequenceHelper::GlobalShortcuts && keySequence.toString().contains(QLatin1String("F12"))) {
         QString title = i18n("Reserved Shortcut");
         QString message = i18n("The F12 key is reserved on Windows, so cannot be used for a global shortcut.\n"
                                "Please choose another one.");
@@ -354,28 +351,28 @@ void KeySequenceHelperPrivate::updateShortcutDisplay()
                 s.append(QLatin1Char(','));
             }
             if (modifierKeys & Qt::MetaModifier) {
-                s += KKeyServer::modToStringUser(Qt::MetaModifier) + QLatin1Char('+');
+                s += QKeySequence(Qt::MetaModifier).toString(QKeySequence::NativeText);
             }
 #if defined(Q_OS_MAC)
             if (modifierKeys & Qt::AltModifier) {
-                s += KKeyServer::modToStringUser(Qt::AltModifier) + QLatin1Char('+');
+                s += QKeySequence(Qt::AltModifier).toString(QKeySequence::NativeText);
             }
             if (modifierKeys & Qt::ControlModifier) {
-                s += KKeyServer::modToStringUser(Qt::ControlModifier) + QLatin1Char('+');
+                s += QKeySequence(Qt::ControlModifier).toString(QKeySequence::NativeText);
             }
 #else
             if (modifierKeys & Qt::ControlModifier) {
-                s += KKeyServer::modToStringUser(Qt::ControlModifier) + QLatin1Char('+');
+                s += QKeySequence(Qt::ControlModifier).toString(QKeySequence::NativeText);
             }
             if (modifierKeys & Qt::AltModifier) {
-                s += KKeyServer::modToStringUser(Qt::AltModifier) + QLatin1Char('+');
+                s += QKeySequence(Qt::AltModifier).toString(QKeySequence::NativeText);
             }
 #endif
             if (modifierKeys & Qt::ShiftModifier) {
-                s += KKeyServer::modToStringUser(Qt::ShiftModifier) + QLatin1Char('+');
+                s += QKeySequence(Qt::ShiftModifier).toString(QKeySequence::NativeText);
             }
             if (modifierKeys & Qt::KeypadModifier) {
-                s += KKeyServer::modToStringUser(Qt::KeypadModifier) + QLatin1Char('+');
+                s += QKeySequence(Qt::KeypadModifier).toString(QKeySequence::NativeText);
             }
         } else if (nKey == 0) {
             s = i18nc("What the user inputs now will be taken as the new shortcut", "Input");

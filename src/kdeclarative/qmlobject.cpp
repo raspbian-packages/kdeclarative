@@ -26,7 +26,6 @@
 #include <QQuickItem>
 #include <QQmlIncubator>
 #include <QTimer>
-#include <QPointer>
 
 #include <qdebug.h>
 #include <kdeclarative.h>
@@ -100,8 +99,8 @@ void QmlObjectPrivate::errorPrint(QQmlComponent *component)
 {
     QString errorStr = QStringLiteral("Error loading QML file.\n");
     if (component->isError()) {
-        QList<QQmlError> errors = component->errors();
-        foreach (const QQmlError &error, errors) {
+        const QList<QQmlError> errors = component->errors();
+        for (const QQmlError &error : errors) {
             errorStr += (error.line() > 0 ? QString(QString::number(error.line()) + QLatin1String(": ")) : QLatin1String(""))
                         + error.description() + QLatin1Char('\n');
         }
@@ -354,7 +353,7 @@ QObject *QmlObject::createObjectFromComponent(QQmlComponent *component, QQmlCont
         //memory management
         component->setParent(object);
         //reparent to root object if wasn't specified otherwise by initialProperties
-        if (!initialProperties.contains(QStringLiteral("parent"))) {
+        if (!initialProperties.contains(QLatin1String("parent"))) {
             if (qobject_cast<QQuickItem *>(rootObject())) {
                 object->setProperty("parent", QVariant::fromValue(rootObject()));
             } else {

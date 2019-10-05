@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"POT-Creation-Date: 2019-02-04 03:08+0100\n"
 "PO-Revision-Date: 2017-09-28 17:57+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -40,6 +40,13 @@ msgstr "QML programska školjka za KPackage"
 #, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "Jedinstveno ime programa (obavezno)"
+
+#: qmlcontrols/kcmcontrols/qml/GridDelegate.qml:108
+#, fuzzy, kde-format
+#| msgctxt "No shortcut defined"
+#| msgid "None"
+msgid "None"
+msgstr "nijedna"
 
 #: qmlcontrols/kquickcontrols/KeySequenceItem.qml:38
 #, kde-format

@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-08-09 02:54+0200\n"
 "PO-Revision-Date: 2015-04-16 09:48+0100\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -50,12 +50,12 @@ msgstr ""
 "Klikněte na tlačítko a poté zadejte zkratku, kterou si přejete v programu.\n"
 "Příklad pro Ctrl+A: držte klávesu Ctrl a stiskněte A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:273
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervovaná klávesová zkratka"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -65,12 +65,12 @@ msgstr ""
 "Klávesa F12 je na Windows rezervována a nelze ji tedy použít jako globální.\n"
 "Vyberte prosím jinou."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:330
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konflikt se standardní zkratkou aplikace"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:334
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -81,29 +81,29 @@ msgstr ""
 "kterou mnoho aplikací využívá.\n"
 "Opravdu si ji přejete použít jako globální klávesovou zkratku?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:336
 #, kde-format
 msgid "Reassign"
 msgstr "Přeřadit"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:378
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Vstup"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:385
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Žádná"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:406
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "Právě stisknutá klávesa není podporována v Qt."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Nepodporovaná klávesa"

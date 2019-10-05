@@ -27,13 +27,12 @@
 #include <QDrag>
 #include <QIcon>
 #include <QGuiApplication>
-#include <QStyleHints>
 #include <QMimeData>
 #include <QMouseEvent>
 #include <QPainter>
-#include <QQmlContext>
-#include <QQuickWindow>
 #include <QQuickItemGrabResult>
+#include <QQuickWindow>
+#include <QStyleHints>
 
 #include <QDebug>
 
@@ -360,7 +359,7 @@ void DeclarativeDragArea::startDrag(const QImage &image)
             pm.fill(Qt::transparent);
             QPainter p(&pm);
             int i = 0;
-            foreach (const QString &ic, icons) {
+            for (const QString &ic : qAsConst(icons)) {
                 p.drawPixmap(QPoint(i * imageSize, 0), QIcon::fromTheme(ic).pixmap(imageSize));
                 i++;
             }

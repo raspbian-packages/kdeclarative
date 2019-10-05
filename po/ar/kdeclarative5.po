@@ -20,8 +20,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-08-09 02:54+0200\n"
 "PO-Revision-Date: 2018-06-09 19:24+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -63,12 +63,12 @@ msgstr ""
 "انقر الزر ثمّ أدخل الاختصار الذي تريد في البرنامج.\n"
 "فمثلًا إن أردت Ctrl+A: أبقِ مفتاح Ctrl مضغوطًا واضغط A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:273
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "اختصار محجوز"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -78,12 +78,12 @@ msgstr ""
 "مفتاح F12 محجوز في «وندوز»، لذا لا يمكن استخدامه كاختصار عمومي.\n"
 "رجاءً اختر غيره."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:330
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "تضارب مع اختصار تطبيق قياسي"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:334
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -94,29 +94,29 @@ msgstr ""
 "التطبيقات.\n"
 "أمتأكّد من استخدامه كاختصار عمومي أيضًا؟"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:336
 #, kde-format
 msgid "Reassign"
 msgstr "أعد التعيين"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:378
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "الدخل"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:385
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "بلا"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:406
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "المفتاح الذي ضغطته لا تدعمه «كيوت»."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
 #, kde-format
 msgid "Unsupported Key"
 msgstr "مفتاح غير مدعوم"
