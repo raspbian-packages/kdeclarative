@@ -11,16 +11,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-08-09 02:54+0200\n"
-"PO-Revision-Date: 2010-12-29 15:32+0530\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"POT-Creation-Date: 2020-04-11 02:47+0200\n"
+"PO-Revision-Date: 2019-12-12 21:03+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Poedit-Country: INDIA\n"
 
 #, kde-format
@@ -31,9 +31,7 @@ msgstr "പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയ�
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-"pravi.a@gmail.com, peter.ani@gmail.com, maxinbjohn@gmail.com, gnuanu@gmail."
-"com, manusmad@gmail.com"
+msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
 
 #: kpackagelauncherqml/main.cpp:43
 #, kde-format
@@ -45,19 +43,19 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "പ്രയോഗത്തിനുള്ള അക്ഷരസഞ്ചയം നിര്‍വ്വചിക്കുന്നു "
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:38
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:53
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:273
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:288
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "പറഞ്ഞുവച്ച കുറുക്കുവഴി"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:289
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -67,12 +65,12 @@ msgstr ""
 "F12 കീ വിന്‍ഡോസില്‍ പറഞ്ഞുവച്ചിട്ടുള്ളതായതിനാല്‍ ആഗോള കുറുക്കുവഴിയായി ഉപയോഗിയ്ക്കാന്‍ സാധ്യമല്ല.\n"
 "ദയവായി മറ്റൊരെണ്ണം തെരഞ്ഞെടുക്കൂ."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:330
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:345
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "നിലവാരത്തിലുള്ള പ്രയോഗ കുറുക്കുവഴിയുമായി പ്രശ്നം"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:346
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -80,29 +78,40 @@ msgid ""
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:336
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:351
 #, kde-format
 msgid "Reassign"
 msgstr "വീണ്ടും ഏല്‍പ്പിക്കുക"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:378
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "ഇന്‍പുട്ട്"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:385
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:400
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "ഒന്നുമല്ല"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:406
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:421
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "നിങ്ങള്‍ അമര്‍ത്തിയ കീ ക്യൂട്ടി പിന്തുണയ്ക്കുന്നതല്ല."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:422
 #, kde-format
 msgid "Unsupported Key"
 msgstr "പിന്തുണയില്ലാത്ത കീ"
+
+#: quickaddons/configmodule.cpp:176
+#, fuzzy, kde-format
+#| msgid "Invalid item."
+msgid "Invalid KPackage '%1'"
+msgstr "തെറ്റായ വസ്തു."
+
+#: quickaddons/configmodule.cpp:182
+#, kde-format
+msgid "No QML file provided"
+msgstr ""

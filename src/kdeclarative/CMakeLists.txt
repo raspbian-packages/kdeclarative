@@ -9,8 +9,16 @@ set(kdeclarative_SRCS
 )
 
 add_library(KF5Declarative ${kdeclarative_SRCS})
-generate_export_header(KF5Declarative EXPORT_FILE_NAME ${KDeclarative_BINARY_DIR}/kdeclarative/kdeclarative_export.h BASE_NAME KDeclarative)
 add_library(KF5::Declarative ALIAS KF5Declarative)
+ecm_generate_export_header(KF5Declarative
+    EXPORT_FILE_NAME ${KDeclarative_BINARY_DIR}/kdeclarative/kdeclarative_export.h
+    BASE_NAME KDeclarative
+    GROUP_BASE_NAME KF
+    VERSION ${KF5_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    DEPRECATION_VERSIONS 5.0 5.45
+    EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
+)
 
 # Apps must include <KDeclarative/File> or <kdeclarative/file.h>
 target_include_directories(KF5Declarative INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KDeclarative>")
@@ -26,7 +34,8 @@ target_link_libraries(KF5Declarative
     KF5::KIOWidgets     #KIO::AccessManager
     KF5::IconThemes #KIconProvider
 )
-target_include_directories(KF5Declarative PUBLIC "$<BUILD_INTERFACE:${KDeclarative_BINARY_DIR};${CMAKE_CURRENT_BINARY_DIR}>")
+set(KDeclarative_BUILD_INCLUDE_DIRS ${KDeclarative_BINARY_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+target_include_directories(KF5Declarative PUBLIC "$<BUILD_INTERFACE:${KDeclarative_BUILD_INCLUDE_DIRS}>")
 
 set_target_properties(KF5Declarative
   PROPERTIES VERSION ${KDECLARATIVE_VERSION_STRING}
@@ -61,6 +70,7 @@ install(FILES
 
 # make available to ecm_add_qch in parent folder
 set(KDeclarative_QCH_SOURCES ${KDeclarative_HEADERS} PARENT_SCOPE)
+set(KDeclarative_QCH_INCLUDE_DIRS ${KDeclarative_BUILD_INCLUDE_DIRS} PARENT_SCOPE)
 
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME KDeclarative LIB_NAME KF5Declarative DEPS "qml" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KDeclarative)

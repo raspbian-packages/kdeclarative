@@ -3,6 +3,7 @@ set(KF5QuickAddons_LIB_SRCS
             managedtexturenode.cpp
             quickviewsharedengine.cpp
             configmodule.cpp
+            managedconfigmodule.cpp
             qtquicksettings.cpp)
 kconfig_add_kcfg_files(KF5QuickAddons_LIB_SRCS renderersettings.kcfgc)
 
@@ -47,6 +48,7 @@ ecm_generate_headers(KQuickAddons_CamelCase_HEADERS
   ManagedTextureNode
   QtQuickSettings
   ConfigModule
+  ManagedConfigModule
   QuickViewSharedEngine
 
   PREFIX KQuickAddons
@@ -75,6 +77,7 @@ install(FILES
 
 # make available to ecm_add_qch in parent folder
 set(KQuickAddons_QCH_SOURCES ${KQuickAddons_HEADERS} PARENT_SCOPE)
+set(KQuickAddons_QCH_INCLUDE_DIRS ${CMAKE_CURRENT_BINARY_DIR} PARENT_SCOPE)
 
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME QuickAddons LIB_NAME KF5QuickAddons DEPS "qml" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/QuickAddons)

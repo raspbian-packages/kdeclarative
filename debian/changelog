@@ -1,4 +1,4 @@
-kdeclarative (5.62.0-1+rpi1) bullseye-staging; urgency=medium
+kdeclarative (5.70.0-1+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
   * Add symbols file hack for raspbian.
@@ -6,7 +6,45 @@ kdeclarative (5.62.0-1+rpi1) bullseye-staging; urgency=medium
   [changes introduced in version 5.27.0-1+rpi1 by Peter Michael Green]
   * Disable testsuite.
 
- -- Raspbian forward porter <root@raspbian.org>  Sat, 05 Oct 2019 23:29:35 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sun, 07 Jun 2020 20:03:55 +0000
+
+kdeclarative (5.70.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Sandro Knauß ]
+  * Bump compat level to 13.
+  * New upstream release (5.70.0).
+  * Update build-deps and deps with the info from cmake.
+  * Wrap long lines in changelog entries: 5.22.0-1.
+  * Set field Upstream-Contact in debian/copyright.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+ -- Sandro Knauß <hefee@debian.org>  Tue, 26 May 2020 23:57:57 +0200
+
+kdeclarative (5.69.0-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Sandro Knauß ]
+  * Bump compat level to 12.
+  * Bump Standards-Version to 4.5.0 (No changes needed).
+  * Get rid of debug-symbol-migration package.
+  * Add Rules-Requires-Root field to control.
+  * New upstream release (5.69.0).
+  * Update build-deps and deps with the info from cmake.
+  * Update symbols from buildds for 5.62.0
+  * Update symbols from build for 5.69.0.
+  * Cleanup Build-Depends.
+  * Enable hardening all.
+  * Update copyright file.
+  * Remove not needed injection of linker flags.
+  * Cleanup copyright file.
+  * Add symbols file for libkf5calendarevents5.
+  * Add Build-Depends-Package to symbols file.
+
+ -- Sandro Knauß <hefee@debian.org>  Thu, 30 Apr 2020 17:56:53 +0200
 
 kdeclarative (5.62.0-1) unstable; urgency=medium
 
@@ -292,7 +330,8 @@ kdeclarative (5.23.0-1) unstable; urgency=medium
 kdeclarative (5.22.0-1) unstable; urgency=medium
 
   [ Maximiliano Curia ]
-  * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
+  * Replace the "Historical name" ddeb-migration by its "Modern, clearer"
+    replacement dbgsym-migration.
   * Add upstream metadata (DEP-12)
   * debian/control: Update Vcs-Browser and Vcs-Git fields
   * Drop qt5-qmltooling-plugins build dependency

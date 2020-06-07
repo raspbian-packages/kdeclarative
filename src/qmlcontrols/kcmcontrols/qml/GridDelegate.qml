@@ -22,7 +22,7 @@ import QtQuick.Controls 2.2 as Controls
 import QtQuick.Templates 2.2 as T2
 import QtGraphicalEffects 1.0
 
-import org.kde.kirigami 2.2 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 
 /**
  * Base delegate for KControlmodules based on Grid views of thumbnails
@@ -38,6 +38,12 @@ T2.ItemDelegate {
      * string for a tooltip for the whole delegate
      */
     property string toolTip
+
+    /**
+     * subtitle: string
+     * optional string for the text to show below the main label
+     */
+    property string subtitle
 
     /**
      * thumbnail: Item
@@ -64,19 +70,24 @@ T2.ItemDelegate {
     height: GridView.view.cellHeight
     hoverEnabled: true
 
-    Rectangle {
+    Kirigami.ShadowedRectangle {
         id: thumbnail
         anchors {
            centerIn: parent
-           verticalCenterOffset: Math.ceil(-label.height/2)
+           verticalCenterOffset: Math.ceil(-labelLayout.height/2)
         }
         width: Kirigami.Settings.isMobile ? delegate.width - Kirigami.Units.gridUnit : Math.min(delegate.GridView.view.implicitCellWidth, delegate.width - Kirigami.Units.gridUnit)
         height: Kirigami.Settings.isMobile ? Math.round((delegate.width - Kirigami.Units.gridUnit) / 1.6)
-                                           : Math.min(delegate.GridView.view.implicitCellHeight - Kirigami.Units.gridUnit * 2,
+                                           : Math.min(delegate.GridView.view.implicitCellHeight - Kirigami.Units.gridUnit * 3,
                                                       delegate.height - Kirigami.Units.gridUnit)
         radius: Kirigami.Units.smallSpacing
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.View
+
+        shadow.xOffset: 0
+        shadow.yOffset: 2
+        shadow.size: 10
+        shadow.color: Qt.rgba(0, 0, 0, 0.3)
 
         color: {
             if (delegate.GridView.isCurrentItem) {
@@ -159,29 +170,40 @@ T2.ItemDelegate {
                 }
             }
         }
-        // Bug 397367: explicitly using "delegate" as otherwise it crashes when switching between KCMs
-        layer.enabled: delegate.GraphicsInfo.api === GraphicsInfo.OpenGL
-        layer.effect: DropShadow {
-            horizontalOffset: 0
-            verticalOffset: 2
-            radius: 10
-            samples: 32
-            color: Qt.rgba(0, 0, 0, 0.3)
-        }
     }
 
-    Controls.Label {
-        id: label
+    ColumnLayout {
+        id: labelLayout
+        spacing: 0
         anchors {
             left: thumbnail.left
             right: thumbnail.right
             top: thumbnail.bottom
-            topMargin: Kirigami.Units.smallSpacing
+            topMargin: caption.visible ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
         }
-        text: delegate.text
-        horizontalAlignment: Text.AlignHCenter
-        elide: Text.ElideRight
+
+        // FIXME: These labels are center-aligned with a maximum width instead
+        // of the more conventional combination of "Layout.fillWidth: true"
+        // and "horizontalAlignment: Text.AlignHCenter" because that combination
+        // triggers https://bugreports.qt.io/browse/QTBUG-49646
+        Controls.Label {
+            Layout.alignment: Qt.AlignHCenter
+            Layout.maximumWidth: labelLayout.width
+            text: delegate.text
+            elide: Text.ElideRight
+        }
+        Controls.Label {
+            id: caption
+            Layout.alignment: Qt.AlignHCenter
+            Layout.maximumWidth: labelLayout.width
+            visible: delegate.subtitle.length > 0
+            opacity: 0.6
+            text: delegate.subtitle
+            font.pointSize: theme.smallestFont.pointSize
+            elide: Text.ElideRight
+        }
     }
+
     Controls.ToolTip.delay: 1000
     Controls.ToolTip.timeout: 5000
     Controls.ToolTip.visible: hovered && delegate.toolTip.length > 0

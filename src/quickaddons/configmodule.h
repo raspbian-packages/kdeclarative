@@ -121,16 +121,7 @@ class ConfigModulePrivate;
  * }
  * \endcode
  *
- * If you want to make the ConfigModule available only conditionally (i.e. show in
- * the list of available modules only if some test succeeds) then you can use
- * Hidden in the .desktop file. An example:
- * \code
- * Hidden[$e]=$(if test -e /dev/js*; then echo "false"; else echo "true"; fi)
- * \endcode
- * The example executes the given code in a shell and uses the stdout output for
- * the Hidden value (so it's either Hidden=true or Hidden=false).
- *
- * See http://techbase.kde.org/Development/Tutorials/KCM_HowTo
+ * See https://techbase.kde.org/Development/Tutorials/KCM_HowTo
  * for more detailed documentation.
  *
  */
@@ -141,6 +132,7 @@ class QUICKADDONS_EXPORT ConfigModule : public QObject
     Q_PROPERTY(QQuickItem *mainUi READ mainUi CONSTANT)
     Q_PROPERTY(KQuickAddons::ConfigModule::Buttons buttons READ buttons WRITE setButtons NOTIFY buttonsChanged)
     Q_PROPERTY(bool needsSave READ needsSave WRITE setNeedsSave NOTIFY needsSaveChanged)
+    Q_PROPERTY(bool representsDefaults READ representsDefaults WRITE setRepresentsDefaults NOTIFY representsDefaultsChanged)
     Q_PROPERTY(QString name READ name CONSTANT)
     Q_PROPERTY(QString description READ description CONSTANT)
     Q_PROPERTY(QString quickHelp READ quickHelp WRITE setQuickHelp NOTIFY quickHelpChanged)
@@ -236,9 +228,21 @@ public:
 
 
     /**
-     * @deturn the qml engine that built the main config UI
+     * @return the qml engine that built the main config UI
      */
     QQmlEngine *engine() const;
+
+    /**
+     * The status of the mainUi component.
+     * @since 5.64
+     */
+    QQmlComponent::Status status() const;
+
+    /**
+     * The error string in case the mainUi failed to load.
+     * @return 5.64
+     */
+    QString errorString() const;
 
 //QML property accessors
 
@@ -275,6 +279,17 @@ public:
      * True when the module has something changed and needs save.
      */
     bool needsSave();
+
+    /**
+     * Set this property to true when the user sets the state of the module
+     * to the default settings (e.g. clicking Defaults would do nothing).
+     */
+    void setRepresentsDefaults(bool defaults);
+
+    /**
+     * True when the module state represents the default settings.
+     */
+    bool representsDefaults();
 
     /**
      * Sets the buttons to display.
@@ -471,7 +486,7 @@ public Q_SLOTS:
     void push(const QString &fileName, const QVariantMap &propertyMap = QVariantMap());
 
     /**
-     * 
+     *
      */
     void push(QQuickItem *item);
 
@@ -481,6 +496,15 @@ public Q_SLOTS:
      */
     void pop();
 
+    /**
+     * Ask the shell to show a passive notification
+     * @param message The message text to dispalay
+     * @param timeout (optional) the timeout, either in milliseconds or the strings "short" and "long"
+     * @param actionText (optional) The notification can have a button with this text
+     * @param callBack (optional) If actionText is set and callBack is a JavaScript function, it will be called when the use clicks the button.
+     * @since 5.68
+     */
+    void showPassiveNotification(const QString &message, const QVariant &timeout = QVariant(), const QString &actionText = QString(), const QJSValue &callBack = QJSValue());
 Q_SIGNALS:
 
     /**
@@ -512,6 +536,13 @@ Q_SIGNALS:
      * keep track of unsaved changes.
      */
     void needsSaveChanged();
+
+    /**
+     * Indicate that the state of the modules contents has changed
+     * in a way that it might represents the defaults settings, or
+     * stopped representing them.
+     */
+    void representsDefaultsChanged();
 
     /**
      * Emits this signal whenever the need for root authorization to save changes.
@@ -561,6 +592,12 @@ Q_SIGNALS:
      * @since 5.53
      */
     void depthChanged(int index);
+
+    /**
+     * Emitted when the kcm wants the shell to display a passive notification
+     * @since 5.68
+     */
+    void passiveNotificationRequested(const QString &message, const QVariant &timeout, const QString &actionText, const QJSValue &callBack);
 
 private:
     ConfigModulePrivate *const d;

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-08-09 02:54+0200\n"
+"POT-Creation-Date: 2020-04-11 02:47+0200\n"
 "PO-Revision-Date: 2014-03-26 19:20+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "Definește fontul aplicației"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:38
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:53
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -54,12 +54,12 @@ msgstr ""
 "aplicație.\n"
 "De exemplu pentru un Ctrl+a: tineți tasta Ctrl apăsată și tastați a."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:273
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:288
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Scurtătură rezervată"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:289
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -70,12 +70,12 @@ msgstr ""
 "global.\n"
 "Alegeți alta."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:330
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:345
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Conflict cu un accelerator standard de aplicație"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:346
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -86,29 +86,40 @@ msgstr ""
 "care o folosesc unele aplicații.\n"
 "Sigur doriți să o utilizați și pe aceasta ca globală?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:336
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:351
 #, kde-format
 msgid "Reassign"
 msgstr "Reatribuie"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:378
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Introduceți"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:385
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:400
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Niciuna"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:406
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:421
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "Tasta pe care tocmai ați apăsat-o nu este susținută de Qt."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:422
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Tastă nesuportată"
+
+#: quickaddons/configmodule.cpp:176
+#, fuzzy, kde-format
+#| msgid "Invalid item."
+msgid "Invalid KPackage '%1'"
+msgstr "Element nevalid."
+
+#: quickaddons/configmodule.cpp:182
+#, kde-format
+msgid "No QML file provided"
+msgstr ""

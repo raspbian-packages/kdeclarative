@@ -63,17 +63,19 @@ QQmlEngine *KDeclarative::declarativeEngine() const
     return d->declarativeEngine.data();
 }
 
-#ifndef KDECLARATIVE_NO_DEPRECATED
+#if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 0)
 void KDeclarative::initialize()
 {
 }
 #endif
 
+#if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 45)
 void KDeclarative::setupBindings()
 {
     setupContext();
     setupEngine(d->declarativeEngine.data());
 }
+#endif
 
 void KDeclarative::setupContext()
 {
@@ -164,7 +166,11 @@ QStringList KDeclarative::runtimePlatform()
 {
     if (KDeclarativePrivate::s_runtimePlatform.isEmpty()) {
         const QString env = QString::fromLocal8Bit(getenv("PLASMA_PLATFORM"));
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
         KDeclarativePrivate::s_runtimePlatform = QStringList(env.split(QLatin1Char(':'), QString::SkipEmptyParts));
+#else
+        KDeclarativePrivate::s_runtimePlatform = QStringList(env.split(QLatin1Char(':'), Qt::SkipEmptyParts));
+#endif
         if (KDeclarativePrivate::s_runtimePlatform.isEmpty()) {
             KConfigGroup cg(KSharedConfig::openConfig(), "General");
             KDeclarativePrivate::s_runtimePlatform = cg.readEntry(QStringLiteral("runtimePlatform"), KDeclarativePrivate::s_runtimePlatform);

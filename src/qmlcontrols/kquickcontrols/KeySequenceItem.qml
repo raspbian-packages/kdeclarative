@@ -10,12 +10,27 @@ RowLayout {
     property alias multiKeyShortcutsAllowed: _helper.multiKeyShortcutsAllowed
     property alias keySequence: _helper.keySequence
 
+    /**
+     * This signal is emitted after the user introduces a new key sequence
+     *
+     * @since 5.68
+     */
+    signal captureFinished()
+
+    /**
+     * Start capturing a key sequence. This equivalent to the user clicking on the main button of the item
+     * @since 5.70
+     */
+    function startCapturing() {
+        mainButton.checked = true
+    }
 
     KQuickControlsPrivate.KeySequenceHelper {
         id: _helper
 
         onCaptureFinished: {
             mainButton.checked = false;
+            parent.captureFinished();
         }
     }
 

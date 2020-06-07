@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.54.0 amd64
+# SymbolsHelper-Confirmed: 5.69.0 amd64
 libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
 * Build-Depends-Package: libkf5declarative-dev
  _ZN12KQuickAddons12ConfigModule10pagePushedEP10QQuickItem@Base 5.53.0
@@ -18,15 +18,20 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZN12KQuickAddons12ConfigModule16staticMetaObjectE@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule17setAuthActionNameERK7QString@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule18columnWidthChangedEi@Base 5.53.0
+ _ZN12KQuickAddons12ConfigModule18representsDefaultsEv@Base 5.69.0
  _ZN12KQuickAddons12ConfigModule18setRootOnlyMessageERK7QString@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule19currentIndexChangedEi@Base 5.54.0
  _ZN12KQuickAddons12ConfigModule21authActionNameChangedEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule21qmlAttachedPropertiesEP7QObject@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule21setNeedsAuthorizationEb@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule21setRepresentsDefaultsEb@Base 5.69.0
  _ZN12KQuickAddons12ConfigModule21setUseRootOnlyMessageEb@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule22rootOnlyMessageChangedEv@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule23showPassiveNotificationERK7QStringRK8QVariantS3_RK8QJSValue@Base 5.69.0
  _ZN12KQuickAddons12ConfigModule25needsAuthorizationChangedEv@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule25representsDefaultsChangedEv@Base 5.69.0
  _ZN12KQuickAddons12ConfigModule25useRootOnlyMessageChangedEv@Base 5.8.0+git20150324.0130+15.04
+ _ZN12KQuickAddons12ConfigModule28passiveNotificationRequestedERK7QStringRK8QVariantS3_RK8QJSValue@Base 5.69.0
  _ZN12KQuickAddons12ConfigModule3popEv@Base 5.53.0
  _ZN12KQuickAddons12ConfigModule4loadEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule4pushEP10QQuickItem@Base 5.54.0
@@ -45,6 +50,23 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZN12KQuickAddons12ConfigModuleD1Ev@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModuleD2Ev@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons15QtQuickSettings4initEv@Base 5.26.0
+ _ZN12KQuickAddons19ManagedConfigModule11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModule11qt_metacastEPKc@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModule15settingsChangedEv@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModule16registerSettingsEP19KCoreConfigSkeleton@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModule16staticMetaObjectE@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModule4loadEv@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModule4saveEv@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModule8defaultsEv@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleC1EP7QObjectRK5QListI8QVariantE@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleC1EPK10KAboutDataP7QObjectRK5QListI8QVariantE@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleC1ERK15KPluginMetaDataP7QObjectRK5QListI8QVariantE@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleC2EP7QObjectRK5QListI8QVariantE@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleC2EPK10KAboutDataP7QObjectRK5QListI8QVariantE@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleC2ERK15KPluginMetaDataP7QObjectRK5QListI8QVariantE@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleD0Ev@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleD1Ev@Base 5.69.0
+ _ZN12KQuickAddons19ManagedConfigModuleD2Ev@Base 5.69.0
  _ZN12KQuickAddons21QuickViewSharedEngine11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.12.0
  _ZN12KQuickAddons21QuickViewSharedEngine11qt_metacastEPKc@Base 5.12.0
  _ZN12KQuickAddons21QuickViewSharedEngine11resizeEventEP12QResizeEvent@Base 5.12.0
@@ -72,6 +94,7 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZNK12KQuickAddons12ConfigModule10metaObjectEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule11columnWidthEv@Base 5.53.0
  _ZNK12KQuickAddons12ConfigModule11descriptionEv@Base 5.41.0
+ _ZNK12KQuickAddons12ConfigModule11errorStringEv@Base 5.69.0
  _ZNK12KQuickAddons12ConfigModule12currentIndexEv@Base 5.54.0
  _ZNK12KQuickAddons12ConfigModule14authActionNameEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule15rootOnlyMessageEv@Base 5.8.0+git20150324.0130+15.04
@@ -80,9 +103,13 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZNK12KQuickAddons12ConfigModule4nameEv@Base 5.41.0
  _ZNK12KQuickAddons12ConfigModule5depthEv@Base 5.54.0
  _ZNK12KQuickAddons12ConfigModule6engineEv@Base 5.8.0+git20150324.0130+15.04
+ _ZNK12KQuickAddons12ConfigModule6statusEv@Base 5.69.0
  _ZNK12KQuickAddons12ConfigModule7buttonsEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule9aboutDataEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule9quickHelpEv@Base 5.8.0+git20150324.0130+15.04
+ _ZNK12KQuickAddons19ManagedConfigModule10isDefaultsEv@Base 5.69.0
+ _ZNK12KQuickAddons19ManagedConfigModule10metaObjectEv@Base 5.69.0
+ _ZNK12KQuickAddons19ManagedConfigModule12isSaveNeededEv@Base 5.69.0
  _ZNK12KQuickAddons21QuickViewSharedEngine10metaObjectEv@Base 5.12.0
  _ZNK12KQuickAddons21QuickViewSharedEngine10resizeModeEv@Base 5.12.0
  _ZNK12KQuickAddons21QuickViewSharedEngine10rootObjectEv@Base 5.12.0
@@ -96,12 +123,15 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZNK12KQuickAddons21QuickViewSharedEngine8sizeHintEv@Base 5.12.0
  _ZTI18ManagedTextureNode@Base 5.3.0+git20141016.0334
  _ZTIN12KQuickAddons12ConfigModuleE@Base 5.8.0+git20150324.0130+15.04
+ _ZTIN12KQuickAddons19ManagedConfigModuleE@Base 5.69.0
  _ZTIN12KQuickAddons21QuickViewSharedEngineE@Base 5.12.0
  _ZTS18ManagedTextureNode@Base 5.3.0+git20141016.0334
  _ZTSN12KQuickAddons12ConfigModuleE@Base 5.8.0+git20150324.0130+15.04
+ _ZTSN12KQuickAddons19ManagedConfigModuleE@Base 5.69.0
  _ZTSN12KQuickAddons21QuickViewSharedEngineE@Base 5.12.0
  _ZTV18ManagedTextureNode@Base 5.3.0+git20141016.0334
  _ZTVN12KQuickAddons12ConfigModuleE@Base 5.8.0+git20150324.0130+15.04
+ _ZTVN12KQuickAddons19ManagedConfigModuleE@Base 5.69.0
  _ZTVN12KQuickAddons21QuickViewSharedEngineE@Base 5.12.0
  _ZZZN10KAboutDataC4ERK7QStringS2_S2_S2_N13KAboutLicense10LicenseKeyES2_S2_S2_S2_Ed_NKUlvE_clEvE15qstring_literal@Base 5.18.0
  (c++)"non-virtual thunk to KQuickAddons::QuickViewSharedEngine::~QuickViewSharedEngine()@Base" 5.12.0

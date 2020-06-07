@@ -23,11 +23,10 @@ import org.kde.kirigami 2.2 as Kirigami
 import org.kde.kcm 1.1 as KCM
 
 /**
- * This component is intended to be used as the root item for most of the
- * KControl modules which are based upon a grid view of thumbnails, such as theme
- * or wallpaper selectors.
- * It has a big GridView as its main item, the implementation is free to add extra
- * content in the header or footer properties.
+ * This component is intended to be used as the root item for KCMs that are based upon
+ * a grid view of thumbnails, such as the theme or wallpaper selectors.
+ * It contains a GridView as its main item.
+ * It is possible to specify a header and footer component.
  * @code
  * import org.kde.kcm 1.1 as KCM
  * KCM.GridViewKCM {
@@ -85,10 +84,12 @@ Kirigami.Page {
 
     header: QtControls.Control {
         id: headerParent
+        height: contentItem ? implicitHeight : 0
     }
 
     footer: QtControls.Control {
         id: footerParent
+        height: contentItem ? implicitHeight : 0
     }
     Component.onCompleted: {
         if (footer && footer != footerParent) {
@@ -96,7 +97,6 @@ Kirigami.Page {
 
             footerParent.contentItem = f
             footer = footerParent
-            f.visible = true
             f.parent = footerParent
         }
 
@@ -105,11 +105,10 @@ Kirigami.Page {
 
             headerParent.contentItem = f
             header = headerParent
-            f.visible = true
             f.parent = headerParent
         }
     }
-    
+
     KCM.GridView {
         id: scroll
         anchors.fill: parent

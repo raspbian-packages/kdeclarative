@@ -32,6 +32,7 @@
 #include <QQmlContext>
 #include <QQuickItem>
 #include <QQmlEngine>
+#include <QQmlFileSelector>
 
 #include <kaboutdata.h>
 #include <klocalizedstring.h>
@@ -53,7 +54,8 @@ public:
         _about(nullptr),
         _useRootOnlyMessage(false),
         _needsAuthorization(false),
-        _needsSave(false)
+        _needsSave(false),
+        _representsDefaults(false)
     {
     }
 
@@ -65,6 +67,7 @@ public:
     const KAboutData *_about;
     QString _rootOnlyMessage;
     QString _quickHelp;
+    QString _errorString;
     QList<QQuickItem *> subPages;
     int _columnWidth = -1;
     int currentIndex = 0;
@@ -72,6 +75,7 @@ public:
 
     bool _needsAuthorization : 1;
     bool _needsSave  :1;
+    bool _representsDefaults :1;
     QString _authActionName;
 
     static QHash<QObject *, ConfigModule *> s_rootObjects;
@@ -145,6 +149,8 @@ QQuickItem *ConfigModule::mainUi()
         return qobject_cast<QQuickItem *>(d->_qmlObject->rootObject());
     }
 
+    d->_errorString.clear();
+
     // if we have a qml context, hook up to it and use its engine
     // this ensure that in e.g. Plasma config dialogs that use a different engine
     // so they can have different QtQuick Controls styles, we don't end up using
@@ -167,20 +173,28 @@ QQuickItem *ConfigModule::mainUi()
     package.setPath(aboutData()->componentName());
 
     if (!package.isValid()) {
+        d->_errorString = i18n("Invalid KPackage '%1'", aboutData()->componentName());
         qWarning() << "Error loading the module" << aboutData()->componentName() << ": invalid KPackage";
         return nullptr;
     }
 
-    if (!package.filePath("mainscript").isEmpty()) {
-        d->_qmlObject->setSource(package.fileUrl("mainscript"));
-        d->_qmlObject->rootContext()->setContextProperty(QStringLiteral("kcm"), this);
-        d->_qmlObject->completeInitialization();
-
-        return qobject_cast<QQuickItem *>(d->_qmlObject->rootObject());
-    } else {
+    if (package.filePath("mainscript").isEmpty()) {
+        d->_errorString = i18n("No QML file provided");
         qWarning() << "Error loading the module" << aboutData()->componentName() << ": no QML file provided";
         return nullptr;
     }
+
+    new QQmlFileSelector(d->_qmlObject->engine(), d->_qmlObject->engine());
+    d->_qmlObject->setSource(package.fileUrl("mainscript"));
+    d->_qmlObject->rootContext()->setContextProperty(QStringLiteral("kcm"), this);
+    d->_qmlObject->completeInitialization();
+
+    if (d->_qmlObject->status() != QQmlComponent::Ready) {
+        d->_errorString = d->_qmlObject->mainComponent()->errorString();
+        return nullptr;
+    }
+
+    return qobject_cast<QQuickItem *>(d->_qmlObject->rootObject());
 }
 
 void ConfigModule::push(const QString &fileName, const QVariantMap &propertyMap)
@@ -240,6 +254,11 @@ void ConfigModule::pop()
     page->deleteLater();
 
     setCurrentIndex(qMin(d->currentIndex, depth() - 1));
+}
+
+void ConfigModule::showPassiveNotification(const QString &message, const QVariant &timeout, const QString &actionText, const QJSValue &callBack)
+{
+    emit passiveNotificationRequested(message, timeout, actionText, callBack);
 }
 
 ConfigModule::Buttons ConfigModule::buttons() const
@@ -350,6 +369,20 @@ QQmlEngine *ConfigModule::engine() const
     return d->_qmlObject->engine();
 }
 
+QQmlComponent::Status ConfigModule::status() const
+{
+    if (!d->_qmlObject) {
+        return QQmlComponent::Null;
+    }
+
+    return d->_qmlObject->status();
+}
+
+QString ConfigModule::errorString() const
+{
+    return d->_errorString;
+}
+
 void ConfigModule::load()
 {
     setNeedsSave(false);
@@ -437,6 +470,21 @@ void ConfigModule::setNeedsSave(bool needs)
 bool ConfigModule::needsSave()
 {
     return d->_needsSave;
+}
+
+void ConfigModule::setRepresentsDefaults(bool defaults)
+{
+    if (defaults == d->_representsDefaults) {
+        return;
+    }
+
+    d->_representsDefaults = defaults;
+    emit representsDefaultsChanged();
+}
+
+bool ConfigModule::representsDefaults()
+{
+    return d->_representsDefaults;
 }
 
 }

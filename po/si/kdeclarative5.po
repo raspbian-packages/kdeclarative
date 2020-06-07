@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-08-09 02:54+0200\n"
+"POT-Creation-Date: 2020-04-11 02:47+0200\n"
 "PO-Revision-Date: 2011-07-25 07:45+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -39,19 +39,19 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "යෙදුම් අක්‍ෂර දක්වන්න කරන්න"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:38
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:53
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:273
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:288
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "වෙන් කළ කෙටි මාර්‍ගය"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:289
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -59,12 +59,12 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:330
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:345
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "සම්මත වැඩසටහන් කෙටි මඟ සමඟ ගැටේ"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:346
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -74,30 +74,41 @@ msgstr ""
 "'%1' යතුරු සංයෝජනය සමහර වැඩසටහන් භාවිතා කරන \"%2\" සම්මත ක්‍රියාව සඳහාද භාවිතා කරයි.\n"
 "ඔබට ඇත්ත වශයෙන්ම එය ලෝකව්‍යාප්ත කෙටි මඟක් වශයෙනුත් භාවිතා කිරීමට අවශ්‍යද?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:336
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:351
 #, kde-format
 msgid "Reassign"
 msgstr "යළි පැවරීම"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:378
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "ප්‍රධානය"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:385
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:400
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "කිසිවක් නැත"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:406
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:421
 #, fuzzy, kde-format
 #| msgid "The key you just pressed isn't supported by Qt."
 msgid "The key you just pressed is not supported by Qt."
 msgstr "ඔබ දැන් එබූ යතුර Qt මඟින් සහය දක්වන්නේ නැත."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:422
 #, kde-format
 msgid "Unsupported Key"
 msgstr "සහාය නොදන්නා යතුරු"
+
+#: quickaddons/configmodule.cpp:176
+#, fuzzy, kde-format
+#| msgid "InvalidCA"
+msgid "Invalid KPackage '%1'"
+msgstr "InvalidCA"
+
+#: quickaddons/configmodule.cpp:182
+#, kde-format
+msgid "No QML file provided"
+msgstr ""

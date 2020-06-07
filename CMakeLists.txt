@@ -1,18 +1,18 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(KF5_VERSION "5.62.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.62.0") # handled by release scripts
+set(KF5_VERSION "5.70.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.70.0") # handled by release scripts
 project(KDeclarative VERSION ${KF5_VERSION})
 
 # Dependencies
 include(FeatureSummary)
-find_package(ECM 5.62.0  NO_MODULE)
-set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
+find_package(ECM 5.70.0  NO_MODULE)
+set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 
-set(REQUIRED_QT_VERSION 5.11.0)
+set(REQUIRED_QT_VERSION 5.12.0)
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED Qml Quick Gui)
 include(KDEInstallDirs)
@@ -31,17 +31,20 @@ find_package(KF5Package ${KF5_DEP_VERSION} REQUIRED)
 
 #########################################################################
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054400)
 
 #add_definitions(-Wno-deprecated)
 
 # Includes
 
-include(GenerateExportHeader)
+include(ECMGenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(CMakePackageConfigHelpers)
 include(ECMAddQch)
+
+set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
 option(BUILD_EXAMPLES "Build and install examples." OFF)
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
@@ -64,7 +67,7 @@ endif()
 
 find_package(epoxy)
 set_package_properties(epoxy PROPERTIES DESCRIPTION "libepoxy"
-                       URL "http://github.com/anholt/libepoxy"
+                       URL "https://github.com/anholt/libepoxy"
                        TYPE OPTIONAL
                        PURPOSE "OpenGL dispatch library"
                       )
