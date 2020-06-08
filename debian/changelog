@@ -6,7 +6,7 @@ kdeclarative (5.70.0-1+rpi1) bullseye-staging; urgency=medium
   [changes introduced in version 5.27.0-1+rpi1 by Peter Michael Green]
   * Disable testsuite.
 
- -- Raspbian forward porter <root@raspbian.org>  Sun, 07 Jun 2020 20:03:55 +0000
+ -- Peter Michael Green <plugwash@raspbian.org>  Mon, 08 Jun 2020 01:14:35 +0000
 
 kdeclarative (5.70.0-1) unstable; urgency=medium
 
