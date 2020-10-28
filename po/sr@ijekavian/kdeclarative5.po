@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2019-02-04 03:08+0100\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-12 03:04+0200\n"
 "PO-Revision-Date: 2017-09-28 17:57+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -41,14 +41,7 @@ msgstr "КуМЛ програмска шкољка за KPackage"
 msgid "The unique name of the application (mandatory)"
 msgstr "Јединствено име програма (обавезно)"
 
-#: qmlcontrols/kcmcontrols/qml/GridDelegate.qml:108
-#, fuzzy, kde-format
-#| msgctxt "No shortcut defined"
-#| msgid "None"
-msgid "None"
-msgstr "ниједна"
-
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:38
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:58
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -57,12 +50,12 @@ msgstr ""
 "Кликните на дугме, па унесите пречицу као што бисте у програму.\n"
 "Примјер за Ctrl+A: држите тастер Ctrl и притисните A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:276
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:288
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Резервисана пречица"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:277
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:289
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -73,12 +66,12 @@ msgstr ""
 "пречица.\n"
 "Изаберите неку другу."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:333
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:345
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Сукоб са стандардном програмском пречицом"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:334
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:346
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -89,29 +82,39 @@ msgstr ""
 "користе неки програми.\n"
 "Желите ли заиста да је користите и као глобалну пречицу?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:339
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:351
 #, kde-format
 msgid "Reassign"
 msgstr "Поново додијели"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:381
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:393
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "унесите..."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:388
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:400
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "ниједна"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:409
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:421
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "КуТ не подржава тастер који сте управо притиснули."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:410
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:422
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Неподржани тастер"
+
+#: quickaddons/configmodule.cpp:176
+#, kde-format
+msgid "Invalid KPackage '%1'"
+msgstr ""
+
+#: quickaddons/configmodule.cpp:182
+#, kde-format
+msgid "No QML file provided"
+msgstr ""

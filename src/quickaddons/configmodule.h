@@ -1,27 +1,13 @@
 /*
-   This file is part of the KDE libraries
+    This file is part of the KDE libraries
 
-   Copyright (c) 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
-   Copyright (c) 2001 Michael Goffioul <kdeprint@swing.be>
-   Copyright (C) 2004 Frans Englich <frans.englich@telia.com>
-   Copyright (C) 2009 Dario Freddi <drf@kde.org>
-   Copyright (C) 2015 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
+    SPDX-FileCopyrightText: 2001 Michael Goffioul <kdeprint@swing.be>
+    SPDX-FileCopyrightText: 2004 Frans Englich <frans.englich@telia.com>
+    SPDX-FileCopyrightText: 2009 Dario Freddi <drf@kde.org>
+    SPDX-FileCopyrightText: 2015 Marco Martin <mart@kde.org>
 
-   This library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Library General Public
-   License as published by the Free Software Foundation; either
-   version 2 of the License, or (at your option) any later version.
-
-   This library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Library General Public License for more details.
-
-   You should have received a copy of the GNU Library General Public License
-   along with this library; see the file COPYING.LIB.  If not, write to
-   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-   Boston, MA 02110-1301, USA.
-
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #ifndef CONFIGMODULE_H
@@ -142,6 +128,7 @@ class QUICKADDONS_EXPORT ConfigModule : public QObject
     Q_PROPERTY(int columnWidth READ columnWidth WRITE setColumnWidth NOTIFY columnWidthChanged)
     Q_PROPERTY(int depth READ depth NOTIFY depthChanged)
     Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
+    Q_PROPERTY(int defaultsIndicatorsVisible READ defaultsIndicatorsVisible WRITE setDefaultsIndicatorsVisible NOTIFY defaultsIndicatorsVisibleChanged)
 
 public:
 
@@ -439,6 +426,12 @@ public:
 
     static ConfigModule *qmlAttachedProperties(QObject *object);
 
+    /**
+     * @returns defaultness indicator visibility
+     * @since 5.73
+     */
+    bool defaultsIndicatorsVisible() const;
+
 public Q_SLOTS:
     /**
      * Load the configuration data into the module.
@@ -480,7 +473,7 @@ public Q_SLOTS:
     virtual void defaults();
 
     /**
-     * Push a new sub page in the KCM hyerarchy: pages will be seen as a Kirigami PageRow
+     * Push a new sub page in the KCM hierarchy: pages will be seen as a Kirigami PageRow
      * @since 5.50
      */
     void push(const QString &fileName, const QVariantMap &propertyMap = QVariantMap());
@@ -491,20 +484,28 @@ public Q_SLOTS:
     void push(QQuickItem *item);
 
     /**
-     * pop the last page of the KCM hyerarchy
+     * pop the last page of the KCM hierarchy
      * @since 5.50
      */
     void pop();
 
     /**
      * Ask the shell to show a passive notification
-     * @param message The message text to dispalay
+     * @param message The message text to display
      * @param timeout (optional) the timeout, either in milliseconds or the strings "short" and "long"
      * @param actionText (optional) The notification can have a button with this text
      * @param callBack (optional) If actionText is set and callBack is a JavaScript function, it will be called when the use clicks the button.
      * @since 5.68
      */
     void showPassiveNotification(const QString &message, const QVariant &timeout = QVariant(), const QString &actionText = QString(), const QJSValue &callBack = QJSValue());
+
+    /**
+     * Change defaultness indicator visibility
+     * @param visible
+     * @since 5.73
+     */
+    void setDefaultsIndicatorsVisible(bool visible);
+
 Q_SIGNALS:
 
     /**
@@ -598,6 +599,12 @@ Q_SIGNALS:
      * @since 5.68
      */
     void passiveNotificationRequested(const QString &message, const QVariant &timeout, const QString &actionText, const QJSValue &callBack);
+
+    /**
+     * Emitted when kcm need to display indicators for field with non default value
+     * @since 5.73
+     */
+    void defaultsIndicatorsVisibleChanged();
 
 private:
     ConfigModulePrivate *const d;

@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: kdeclarative
-Source: https://projects.kde.org/projects/frameworks/kdeclarative
+Source: https://invent.kde.org/frameworks/kdeclarative
 Upstream-Contact: kde-frameworks-devel@kde.org
 
 Files: *

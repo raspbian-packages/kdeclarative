@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-11 02:47+0200\n"
+"POT-Creation-Date: 2020-09-06 02:09+0200\n"
 "PO-Revision-Date: 2013-11-08 01:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -35,18 +35,18 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sairan@computer.org"
 
-#: kpackagelauncherqml/main.cpp:43
+#: kpackagelauncherqml/main.cpp:30
 #, kde-format
 msgid "KPackage QML application shell"
 msgstr ""
 
-#: kpackagelauncherqml/main.cpp:50
+#: kpackagelauncherqml/main.cpp:37
 #, fuzzy, kde-format
 #| msgid "defines the application font"
 msgid "The unique name of the application (mandatory)"
 msgstr "қолданбаның қаріпін анықтайды"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:53
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -60,12 +60,12 @@ msgstr ""
 "Мысалы, Ctrl+a: дегенді келтіру үшін 'Ctrl' пернені басып тұрып \n"
 "'a' пернесін басыңыз."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:288
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Арналған тіркесімі"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:289
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -76,12 +76,12 @@ msgstr ""
 "жарамайды.\n"
 "Басқа пернені таңдаңыз."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:345
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Қолданбаның стандартты перне тіркесімімен қайшылық"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:346
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -92,40 +92,40 @@ msgstr ""
 "байланысқан.\n"
 "Оны жалпы жүйелік тіркесімі ретінде пайдаланбақсыз ба?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:351
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
 #, kde-format
 msgid "Reassign"
 msgstr "Ауыстыру"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:393
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Енгізу"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:400
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Жоқ"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:421
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "Жаңа ғана басқан пернені Qt танымайды."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:422
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Танымайтын перне"
 
-#: quickaddons/configmodule.cpp:176
+#: quickaddons/configmodule.cpp:164
 #, fuzzy, kde-format
 #| msgid "Invalid item."
 msgid "Invalid KPackage '%1'"
 msgstr "Жарамсыз нәрсе."
 
-#: quickaddons/configmodule.cpp:182
+#: quickaddons/configmodule.cpp:170
 #, kde-format
 msgid "No QML file provided"
 msgstr ""

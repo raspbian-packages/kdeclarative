@@ -1,24 +1,12 @@
 /*
- *   Copyright 2013 Marco Martin <notmart@gmail.com>
- *
- *   This program is free software; you can redistribute it and/or modify
- *   it under the terms of the GNU Library General Public License as
- *   published by the Free Software Foundation; either version 2, or
- *   (at your option) any later version.
- *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU General Public License for more details
- *
- *   You should have received a copy of the GNU Library General Public
- *   License along with this program; if not, write to the
- *   Free Software Foundation, Inc.,
- *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- */
+    SPDX-FileCopyrightText: 2013 Marco Martin <notmart@gmail.com>
+    SPDX-FileCopyrightText: 2020 David Edmundson <davidedmundson@kde.org>
 
-#ifndef CONFIGPROPERTYMAP_P
-#define CONFIGPROPERTYMAP_P
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
+
+#ifndef CONFIGPROPERTYMAP_H
+#define CONFIGPROPERTYMAP_H
 
 #include <QQmlPropertyMap>
 
@@ -33,7 +21,8 @@ class ConfigPropertyMapPrivate;
 /**
  * @class KDeclarative::ConfigPropertyMap configpropertymap.h KDeclarative/ConfigPropertyMap
  *
- * TODO
+ * An object that (optionally) automatically saves changes in a
+ * property map to a configuration object (e.g. a KConfig file).
  */
 class KDECLARATIVE_EXPORT ConfigPropertyMap : public QQmlPropertyMap
 {
@@ -58,6 +47,22 @@ public:
      * @since 5.65
      */
     void setAutosave(bool autosave);
+
+    /**
+     * Whether notifications on config changes are enabled. Disabled by default.
+     * @see KConfigBase::Notify
+     * @return true if writes send (dbus) notifications
+     * @since 5.73
+     */
+    bool isNotify() const;
+
+    /**
+     * Enable or disable notifications on config changes.
+     * @see KConfigBase::Notify
+     * @param notify whether to send notifications
+     * @since 5.73
+     */
+    void setNotify(bool notify);
 
     /**
      * @brief Whether the value at the given key is immutable

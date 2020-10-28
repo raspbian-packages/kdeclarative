@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.69.0 amd64
+# SymbolsHelper-Confirmed: 5.74.0 amd64
 libKF5Declarative.so.5 libkf5declarative5 #MINVER#
 * Build-Depends-Package: libkf5declarative-dev
  _ZN12KDeclarative12KDeclarative10initializeEv@Base 4.96.0
@@ -21,6 +21,7 @@ libKF5Declarative.so.5 libkf5declarative5 #MINVER#
  _ZN12KDeclarative17ConfigPropertyMap11setAutosaveEb@Base 5.69.0
  _ZN12KDeclarative17ConfigPropertyMap11updateValueERK7QStringRK8QVariant@Base 5.16.0
  _ZN12KDeclarative17ConfigPropertyMap16staticMetaObjectE@Base 4.96.0
+ _ZN12KDeclarative17ConfigPropertyMap9setNotifyEb@Base 5.74.0
  _ZN12KDeclarative17ConfigPropertyMapC1EP19KCoreConfigSkeletonP7QObject@Base 4.96.0
  _ZN12KDeclarative17ConfigPropertyMapC2EP19KCoreConfigSkeletonP7QObject@Base 4.96.0
  _ZN12KDeclarative17ConfigPropertyMapD0Ev@Base 4.96.0
@@ -64,6 +65,7 @@ libKF5Declarative.so.5 libkf5declarative5 #MINVER#
  _ZNK12KDeclarative17ConfigPropertyMap10isAutosaveEv@Base 5.69.0
  _ZNK12KDeclarative17ConfigPropertyMap10metaObjectEv@Base 4.96.0
  _ZNK12KDeclarative17ConfigPropertyMap11isImmutableERK7QString@Base 5.16.0
+ _ZNK12KDeclarative17ConfigPropertyMap8isNotifyEv@Base 5.74.0
  _ZNK12KDeclarative21QmlObjectSharedEngine10metaObjectEv@Base 5.12.0
  _ZNK12KDeclarative9QmlObject10metaObjectEv@Base 4.96.0
  _ZNK12KDeclarative9QmlObject10rootObjectEv@Base 4.96.0
@@ -80,12 +82,6 @@ libKF5Declarative.so.5 libkf5declarative5 #MINVER#
  (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EED0Ev@Base 5.12.0
  (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EED1Ev@Base 5.12.0
  (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EED2Ev@Base 5.12.0
- (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 5.12.0
- (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 5.12.0
- (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info@Base 5.12.0
- (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EED0Ev@Base 5.12.0
- (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EED1Ev@Base 5.12.0
- (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EED2Ev@Base 5.12.0
  _ZTIN12KDeclarative17ConfigPropertyMapE@Base 4.96.0
  _ZTIN12KDeclarative21QmlObjectSharedEngineE@Base 5.12.0
  _ZTIN12KDeclarative9QmlObjectE@Base 4.96.0

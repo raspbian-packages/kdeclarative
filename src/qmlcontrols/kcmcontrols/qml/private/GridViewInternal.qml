@@ -1,19 +1,7 @@
 /*
-   Copyright (c) 2019 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
 
-   This library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Library General Public
-   License version 2 as published by the Free Software Foundation.
-
-   This library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Library General Public License for more details.
-
-   You should have received a copy of the GNU Library General Public License
-   along with this library; see the file COPYING.LIB.  If not, write to
-   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-   Boston, MA 02110-1301, USA.
+    SPDX-License-Identifier: LGPL-2.0-only
 */
 
 import QtQuick 2.7
@@ -24,8 +12,14 @@ import org.kde.kirigami 2.3 as Kirigami
 
 GridView {
     id: view
+
     property int implicitCellWidth: Kirigami.Units.gridUnit * 10
     property int implicitCellHeight: Math.round(implicitCellWidth / 1.6) + Kirigami.Units.gridUnit*3
+
+    /**
+     * Allow to highlight the selected item with Kirigami.Theme.neutralTextColor
+     */
+    property bool neutralHighlight: false
 
     onCurrentIndexChanged: positionViewAtIndex(currentIndex, GridView.Contain);
 
@@ -37,7 +31,7 @@ GridView {
     anchors {
         fill: parent
         margins: 2
-        leftMargin: scroll.QtControls.ScrollBar.vertical.visible ? 2 :  internal.scrollBarSpace/2 + 2
+        leftMargin: scroll.QtControls.ScrollBar.vertical.visible ? 2 : Math.round(internal.scrollBarSpace/2) + 2
     }
     clip: true
     activeFocusOnTab: true

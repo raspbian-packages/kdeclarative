@@ -1,27 +1,15 @@
 /*
- *   Copyright 2013 Marco Martin <notmart@gmail.com>
- *
- *   This program is free software; you can redistribute it and/or modify
- *   it under the terms of the GNU Library General Public License as
- *   published by the Free Software Foundation; either version 2, or
- *   (at your option) any later version.
- *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU General Public License for more details
- *
- *   You should have received a copy of the GNU Library General Public
- *   License along with this program; if not, write to the
- *   Free Software Foundation, Inc.,
- *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- */
+    SPDX-FileCopyrightText: 2013 Marco Martin <notmart@gmail.com>
+    SPDX-FileCopyrightText: 2020 David Edmundson <davidedmundson@kde.org>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
 
 #include "configpropertymap.h"
 
 #include <QJSValue>
 #include <QPointer>
-#include <kcoreconfigskeleton.h>
+#include <KCoreConfigSkeleton>
 
 #include <functional>
 
@@ -47,6 +35,7 @@ public:
     QPointer<KCoreConfigSkeleton> config;
     bool updatingConfigValue = false;
     bool autosave = true;
+    bool notify = false;
 };
 
 ConfigPropertyMap::ConfigPropertyMap(KCoreConfigSkeleton *config, QObject *parent)
@@ -83,6 +72,16 @@ bool KDeclarative::ConfigPropertyMap::isAutosave() const
 void ConfigPropertyMap::setAutosave(bool autosave)
 {
     d->autosave = autosave;
+}
+
+bool ConfigPropertyMap::isNotify() const
+{
+    return d->notify;
+}
+
+void ConfigPropertyMap::setNotify(bool notify)
+{
+    d->notify = notify;
 }
 
 QVariant ConfigPropertyMap::updateValue(const QString &key, const QVariant &input)
@@ -127,6 +126,7 @@ void ConfigPropertyMapPrivate::writeConfig()
 
     const auto lstItems = config.data()->items();
     for (KConfigSkeletonItem *item : lstItems) {
+        item->setWriteFlags(notify ? KConfigBase::Notify : KConfigBase::Normal);
         item->setProperty(q->value(item->key()));
     }
 
@@ -142,6 +142,7 @@ void ConfigPropertyMapPrivate::writeConfigValue(const QString &key, const QVaria
     KConfigSkeletonItem *item = config.data()->findItem(key);
     if (item) {
         updatingConfigValue = true;
+        item->setWriteFlags(notify ? KConfigBase::Notify : KConfigBase::Normal);
         item->setProperty(value);
         if (autosave) {
             config.data()->save();

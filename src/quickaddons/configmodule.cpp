@@ -1,27 +1,13 @@
 /*
-   This file is part of the KDE libraries
+    This file is part of the KDE libraries
 
-   Copyright (c) 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
-   Copyright (c) 2001 Michael Goffioul <kdeprint@swing.be>
-   Copyright (C) 2004 Frans Englich <frans.englich@telia.com>
-   Copyright (C) 2009 Dario Freddi <drf@kde.org>
-   Copyright (C) 2015 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
+    SPDX-FileCopyrightText: 2001 Michael Goffioul <kdeprint@swing.be>
+    SPDX-FileCopyrightText: 2004 Frans Englich <frans.englich@telia.com>
+    SPDX-FileCopyrightText: 2009 Dario Freddi <drf@kde.org>
+    SPDX-FileCopyrightText: 2015 Marco Martin <mart@kde.org>
 
-   This library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Library General Public
-   License as published by the Free Software Foundation; either
-   version 2 of the License, or (at your option) any later version.
-
-   This library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Library General Public License for more details.
-
-   You should have received a copy of the GNU Library General Public License
-   along with this library; see the file COPYING.LIB.  If not, write to
-   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-   Boston, MA 02110-1301, USA.
-
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "configmodule.h"
@@ -34,8 +20,8 @@
 #include <QQmlEngine>
 #include <QQmlFileSelector>
 
-#include <kaboutdata.h>
-#include <klocalizedstring.h>
+#include <KAboutData>
+#include <KLocalizedString>
 #include <kdeclarative/qmlobject.h>
 #include <kdeclarative/qmlobjectsharedengine.h>
 
@@ -55,7 +41,8 @@ public:
         _useRootOnlyMessage(false),
         _needsAuthorization(false),
         _needsSave(false),
-        _representsDefaults(false)
+        _representsDefaults(false),
+        _defaultsIndicatorVisible(false)
     {
     }
 
@@ -76,6 +63,7 @@ public:
     bool _needsAuthorization : 1;
     bool _needsSave  :1;
     bool _representsDefaults :1;
+    bool _defaultsIndicatorVisible :1;
     QString _authActionName;
 
     static QHash<QObject *, ConfigModule *> s_rootObjects;
@@ -487,6 +475,19 @@ bool ConfigModule::representsDefaults()
     return d->_representsDefaults;
 }
 
+bool ConfigModule::defaultsIndicatorsVisible() const
+{
+    return d->_defaultsIndicatorVisible;
+}
+
+void ConfigModule::setDefaultsIndicatorsVisible(bool visible)
+{
+    if (d->_defaultsIndicatorVisible == visible) {
+        return;
+    }
+    d->_defaultsIndicatorVisible = visible;
+    emit defaultsIndicatorsVisibleChanged();
+}
 }
 
 #include "moc_configmodule.cpp"

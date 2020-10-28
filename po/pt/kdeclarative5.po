@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-11 02:47+0200\n"
+"POT-Creation-Date: 2020-09-06 02:09+0200\n"
 "PO-Revision-Date: 2020-01-08 11:46+0000\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -116,17 +116,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: kpackagelauncherqml/main.cpp:43
+#: kpackagelauncherqml/main.cpp:30
 #, kde-format
 msgid "KPackage QML application shell"
 msgstr "Consola de aplicações QML do KPackage"
 
-#: kpackagelauncherqml/main.cpp:50
+#: kpackagelauncherqml/main.cpp:37
 #, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "O nome único da aplicação (obrigatório)"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:53
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -137,12 +137,12 @@ msgstr ""
 "Exemplo para o Ctrl+A: mantenha carregada a tecla Ctrl e depois carregue em "
 "A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:288
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Atalho Reservado"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:289
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -153,12 +153,12 @@ msgstr ""
 "global.\n"
 "Por favor, escolha outra qualquer."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:345
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Conflito com o Atalho-Padrão da Aplicação"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:346
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -169,39 +169,39 @@ msgstr ""
 "usada por algumas aplicações.\n"
 "Deseja mesmo usá-la também como um atalho global?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:351
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
 #, kde-format
 msgid "Reassign"
 msgstr "Atribuir de Novo"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:393
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Entrada"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:400
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Nenhum"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:421
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "A tecla que acabou de pressionar não é suportada pelo Qt."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:422
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Tecla Não Suportada"
 
-#: quickaddons/configmodule.cpp:176
+#: quickaddons/configmodule.cpp:164
 #, kde-format
 msgid "Invalid KPackage '%1'"
 msgstr "KPackage Inválido '%1'"
 
-#: quickaddons/configmodule.cpp:182
+#: quickaddons/configmodule.cpp:170
 #, kde-format
 msgid "No QML file provided"
 msgstr "Não foi indicado nenhum ficheiro QML"

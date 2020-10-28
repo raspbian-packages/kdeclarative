@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-11 02:47+0200\n"
+"POT-Creation-Date: 2020-09-06 02:09+0200\n"
 "PO-Revision-Date: 2011-07-22 16:08+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -41,18 +41,18 @@ msgstr ""
 "renato@translator-shop.org, zarko.pintar@gmail.com, marko@dimjasevic.net, "
 "adundovi@gmail.com"
 
-#: kpackagelauncherqml/main.cpp:43
+#: kpackagelauncherqml/main.cpp:30
 #, kde-format
 msgid "KPackage QML application shell"
 msgstr ""
 
-#: kpackagelauncherqml/main.cpp:50
+#: kpackagelauncherqml/main.cpp:37
 #, fuzzy, kde-format
 #| msgid "defines the application font"
 msgid "The unique name of the application (mandatory)"
 msgstr "definira pismo aplikacije."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:53
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -65,12 +65,12 @@ msgstr ""
 "Pritisnite gumb, zatim unesite prečac kao što bi napravili u samom programu."
 "\\ Primjer za Ctrl+a: držite tipku Ctrl i pritisnite a."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:288
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Rezervirani prečaci"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:289
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -81,12 +81,12 @@ msgstr ""
 "prečac.\n"
 "Molim da izaberete drugu tipku."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:345
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Sukob sa zadanim prečacem aplikacije"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:346
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -97,40 +97,40 @@ msgstr ""
 "koju neka aplikacija koristi.\n"
 "Želite li je zaista koristiti kao opći prečac? "
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:351
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
 #, kde-format
 msgid "Reassign"
 msgstr "Prenamjeni"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:393
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ulaz"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:400
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Bez"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:421
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "Qt ne podržava tipku koju ste upravo pritisnuli."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:422
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Nepodržana tipka"
 
-#: quickaddons/configmodule.cpp:176
+#: quickaddons/configmodule.cpp:164
 #, fuzzy, kde-format
 #| msgid "Invalid item."
 msgid "Invalid KPackage '%1'"
 msgstr "Neispravna stavka."
 
-#: quickaddons/configmodule.cpp:182
+#: quickaddons/configmodule.cpp:170
 #, kde-format
 msgid "No QML file provided"
 msgstr ""

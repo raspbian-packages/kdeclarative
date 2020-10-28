@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-11 02:47+0200\n"
+"POT-Creation-Date: 2020-09-06 02:09+0200\n"
 "PO-Revision-Date: 2015-05-19 10:02+0000\n"
 "Last-Translator: Necdet <necdetyucel@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -44,17 +44,17 @@ msgstr ""
 "tulliana@gmail.com, gorkem@kde.org, ibrahim@pardus.org.tr, volkangezer@gmail."
 "com"
 
-#: kpackagelauncherqml/main.cpp:43
+#: kpackagelauncherqml/main.cpp:30
 #, kde-format
 msgid "KPackage QML application shell"
 msgstr "KPackage QML uygulama kabuğu"
 
-#: kpackagelauncherqml/main.cpp:50
+#: kpackagelauncherqml/main.cpp:37
 #, kde-format
 msgid "The unique name of the application (mandatory)"
 msgstr "Uygulamanın benzersiz ismi (zorunlu)"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:53
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -63,12 +63,12 @@ msgstr ""
 "Düğmeye tıklayın, ardından kısayol tuşlarına basın.\n"
 "Ctrl+A örneği için: Ctrl tuşuna basılı tutun ve A tuşuna basın."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:288
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Ayrılmış Kısayol"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:289
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -79,12 +79,12 @@ msgstr ""
 "olarak kullanılamaz.\n"
 "Lütfen başka bir tuş seçin."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:345
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Standart Uygulama Kısayolu ile Çakışma"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:346
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -95,40 +95,40 @@ msgstr ""
 "ayrılmıştı.\n"
 "Bu kombinasyonu şu anki eylem için yeniden atamak ister misiniz?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:351
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
 #, kde-format
 msgid "Reassign"
 msgstr "Yeniden Ata"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:393
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Girdi"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:400
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Hiçbiri"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:421
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
 #, kde-format
 msgid "The key you just pressed is not supported by Qt."
 msgstr "Şimdi bastığınız tuş Qt tarafından desteklenmiyor."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:422
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
 #, kde-format
 msgid "Unsupported Key"
 msgstr "Desteklenmeyen Tuş"
 
-#: quickaddons/configmodule.cpp:176
+#: quickaddons/configmodule.cpp:164
 #, fuzzy, kde-format
 #| msgid "Invalid item."
 msgid "Invalid KPackage '%1'"
 msgstr "Geçersiz öge."
 
-#: quickaddons/configmodule.cpp:182
+#: quickaddons/configmodule.cpp:170
 #, kde-format
 msgid "No QML file provided"
 msgstr ""

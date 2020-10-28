@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(KF5_VERSION "5.70.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.70.0") # handled by release scripts
+set(KF5_VERSION "5.74.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.74.0") # handled by release scripts
 project(KDeclarative VERSION ${KF5_VERSION})
 
 # Dependencies
 include(FeatureSummary)
-find_package(ECM 5.70.0  NO_MODULE)
+find_package(ECM 5.74.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -28,11 +28,12 @@ find_package(KF5WindowSystem ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5GlobalAccel ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5GuiAddons ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5Package ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5Notifications ${KF5_DEP_VERSION} REQUIRED)
 
 #########################################################################
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054400)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054900)
 
 #add_definitions(-Wno-deprecated)
 

@@ -1,25 +1,11 @@
 /*
- * <one line to give the library's name and an idea of what it does.>
- * Copyright (C) 2014  David Edmundson <davidedmundson@kde.org>
- * Copyright (C) 1998 Mark Donohoe <donohoe@kde.org>
- * Copyright (C) 2001 Ellis Whitehead <ellis@kde.org>
- * Copyright (C) 2007 Andreas Hartmetz <ahartmetz@gmail.com>
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- */
+    SPDX-FileCopyrightText: 2014 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 1998 Mark Donohoe <donohoe@kde.org>
+    SPDX-FileCopyrightText: 2001 Ellis Whitehead <ellis@kde.org>
+    SPDX-FileCopyrightText: 2007 Andreas Hartmetz <ahartmetz@gmail.com>
+
+    SPDX-License-Identifier: LGPL-2.1-or-later
+*/
 
 #include "keysequencehelper.h"
 
@@ -37,6 +23,8 @@
 #include <KMessageBox>
 #include <KGlobalAccel/KGlobalShortcutInfo>
 #include <KGlobalAccel/KGlobalAccel>
+
+#include <kkeyserver.h>
 
 uint qHash(const QKeySequence &seq)
 {
@@ -198,8 +186,14 @@ bool KeySequenceHelper::isKeySequenceAvailable(const QKeySequence& keySequence) 
     if (keySequence.isEmpty()) {
         return true;
     }
-    return !(d->conflictWithGlobalShortcuts(keySequence)
-             || d->conflictWithStandardShortcuts(keySequence));
+    bool conflict = false;
+    if (d->checkAgainstShortcutTypes.testFlag(GlobalShortcuts)) {
+        conflict |= d->conflictWithGlobalShortcuts(keySequence);
+    }
+    if (d->checkAgainstShortcutTypes.testFlag(StandardShortcuts)) {
+        conflict |=  d->conflictWithStandardShortcuts(keySequence);
+    }
+    return !conflict;
 }
 
 //
@@ -229,6 +223,20 @@ void KeySequenceHelper::setKeySequence(const QKeySequence& sequence)
     d->updateShortcutDisplay();
     emit keySequenceChanged(d->keySequence);
 }
+
+KeySequenceHelper::ShortcutTypes KeySequenceHelper::checkAgainstShortcutTypes()
+{
+    return d->checkAgainstShortcutTypes;
+}
+
+void KeySequenceHelper::setCheckAgainstShortcutTypes(KeySequenceHelper::ShortcutTypes types)
+{
+    if (d->checkAgainstShortcutTypes != types) {
+        d->checkAgainstShortcutTypes = types;
+    }
+    Q_EMIT checkAgainstShortcutTypesChanged();
+}
+
 
 
 void KeySequenceHelper::clearKeySequence()
@@ -289,7 +297,7 @@ bool KeySequenceHelperPrivate::conflictWithGlobalShortcuts(const QKeySequence &k
         QString message = i18n("The F12 key is reserved on Windows, so cannot be used for a global shortcut.\n"
                                "Please choose another one.");
 
-        KMessageBox::sorry(0, message, title);
+        KMessageBox::sorry(nullptr, message, title);
         return false;
     }
 #endif
@@ -468,8 +476,10 @@ void KeySequenceHelper::keyPressed(int key, int modifiers)
         if (key) {
             if ((key == Qt::Key_Backtab) && (d->modifierKeys & Qt::SHIFT)) {
                 key = Qt::Key_Tab | d->modifierKeys;
+            } else if (KKeyServer::isShiftAsModifierAllowed(key)) {
+                key |= d->modifierKeys;
             } else {
-                key |= (d->modifierKeys);
+                key |= (d->modifierKeys & ~Qt::SHIFT);
             }
 
             if (d->nKey == 0) {

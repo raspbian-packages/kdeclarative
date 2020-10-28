@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.69.0 amd64
+# SymbolsHelper-Confirmed: 5.74.0 amd64
 libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
 * Build-Depends-Package: libkf5declarative-dev
  _ZN12KQuickAddons12ConfigModule10pagePushedEP10QQuickItem@Base 5.53.0
@@ -32,6 +32,8 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZN12KQuickAddons12ConfigModule25representsDefaultsChangedEv@Base 5.69.0
  _ZN12KQuickAddons12ConfigModule25useRootOnlyMessageChangedEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule28passiveNotificationRequestedERK7QStringRK8QVariantS3_RK8QJSValue@Base 5.69.0
+ _ZN12KQuickAddons12ConfigModule28setDefaultsIndicatorsVisibleEb@Base 5.74.0
+ _ZN12KQuickAddons12ConfigModule32defaultsIndicatorsVisibleChangedEv@Base 5.74.0
  _ZN12KQuickAddons12ConfigModule3popEv@Base 5.53.0
  _ZN12KQuickAddons12ConfigModule4loadEv@Base 5.8.0+git20150324.0130+15.04
  _ZN12KQuickAddons12ConfigModule4pushEP10QQuickItem@Base 5.54.0
@@ -100,6 +102,7 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZNK12KQuickAddons12ConfigModule15rootOnlyMessageEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule18needsAuthorizationEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule18useRootOnlyMessageEv@Base 5.8.0+git20150324.0130+15.04
+ _ZNK12KQuickAddons12ConfigModule25defaultsIndicatorsVisibleEv@Base 5.74.0
  _ZNK12KQuickAddons12ConfigModule4nameEv@Base 5.41.0
  _ZNK12KQuickAddons12ConfigModule5depthEv@Base 5.54.0
  _ZNK12KQuickAddons12ConfigModule6engineEv@Base 5.8.0+git20150324.0130+15.04

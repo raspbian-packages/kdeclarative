@@ -1,21 +1,8 @@
 /*
- *    Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>
- *
- *    This library is free software; you can redistribute it and/or
- *    modify it under the terms of the GNU Library General Public
- *    License as published by the Free Software Foundation; either
- *    version 2 of the License, or (at your option) any later version.
- *
- *    This library is distributed in the hope that it will be useful,
- *    but WITHOUT ANY WARRANTY; without even the implied warranty of
- *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *    Library General Public License for more details.
- *
- *    You should have received a copy of the GNU Library General Public License
- *    along with this library; see the file COPYING.LIB.  If not, write to
- *    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- *    Boston, MA 02110-1301, USA.
- */
+    SPDX-FileCopyrightText: 2015 Kai Uwe Broulik <kde@privat.broulik.de>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
 
 #ifndef KCMSHELL_H
 #define KCMSHELL_H
@@ -32,6 +19,36 @@ public:
 
 public Q_SLOTS:
     void open(const QStringList &names) const;
+
+    /**
+     * Opens the specified module in System Settings. Only a single KCM name may
+     * be provided.
+     *
+     * @code
+     * onClicked: KCMShell.openSystemSettings("kcm_kscreen")
+     * @endcode
+     *
+     * @param name A single kcm name to open in System Settings. Opening multiple
+     * KCMs using this function is not supported; to do that, use kcmshell.open.
+     *
+     * @since 5.71
+     */
+    void openSystemSettings(const QString &name) const;
+
+     /**
+     * Opens the specified module in InfCenter. Only a single KCM name may
+     * be provided.
+     *
+     * @code
+     * onClicked: KCMShell.openInfoCenter("kcm_energy")
+     * @endcode
+     *
+     * @param name A single kcm name to open in Info Center. Opening multiple
+     * KCMs using this function is not supported; to do that, use kcmshell.open.
+     *
+     * @since 5.71
+     */
+    void openInfoCenter(const QString &name) const;
 
     /**
      * Check which of the given control modules the user is
