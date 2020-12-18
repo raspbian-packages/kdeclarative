@@ -1,0 +1,67 @@
+/*
+    SPDX-FileCopyrightText: 2009 Alan Alpert <alan.alpert@nokia.com>
+    SPDX-FileCopyrightText: 2010 Ménard Alexis <menard@kde.org>
+    SPDX-FileCopyrightText: 2010 Marco Martin <mart@kde.org>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
+
+#include "kquickcontrolsaddonsplugin.h"
+#include "config-kquickcontrolsaddons.h"
+
+
+#include "qpixmapitem.h"
+#include "qimageitem.h"
+#include "qiconitem.h"
+#include "mouseeventlistener.h"
+#include "columnproxymodel.h"
+#include "clipboard.h"
+#include "fallbacktaphandler.h"
+#include "mimedatabase.h"
+#include "kcmshell.h"
+#include "icondialog.h"
+#include "eventgenerator.h"
+
+#if HAVE_EPOXY
+#include "plotter.h"
+#endif
+
+static QObject *kcmshell_singleton_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine);
+    Q_UNUSED(scriptEngine);
+
+    return new KCMShell();
+}
+
+void KQuickControlsAddonsPlugin::registerTypes(const char *uri)
+{
+    Q_ASSERT(QString::fromLatin1(uri) == QLatin1String("org.kde.kquickcontrolsaddons"));
+
+    qmlRegisterType<QPixmapItem>(uri, 2, 0, "QPixmapItem");
+    qmlRegisterType<QImageItem>(uri, 2, 0, "QImageItem");
+    qmlRegisterType<QIconItem>(uri, 2, 0, "QIconItem");
+    qmlRegisterType<MouseEventListener>(uri, 2, 0, "MouseEventListener");
+    qmlRegisterType<ColumnProxyModel>(uri, 2, 0, "ColumnProxyModel");
+    qmlRegisterType<Clipboard>(uri, 2, 0, "Clipboard");
+    qmlRegisterType<MimeDatabase>(uri, 2, 0, "MimeDatabase");
+    qmlRegisterSingletonType<KCMShell>(uri, 2, 0, "KCMShell", kcmshell_singleton_provider);
+    qmlRegisterType<IconDialog>(uri, 2, 0, "IconDialog");
+    qmlRegisterType<EventGenerator>(uri, 2, 0, "EventGenerator");
+    qmlRegisterUncreatableType<FallbackTapHandlerMouseEvent>(uri, 2, 1, "FallbackTapHandlerMouseEvent", QStringLiteral("Cannot create items of type FallbackTapHandlerMouseEvent"));
+    qmlRegisterType<FallbackTapHandler>(uri, 2, 1, "FallbackTapHandler");
+
+#if HAVE_EPOXY
+    qmlRegisterType<PlotData>(uri, 2, 0, "PlotData");
+    qmlRegisterType<Plotter>(uri, 2, 0, "Plotter");
+#endif
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
+    qmlRegisterType<QAbstractItemModel>();
+#else
+    qmlRegisterAnonymousType<QAbstractItemModel>(uri, 1);
+#endif
+    qRegisterMetaType<QModelIndex>("QModelIndex");
+}
+
+
+
