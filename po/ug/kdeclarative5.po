@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-06 02:09+0200\n"
+"POT-Creation-Date: 2020-11-13 02:11+0100\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -39,7 +39,19 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "پروگرامما خەت نۇسخا بەلگىلەش"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "كىرگۈز"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:78
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "يوق"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:88
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -52,12 +64,12 @@ msgstr ""
 "بۇ توپچىنى چېكىپ، ئاندىن بۇ پروگراممىغا تېزلەتمە كىرگۈزۈڭ.\n"
 "مەسىلەن، Ctrl+a يەنى Ctrl كۇنۇپكىسىنى بېسىپ تۇرۇپ ئاندىن a كۇنۇپكا بېسىلىدۇ."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "بەلگىلىنىپ بولغان تېزلەتمە"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:119
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -68,12 +80,12 @@ msgstr ""
 "بولمايدۇ\n"
 "باشقا كۇنۇپكا تاللاڭ."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:174
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "پروگراممىنىڭ ئۆلچەملىك تېزلەتمىسى بىلەن توقۇنۇشۇپ قالدى"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:175
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -84,32 +96,10 @@ msgstr ""
 "ئۈچۈن بېكىتىلگەن\n"
 "بۇنى راستلا ئومۇمىيەت تېزلەتمە سۈپىتىدە ئىشلىتەمسىز؟"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:180
 #, kde-format
 msgid "Reassign"
 msgstr "قايتا تەقسىملە"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
-#, kde-format
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "كىرگۈز"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
-#, kde-format
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "يوق"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
-#, kde-format
-msgid "The key you just pressed is not supported by Qt."
-msgstr "باسقان كۇنۇپكىنى Qt دا ئىشلەتكىلى بولمايدۇ."
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
-#, kde-format
-msgid "Unsupported Key"
-msgstr "ئىشلەتكىلى بولمايدىغان كۇنۇپكا"
 
 #: quickaddons/configmodule.cpp:164
 #, fuzzy, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-06 02:09+0200\n"
+"POT-Creation-Date: 2020-11-13 02:11+0100\n"
 "PO-Revision-Date: 2007-10-15 22:19+0200\n"
 "Last-Translator: Jañ-Mai Drapier <jan-mai.drapier@mail.dotcom.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -38,20 +38,33 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "Kas ur bostel da ratreer an arload"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#, fuzzy, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Restr enkas"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:78
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Ebet"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:88
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Berradennoù"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:119
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -59,12 +72,12 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:174
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:175
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -75,34 +88,10 @@ msgstr ""
 "« %2 ».\n"
 "Diuzit mar plij ur blokad stokelloù dieil."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:180
 #, fuzzy, kde-format
 msgid "Reassign"
 msgstr "Rusianeg"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
-#, fuzzy, kde-format
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "Restr enkas"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
-#, fuzzy, kde-format
-#| msgid "None"
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "Ebet"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
-#, kde-format
-msgid "The key you just pressed is not supported by Qt."
-msgstr ""
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
-#, fuzzy, kde-format
-#| msgid "Unsorted"
-msgid "Unsupported Key"
-msgstr "N'eo ket rummet"
 
 #: quickaddons/configmodule.cpp:164
 #, fuzzy, kde-format

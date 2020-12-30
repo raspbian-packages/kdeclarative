@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-06 02:09+0200\n"
+"POT-Creation-Date: 2020-11-13 02:11+0100\n"
 "PO-Revision-Date: 2017-05-16 06:49-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -52,7 +52,19 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "מגדיר את הגופן של התכנית"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "קלט"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:78
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "ללא"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:88
 #, fuzzy, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -61,12 +73,12 @@ msgstr ""
 "לחץ על הכפתור, ואז תוכל ליצור קיצור מקשים לשימוש בתוכנית.\n"
 "דוגמא: לקיצור Ctrl+a: לחץ על המקש Ctrl ועל המקש a"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "קיצורי מקשים שמורים"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:119
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -76,12 +88,12 @@ msgstr ""
 "מקש ה-F12 הוא מקש שמור בWindows, ולכן אינו יכול לשמש כמקש קיצור גלובלי.אנא "
 "לבחור מקש אחר."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:174
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "התנגשות עם קיצור סטנדרטי של ישומים"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:175
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -92,32 +104,10 @@ msgstr ""
 "רבות.\n"
 "מסיבה זו אין באפשרותך להשתמש בו עבור קיצורים גלובליים."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:180
 #, kde-format
 msgid "Reassign"
 msgstr "שייך מחדש"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
-#, kde-format
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "קלט"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
-#, kde-format
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "ללא"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
-#, kde-format
-msgid "The key you just pressed is not supported by Qt."
-msgstr "המקש שלחצת אינו נתמך על ידי Qt."
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
-#, kde-format
-msgid "Unsupported Key"
-msgstr "מקש לא נתמך"
 
 #: quickaddons/configmodule.cpp:164
 #, kde-format

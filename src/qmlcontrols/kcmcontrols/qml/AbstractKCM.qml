@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
 
-    SPDX-License-Identifier: LGPL-2.0-only
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 import QtQuick 2.7
@@ -37,29 +37,27 @@ Kirigami.Page {
 
     title: kcm.name
 
-    leftPadding: Kirigami.Settings.isMobile ? 0 : 4
-    topPadding: headerParent.contentItem ? 0 : (Kirigami.Settings.isMobile ? 0 : 4)
-    rightPadding: (Kirigami.Settings.isMobile ? 0 : 4)
-    bottomPadding: footerParent.contentItem ? 0 : (Kirigami.Settings.isMobile ? 0 : 4)
+    leftPadding: 6 // Layout_ChildMarginWidth from Breeze
+    topPadding: headerParent.contentItem ? 0 : leftPadding
+    rightPadding: leftPadding
+    bottomPadding: footerParent.contentItem ? 0 : leftPadding
 
     header: QtControls.Control {
         id: headerParent
-        visible: contentItem ? contentItem.visible : false
-        height: visible ? implicitHeight : 0
-        leftPadding: 4
-        topPadding: 4
-        rightPadding: 4
-        bottomPadding: 4
+        height: contentItem ? implicitHeight : 0
+        leftPadding: 6 // Layout_ChildMarginWidth from Breeze
+        topPadding: leftPadding
+        rightPadding: leftPadding
+        bottomPadding: leftPadding
     }
 
     footer: QtControls.Control {
         id: footerParent
-        visible: contentItem ? contentItem.visible : false
-        height: visible ? implicitHeight : 0
-        leftPadding: 4
-        topPadding: 4
-        rightPadding: 4
-        bottomPadding: 4
+        height: contentItem ? implicitHeight : 0
+        leftPadding: 6 // Layout_ChildMarginWidth from Breeze
+        topPadding: leftPadding
+        rightPadding: leftPadding
+        bottomPadding: leftPadding
     }
 
     Component.onCompleted: {
@@ -79,6 +77,17 @@ Kirigami.Page {
             header = headerParent
             header.visible = true
             h.parent = headerParent
+        }
+
+        //Search overlaysheets in contentItem, parent to root if found
+        for (let i in contentItem.data) {
+            let child = contentItem.data[i];
+            if (child instanceof Kirigami.OverlaySheet) {
+                if (!child.parent) {
+                    child.parent = root;
+                }
+                root.data.push(child);
+            }
         }
     }
 }

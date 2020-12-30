@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-08-09 02:04+0200\n"
+"POT-Creation-Date: 2020-11-13 02:11+0100\n"
 "PO-Revision-Date: 2015-04-28 08:55+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -45,7 +45,19 @@ msgstr "KPackage QML programskall"
 msgid "The unique name of the application (mandatory)"
 msgstr "Det entydige navnet på programmet (obligatorisk)"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:58
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Inndata"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:78
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Ingen"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:88
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -55,12 +67,12 @@ msgstr ""
 "programmet.\n"
 "Eksempel for CTRL+A: Hold CTRL-tasten og trykk A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:274
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "Reservert snarvei"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:275
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:119
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -71,12 +83,12 @@ msgstr ""
 "snarvei.\n"
 "Velg en annen tast."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:331
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:174
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Konflikt med en standard programsnarvei"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:332
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:175
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -87,32 +99,10 @@ msgstr ""
 "mange programmer bruker.\n"
 "Er du sikker på at du vil bruke den som en  global snarvei også?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:337
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:180
 #, kde-format
 msgid "Reassign"
 msgstr "Tilordne på nytt"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:379
-#, kde-format
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "Inndata"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:386
-#, kde-format
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "Ingen"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:407
-#, kde-format
-msgid "The key you just pressed is not supported by Qt."
-msgstr "Qt støtter ikke den tasten du nettopp trykket."
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
-#, kde-format
-msgid "Unsupported Key"
-msgstr "Ustøttet tast"
 
 #: quickaddons/configmodule.cpp:164
 #, kde-format

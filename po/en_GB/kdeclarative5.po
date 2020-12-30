@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-06 02:09+0200\n"
+"POT-Creation-Date: 2020-11-13 02:11+0100\n"
 "PO-Revision-Date: 2020-03-30 19:59+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -38,73 +38,63 @@ msgstr "KPackage QML application shell"
 msgid "The unique name of the application (mandatory)"
 msgstr "The unique name of the application (mandatory)"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
-#, kde-format
-msgid ""
-"Click on the button, then enter the shortcut like you would in the program.\n"
-"Example for Ctrl+A: hold the Ctrl key and press A."
-msgstr ""
-"Click on the button, then enter the shortcut like you would in the program.\n"
-"Example for Ctrl+A: hold the Ctrl key and press A."
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
-#, kde-format
-msgid "Reserved Shortcut"
-msgstr "Reserved Shortcut"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
-#, kde-format
-msgid ""
-"The F12 key is reserved on Windows, so cannot be used for a global "
-"shortcut.\n"
-"Please choose another one."
-msgstr ""
-"The F12 key is reserved on Windows, so cannot be used for a global "
-"shortcut.\n"
-"Please choose another one."
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
-#, kde-format
-msgid "Conflict with Standard Application Shortcut"
-msgstr "Conflict with Standard Application Shortcut"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
-#, kde-format
-msgid ""
-"The '%1' key combination is also used for the standard action \"%2\" that "
-"some applications use.\n"
-"Do you really want to use it as a global shortcut as well?"
-msgstr ""
-"The '%1' key combination is also used for the standard action \"%2\" that "
-"some applications use.\n"
-"Do you really want to use it as a global shortcut as well?"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
-#, kde-format
-msgid "Reassign"
-msgstr "Reassign"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Input"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:78
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "None"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:88
 #, kde-format
-msgid "The key you just pressed is not supported by Qt."
-msgstr "The key you just pressed is not supported by Qt."
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
-msgid "Unsupported Key"
-msgstr "Unsupported Key"
+msgid "Reserved Shortcut"
+msgstr "Reserved Shortcut"
+
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:119
+#, kde-format
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:174
+#, kde-format
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Conflict with Standard Application Shortcut"
+
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:175
+#, kde-format
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:180
+#, kde-format
+msgid "Reassign"
+msgstr "Reassign"
 
 #: quickaddons/configmodule.cpp:164
 #, kde-format

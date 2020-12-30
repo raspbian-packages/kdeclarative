@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>
 
-    SPDX-License-Identifier: LGPL-2.0-only
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 import QtQuick 2.7
@@ -25,64 +25,16 @@ import "." as Priv
  *     footer: Item {...}
  * }
  * @endcode
- * @inherits org.kde.kirigami.Page
  */
-Kirigami.Page {
+AbstractKCM {
     id: root
 
     /**
-     * view: GridView
+     * view: ScrollView
      * Exposes the internal flickable
      */
     property alias view: scroll.view
 
-    title: kcm.name
-    implicitWidth: Kirigami.Units.gridUnit * 20
-    implicitHeight: view && view.contentHeight > 0 ? Math.min(view.contentHeight, Kirigami.Units.gridUnit * 20) : Kirigami.Units.gridUnit * 20
-    //flickable: scroll.view
-
-    //NOTE: this should be smallspacing buit we need a pixel size in order to align with systemsettings widgets
-    leftPadding: Kirigami.Settings.isMobile ? 0 : 4
-    topPadding: headerParent.contentItem ? 0 : (Kirigami.Settings.isMobile ? 0 : 4)
-    rightPadding: (Kirigami.Settings.isMobile ? 0 : 4)
-    bottomPadding: footerParent.contentItem ? 0 : (Kirigami.Settings.isMobile ? 0 : 4)
-
-    header: QtControls.Control {
-        id: headerParent
-        visible: root.contentItem && root.contentItem.visible
-        height: visible ? implicitHeight : 0
-        leftPadding: 4
-        topPadding: 4
-        rightPadding: 4
-        bottomPadding: 4
-    }
-
-    footer: QtControls.Control {
-        id: footerParent
-        visible: root.contentItem && root.contentItem.visible
-        height: visible ? implicitHeight : 0
-        leftPadding: 4
-        topPadding: 4
-        rightPadding: 4
-        bottomPadding: 4
-    }
-    Component.onCompleted: {
-        if (footer && footer != footerParent) {
-            var f = footer
-
-            footerParent.contentItem = f
-            footer = footerParent
-            f.parent = footerParent
-        }
-
-        if (header && header != headerParent) {
-            var h = header
-
-            headerParent.contentItem = h
-            header = headerParent
-            h.parent = headerParent
-        }
-    }
     Priv.ScrollView {
         id: scroll
         anchors.fill: parent

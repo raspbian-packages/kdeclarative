@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-06 02:09+0200\n"
+"POT-Creation-Date: 2020-11-13 02:11+0100\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -43,20 +43,33 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "ichaza isicelo sohlobo lwamagama."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#, fuzzy, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "&Igalelo Elisuka"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:78
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Akukho nanye"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:88
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Indlela emfutshane"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:119
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -64,12 +77,12 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:174
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Ungqubano Nesicelo Esisezantsi Sendlela emfutshane"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:175
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -79,33 +92,10 @@ msgstr ""
 "Indibaniselwano '%1' yesitshixo sele inikezelwe kwi \"%2\"ntshukumo.\n"
 "Nceda khetha indibaniselwano yesinye isitshixo."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:180
 #, fuzzy, kde-format
 msgid "Reassign"
 msgstr "Isirashiya"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
-#, fuzzy, kde-format
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "&Igalelo Elisuka"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
-#, fuzzy, kde-format
-#| msgid "None"
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "Akukho nanye"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
-#, kde-format
-msgid "The key you just pressed is not supported by Qt."
-msgstr ""
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
-#, fuzzy, kde-format
-msgid "Unsupported Key"
-msgstr "Engenasihloko"
 
 #: quickaddons/configmodule.cpp:164
 #, fuzzy, kde-format

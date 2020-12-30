@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>
 
-    SPDX-License-Identifier: LGPL-2.0-only
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 import QtQuick 2.7
@@ -24,9 +24,8 @@ import org.kde.kcm 1.1 as KCM
  *     footer: Item {...}
  * }
  * @endcode
- * @inherits org.kde.kirigami.Page
  */
-Kirigami.Page {
+AbstractKCM {
     id: root
 
     /**
@@ -45,7 +44,6 @@ Kirigami.Page {
      */
     property alias view: scroll.view
 
-    title: kcm.name
     implicitWidth: {
         var width = 0;
 
@@ -63,39 +61,6 @@ Kirigami.Page {
     implicitHeight: view.implicitCellHeight * 3 + (header ? header.height : 0) + (footer ? footer.height : 0) + Kirigami.Units.gridUnit
 
     flickable: scroll.view
-
-    //NOTE: this should be smallspacing buit we need a pixel size in order to align with systemsettings widgets
-    leftPadding: Kirigami.Settings.isMobile ? 0 : headerParent.leftPadding
-    topPadding: headerParent.contentItem ? 0 : leftPadding
-    rightPadding: leftPadding
-    bottomPadding: footerParent.contentItem ? 0 : leftPadding
-
-    header: QtControls.Control {
-        id: headerParent
-        height: contentItem ? implicitHeight : 0
-    }
-
-    footer: QtControls.Control {
-        id: footerParent
-        height: contentItem ? implicitHeight : 0
-    }
-    Component.onCompleted: {
-        if (footer && footer != footerParent) {
-            var f = footer
-
-            footerParent.contentItem = f
-            footer = footerParent
-            f.parent = footerParent
-        }
-
-        if (header && header != headerParent) {
-            var f = header
-
-            headerParent.contentItem = f
-            header = headerParent
-            f.parent = headerParent
-        }
-    }
 
     KCM.GridView {
         id: scroll

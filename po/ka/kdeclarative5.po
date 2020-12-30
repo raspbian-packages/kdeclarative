@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-06 02:09+0200\n"
+"POT-Creation-Date: 2020-11-13 02:11+0100\n"
 "PO-Revision-Date: 2009-12-17 02:11+0400\n"
 "Last-Translator: George Machitidze <giomac@gmail.com>\n"
 "Language-Team: Georgian <http://www.gia.ge>\n"
@@ -37,20 +37,34 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "მიუთითებს პროგრამის შრიფტს"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#, fuzzy, kde-format
+#| msgid "Input file"
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "შეტანის ფაილი"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:78
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "არა"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:88
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "მალმხმობი"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:119
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -58,12 +72,12 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:174
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "კონფლიქტი პროგრამის სტანდარტულ მალმხმობთან"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:175
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -73,35 +87,10 @@ msgstr ""
 "კლავიშების ბმული %1 უკვე გამოიყენება \"%2\" სტანდარტული ქმედებისთვის.\n"
 "გადმოვამისამართო იგი ახალ ქმედებაზე?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:180
 #, kde-format
 msgid "Reassign"
 msgstr "გადამისამართება"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
-#, fuzzy, kde-format
-#| msgid "Input file"
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "შეტანის ფაილი"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
-#, fuzzy, kde-format
-#| msgid "None"
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "არა"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
-#, kde-format
-msgid "The key you just pressed is not supported by Qt."
-msgstr ""
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
-#, fuzzy, kde-format
-#| msgid "Untrusted"
-msgid "Unsupported Key"
-msgstr "შეუმოწმებელი"
 
 #: quickaddons/configmodule.cpp:164
 #, fuzzy, kde-format

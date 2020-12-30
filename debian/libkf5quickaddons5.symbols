@@ -108,6 +108,7 @@ libKF5QuickAddons.so.5 libkf5quickaddons5 #MINVER#
  _ZNK12KQuickAddons12ConfigModule6engineEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule6statusEv@Base 5.69.0
  _ZNK12KQuickAddons12ConfigModule7buttonsEv@Base 5.8.0+git20150324.0130+15.04
+ _ZNK12KQuickAddons12ConfigModule7subPageEi@Base 5.77.0
  _ZNK12KQuickAddons12ConfigModule9aboutDataEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons12ConfigModule9quickHelpEv@Base 5.8.0+git20150324.0130+15.04
  _ZNK12KQuickAddons19ManagedConfigModule10isDefaultsEv@Base 5.69.0

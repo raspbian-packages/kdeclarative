@@ -1,4 +1,4 @@
-kdeclarative (5.74.0-2+rpi1) bullseye-staging; urgency=medium
+kdeclarative (5.77.0-2+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
   * Add symbols file hack for raspbian.
@@ -6,7 +6,29 @@ kdeclarative (5.74.0-2+rpi1) bullseye-staging; urgency=medium
   [changes introduced in version 5.27.0-1+rpi1 by Peter Michael Green]
   * Disable testsuite.
 
- -- Raspbian forward porter <root@raspbian.org>  Wed, 28 Oct 2020 02:10:47 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Wed, 30 Dec 2020 23:01:05 +0000
+
+kdeclarative (5.77.0-2) unstable; urgency=medium
+
+  * Release to unstable.
+
+ -- Norbert Preining <norbert@preining.info>  Tue, 22 Dec 2020 10:33:34 +0900
+
+kdeclarative (5.77.0-1) experimental; urgency=medium
+
+  [ Vagrant Cascadian ]
+  * Disable fixfilepath feature, as it triggers build failures when
+    enabled (Closes: #972735).
+  [ Norbert Preining ]
+  * Bump Standards-Version to 4.5.1 (No changes needed).
+
+  * New upstream release (5.77.0).
+  * Update build-deps and deps with the info from cmake.
+  * Add myself to Uploaders.
+  * Update maintainer to Debian Qt/KDE Maintainers.
+  * Update symbols.
+
+ -- Norbert Preining <norbert@preining.info>  Fri, 18 Dec 2020 10:03:52 +0900
 
 kdeclarative (5.74.0-2) unstable; urgency=medium
 

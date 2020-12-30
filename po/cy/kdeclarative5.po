@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-06 02:09+0200\n"
+"POT-Creation-Date: 2020-11-13 02:11+0100\n"
 "PO-Revision-Date: 2005-01-28 17:54+0000\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -51,20 +51,34 @@ msgstr ""
 msgid "The unique name of the application (mandatory)"
 msgstr "diffinio wynebfath y cymhwysiad"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:70
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#, fuzzy, kde-format
+#| msgid "Input file"
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Ffeil fewnbwn"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:78
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Dim"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:88
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:296
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Byrlwybr"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:297
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:119
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -72,12 +86,12 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:353
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:174
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Croestyniad efo Byrlwybr Cymhwysiad Arferol"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:354
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:175
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -88,35 +102,10 @@ msgstr ""
 "\"%2\".\n"
 "Ydych eisiau ei ail-neilltuo o'r weithred yna i'r un gyfredol?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:359
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:180
 #, fuzzy, kde-format
 msgid "Reassign"
 msgstr "Rwsieg"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:401
-#, fuzzy, kde-format
-#| msgid "Input file"
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "Ffeil fewnbwn"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:408
-#, fuzzy, kde-format
-#| msgid "None"
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "Dim"
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:429
-#, kde-format
-msgid "The key you just pressed is not supported by Qt."
-msgstr ""
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:430
-#, fuzzy, kde-format
-#| msgid "Untrusted"
-msgid "Unsupported Key"
-msgstr "Ni ymddiriedir"
 
 #: quickaddons/configmodule.cpp:164
 #, fuzzy, kde-format

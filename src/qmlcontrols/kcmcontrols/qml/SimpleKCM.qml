@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>
 
-    SPDX-License-Identifier: LGPL-2.0-only
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 import QtQuick 2.7
@@ -36,29 +36,19 @@ Kirigami.ScrollablePage {
 
     title: kcm.name
 
-    leftPadding: Kirigami.Settings.isMobile ? 0 : 4
-    topPadding: headerParent.contentItem ? 0 : (Kirigami.Settings.isMobile ? 0 : 4)
-    rightPadding: (Kirigami.Settings.isMobile ? 0 : 4)
-    bottomPadding: footerParent.contentItem ? 0 : (Kirigami.Settings.isMobile ? 0 : 4)
+    leftPadding: 6 // Layout_ChildMarginWidth from Breeze
+    topPadding: headerParent.contentItem ? 0 : leftPadding
+    rightPadding: leftPadding
+    bottomPadding: footerParent.contentItem ? 0 : leftPadding
 
     header: QtControls.Control {
         id: headerParent
-        visible: contentItem ? contentItem.visible : false
-        height: visible ? implicitHeight : 0
-        leftPadding: 4
-        topPadding: 4
-        rightPadding: 4
-        bottomPadding: 4
+        height: contentItem ? implicitHeight : 0
     }
 
     footer: QtControls.Control {
         id: footerParent
-        visible: contentItem ? contentItem.visible : false
-        height: visible ? implicitHeight : 0
-        leftPadding: 4
-        topPadding: 4
-        rightPadding: 4
-        bottomPadding: 4
+        height: contentItem ? implicitHeight : 0
     }
 
     Component.onCompleted: {
