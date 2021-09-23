@@ -29,7 +29,7 @@ msgstr "Nguyễn Hùng Phú,Lê Hoàng Phương,Hoàng Đức Hiếu,Clytie Sidd
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"phuhnguyen@disroot.org,herophuong93@gmail.com,hieu.d.hoang@gmail.com,"
+"phu.nguyen@kdemail.net,herophuong93@gmail.com,hieu.d.hoang@gmail.com,"
 "clytie@riverland.net.au"
 
 #: kpackagelauncherqml/main.cpp:30

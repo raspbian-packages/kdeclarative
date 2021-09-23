@@ -87,11 +87,13 @@ void KDeclarative::setupContext()
 
 void KDeclarative::setupEngine(QQmlEngine *engine)
 {
+#ifndef Q_OS_ANDROID
     // get rid of stock network access manager factory
     QQmlNetworkAccessManagerFactory *factory = engine->networkAccessManagerFactory();
     engine->setNetworkAccessManagerFactory(nullptr);
     delete factory;
     engine->setNetworkAccessManagerFactory(new KIOAccessManagerFactory());
+#endif
 
     /* Tell the engine to search for platform-specific imports first
        (so it will "win" in import name resolution).
@@ -134,9 +136,11 @@ QString KDeclarative::translationDomain() const
 
 void KDeclarative::setupQmlJsDebugger()
 {
+#if QT_CONFIG(qml_debug)
     if (QCoreApplication::arguments().contains(QLatin1String("-qmljsdebugger"))) {
         QQmlDebuggingEnabler enabler;
     }
+#endif
 }
 
 QString KDeclarative::defaultComponentsTarget()

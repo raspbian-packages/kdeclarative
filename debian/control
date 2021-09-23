@@ -6,29 +6,29 @@ Uploaders: Norbert Preining <norbert@preining.info>
 Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
                doxygen,
-               extra-cmake-modules (>= 5.83.0~),
+               extra-cmake-modules (>= 5.86.0~),
                libepoxy-dev,
-               libkf5config-dev (>= 5.83.0~),
-               libkf5globalaccel-dev (>= 5.83.0~),
-               libkf5guiaddons-dev (>= 5.83.0~),
-               libkf5i18n-dev (>= 5.83.0~),
-               libkf5iconthemes-dev (>= 5.83.0~),
-               libkf5kio-dev (>= 5.83.0~),
-               libkf5notifications-dev (>= 5.83.0~),
-               libkf5package-dev (>= 5.83.0~),
-               libkf5widgetsaddons-dev (>= 5.83.0~),
-               libkf5windowsystem-dev (>= 5.83.0~),
+               libkf5config-dev (>= 5.86.0~),
+               libkf5globalaccel-dev (>= 5.86.0~),
+               libkf5guiaddons-dev (>= 5.86.0~),
+               libkf5i18n-dev (>= 5.86.0~),
+               libkf5iconthemes-dev (>= 5.86.0~),
+               libkf5kio-dev (>= 5.86.0~),
+               libkf5notifications-dev (>= 5.86.0~),
+               libkf5package-dev (>= 5.86.0~),
+               libkf5widgetsaddons-dev (>= 5.86.0~),
+               libkf5windowsystem-dev (>= 5.86.0~),
                libqt5sql5-sqlite,
                pkg-config,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qml-module-qtquick2,
-               qtbase5-dev (>= 5.15.0~),
-               qtdeclarative5-dev (>= 5.15.0~),
+               qtbase5-dev (>= 5.15.2~),
+               qtdeclarative5-dev (>= 5.15.2~),
                qttools5-dev,
                qttools5-dev-tools,
                xauth,
                xvfb,
-Standards-Version: 4.5.1
+Standards-Version: 4.6.0
 Homepage: https://invent.kde.org/frameworks/kdeclarative
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kdeclarative
 Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kdeclarative.git
@@ -65,11 +65,11 @@ Section: libdevel
 Architecture: any
 Depends: libkf5calendarevents5 (= ${binary:Version}),
          libkf5declarative5 (= ${binary:Version}),
-         libkf5kio-dev (>= 5.83.0~),
-         libkf5package-dev (>= 5.83.0~),
+         libkf5kio-dev (>= 5.86.0~),
+         libkf5package-dev (>= 5.86.0~),
          libkf5quickaddons5 (= ${binary:Version}),
-         qtbase5-dev (>= 5.15.0~),
-         qtdeclarative5-dev (>= 5.15.0~),
+         qtbase5-dev (>= 5.15.2~),
+         qtdeclarative5-dev (>= 5.15.2~),
          ${misc:Depends},
 Recommends: libkf5declarative-doc (= ${source:Version})
 Description: development files for kdeclarative
@@ -121,6 +121,18 @@ Depends: libkf5declarative5 (>= ${source:Version}),
          ${shlibs:Depends},
 Description: provides integration of QML and KDE frameworks - draganddrop
  Provides QML draganddrop functionality.
+
+Package: qml-module-org-kde-graphicaleffects
+Architecture: any
+Multi-arch: same
+Depends: libkf5declarative5 (>= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: provides integration of QML and KDE Frameworks - graphicaleffects
+ This import contains KDE extras that are visually similar to Qt Quick
+ Controls.
+ .
+ This package contains the QML files used by libkf5declarative.
 
 Package: qml-module-org-kde-kcm
 Architecture: any

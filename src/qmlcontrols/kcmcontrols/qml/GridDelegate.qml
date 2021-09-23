@@ -139,23 +139,19 @@ T2.ItemDelegate {
                 height: width
                 source: typeof pluginName === "string" && pluginName === "None" ? "edit-none" : "view-preview"
             }
-        }
-
-        Rectangle {
-            anchors.fill: thumbnailArea
-            visible: actionsRow.children.length > 0 && (Kirigami.Settings.isMobile || delegate.hovered || delegate.GridView.isCurrentItem)
-            radius: delegate.thumbnailAvailable ? 0 : thumbnailArea.radius
-            color: Kirigami.Settings.isMobile ? "transparent" : Qt.rgba(1, 1, 1, 0.2)
 
             RowLayout {
-                id: actionsRow
-
                 anchors {
                     right: parent.right
                     rightMargin: Kirigami.Units.smallSpacing
                     bottom: parent.bottom
                     bottomMargin: Kirigami.Units.smallSpacing
                 }
+
+                // Always show above thumbnail content
+                z: 9999
+
+                visible: children.length > 0 && (Kirigami.Settings.isMobile || delegate.hovered || delegate.GridView.isCurrentItem)
 
                 Repeater {
                     model: delegate.actions
@@ -204,7 +200,7 @@ T2.ItemDelegate {
             visible: delegate.subtitle.length > 0
             opacity: 0.6
             text: delegate.subtitle
-            font.pointSize: theme.smallestFont.pointSize
+            font.pointSize: Kirigami.Theme.smallFont.pointSize
             font.bold: delegate.GridView.isCurrentItem
             elide: Text.ElideRight
         }

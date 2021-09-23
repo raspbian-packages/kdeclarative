@@ -26,7 +26,7 @@
 class KeySequenceHelperPrivate
 {
 public:
-    KeySequenceHelperPrivate(KeySequenceHelper *q);
+    KeySequenceHelperPrivate(KeySequenceHelper *qq);
 
     /**
      * Conflicts the key sequence @a seq with a current standard
@@ -62,8 +62,8 @@ public:
     KeySequenceHelper::ShortcutTypes checkAgainstShortcutTypes;
 };
 
-KeySequenceHelperPrivate::KeySequenceHelperPrivate(KeySequenceHelper *q)
-    : q(q)
+KeySequenceHelperPrivate::KeySequenceHelperPrivate(KeySequenceHelper *qq)
+    : q(qq)
     , checkAgainstShortcutTypes(KeySequenceHelper::StandardShortcuts | KeySequenceHelper::GlobalShortcuts)
 {
 }
@@ -196,7 +196,7 @@ QWindow *KeySequenceHelper::renderWindow(QQuickWindow *quickWindow)
 {
     QWindow *renderWindow = QQuickRenderControl::renderWindowFor(quickWindow);
     auto window = renderWindow ? renderWindow : quickWindow;
-    // If we have CppOwnership, set it explicitely to prevent the engine taking ownership of the window
+    // If we have CppOwnership, set it explicitly to prevent the engine taking ownership of the window
     // and crashing on teardown
     if (QQmlEngine::objectOwnership(window) == QQmlEngine::CppOwnership) {
         QQmlEngine::setObjectOwnership(window, QQmlEngine::CppOwnership);
