@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-03 00:14+0000\n"
+"POT-Creation-Date: 2021-11-02 00:14+0000\n"
 "PO-Revision-Date: 2009-12-04 22:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -100,13 +100,13 @@ msgstr ""
 msgid "Reassign"
 msgstr "Przëpiszë"
 
-#: quickaddons/configmodule.cpp:164
+#: quickaddons/configmodule.cpp:183
 #, fuzzy, kde-format
 #| msgid "invalid flags"
 msgid "Invalid KPackage '%1'"
 msgstr "lëché fanë"
 
-#: quickaddons/configmodule.cpp:170
+#: quickaddons/configmodule.cpp:189
 #, kde-format
 msgid "No QML file provided"
 msgstr ""

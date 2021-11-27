@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-03 00:14+0000\n"
+"POT-Creation-Date: 2021-11-02 00:14+0000\n"
 "PO-Revision-Date: 2012-06-27 10:04+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -105,13 +105,13 @@ msgstr ""
 msgid "Reassign"
 msgstr "ផ្ដល់ឡើង​វិញ"
 
-#: quickaddons/configmodule.cpp:164
+#: quickaddons/configmodule.cpp:183
 #, fuzzy, kde-format
 #| msgid "Invalid item."
 msgid "Invalid KPackage '%1'"
 msgstr "ធាតុ​មិន​ត្រឹមត្រូវ ។"
 
-#: quickaddons/configmodule.cpp:170
+#: quickaddons/configmodule.cpp:189
 #, kde-format
 msgid "No QML file provided"
 msgstr ""
