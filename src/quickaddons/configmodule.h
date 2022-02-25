@@ -16,12 +16,12 @@
 #include "quickaddons_export.h"
 
 #include <QObject>
+#include <QStringList>
 #include <QVariant>
 #include <QtQml>
 
 #include <KPluginMetaData>
 
-class QStringList;
 class KAboutData;
 class QQuickItem;
 class QQmlEngine;
@@ -197,7 +197,7 @@ public:
     /**
      * Destroys the module.
      */
-    ~ConfigModule();
+    ~ConfigModule() override;
 
 #if QUICKADDONS_ENABLE_DEPRECATED_SINCE(5, 88)
     /**
@@ -511,10 +511,18 @@ public Q_SLOTS:
     void push(QQuickItem *item);
 
     /**
-     * pop the last page of the KCM hierarchy
+     * pop the last page of the KCM hierarchy, the page is destroyed
      * @since 5.50
      */
     void pop();
+
+    /**
+     * remove and return the last page of the KCM hierarchy:
+     * the popped page won't be deleted, it's the caller's responsibility to manage the lifetime of the returned item
+     * @returns the last page if any, nullptr otherwise
+     * @since 5.89
+     */
+    QQuickItem *takeLast();
 
     /**
      * Ask the shell to show a passive notification

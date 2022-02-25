@@ -73,10 +73,11 @@ QHash<QObject *, ConfigModule *> ConfigModulePrivate::s_rootObjects = QHash<QObj
 
 QString ConfigModulePrivate::componentName() const
 {
-    if (_metaData.isValid()) {
+    if (_about) {
+        return _about->componentName();
+    } else {
         return _metaData.pluginId();
     }
-    return _about->componentName();
 }
 
 #if QUICKADDONS_BUILD_DEPRECATED_SINCE(5, 88)
@@ -132,7 +133,7 @@ ConfigModule *ConfigModule::qmlAttachedProperties(QObject *object)
 {
     // at the moment of the attached object creation, the root item is the only one that hasn't a parent
     // only way to avoid creation of this attached for everybody but the root item
-    const QQmlEngine *engine = QtQml::qmlEngine(object);
+    const QQmlEngine *engine = qmlEngine(object);
     QQmlContext *cont = QQmlEngine::contextForObject(object);
 
     // Search the qml context that is the "root" for the sharedqmlobject, which
@@ -178,6 +179,9 @@ QQuickItem *ConfigModule::mainUi()
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
     package.setDefaultPackageRoot(QStringLiteral("kpackage/kcms"));
     package.setPath(d->componentName());
+    if (d->_metaData.isValid() && !package.metadata().isValid()) {
+        package.setMetadata(d->_metaData);
+    }
 
     if (!package.isValid()) {
         d->_errorString = i18n("Invalid KPackage '%1'", d->componentName());
@@ -250,15 +254,21 @@ void ConfigModule::push(QQuickItem *item)
 
 void ConfigModule::pop()
 {
+    if (QQuickItem *page = takeLast()) {
+        page->deleteLater();
+    }
+}
+
+QQuickItem *ConfigModule::takeLast()
+{
     if (d->subPages.isEmpty()) {
-        return;
+        return nullptr;
     }
     QQuickItem *page = d->subPages.takeLast();
     Q_EMIT pageRemoved();
     Q_EMIT depthChanged(depth());
-    page->deleteLater();
-
     setCurrentIndex(qMin(d->currentIndex, depth() - 1));
+    return page;
 }
 
 void ConfigModule::showPassiveNotification(const QString &message, const QVariant &timeout, const QString &actionText, const QJSValue &callBack)

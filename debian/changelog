@@ -1,4 +1,4 @@
-kdeclarative (5.88.0-1+rpi1) bookworm-staging; urgency=medium
+kdeclarative (5.90.0-1+rpi1) bookworm-staging; urgency=medium
 
   [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
   * Add symbols file hack for raspbian.
@@ -6,7 +6,20 @@ kdeclarative (5.88.0-1+rpi1) bookworm-staging; urgency=medium
   [changes introduced in version 5.27.0-1+rpi1 by Peter Michael Green]
   * Disable testsuite.
 
- -- Raspbian forward porter <root@raspbian.org>  Sat, 27 Nov 2021 21:57:25 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 25 Feb 2022 05:48:39 +0000
+
+kdeclarative (5.90.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (5.89.0).
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.90.0).
+  * Added myself to the uploaders.
+  * Update symbols from build for 5.90.0.
+  * Update copyright information.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Fri, 11 Feb 2022 23:46:44 +0100
 
 kdeclarative (5.88.0-1) unstable; urgency=medium
 
