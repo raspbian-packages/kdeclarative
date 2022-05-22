@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-18 00:40+0000\n"
+"POT-Creation-Date: 2022-02-04 00:41+0000\n"
 "PO-Revision-Date: 2009-10-17 00:34+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -44,32 +44,51 @@ msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr ""
 
+#: qmlcontrols/kquickcontrols/ColorButton.qml:63
+#, kde-format
+msgctxt "@info:whatsthis for a button"
+msgid "Color button"
+msgstr ""
+
+#: qmlcontrols/kquickcontrols/ColorButton.qml:65
+#, kde-format
+msgctxt "@info:whatsthis for a button of current color code %1"
+msgid "Current color is %1. This button will open a color chooser dialog."
+msgstr ""
+
+#: qmlcontrols/kquickcontrols/ColorButton.qml:66
+#, fuzzy, kde-format
+#| msgid "Curr&ent actions:"
+msgctxt "@info:whatsthis for a button of current color code %1"
+msgid "Current color is %1."
+msgstr "&Жорий амаллар:"
+
 #: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
 #, fuzzy, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Киритиш файли"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:77
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
 #, fuzzy, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Йўқ"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:92
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:115
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Reserved Shortcut"
 msgstr "Тугмалар бирикмаси"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:117
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:120
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -77,34 +96,34 @@ msgid ""
 "Please choose another one."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:142
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:144
 #, fuzzy, kde-format
 msgid "Global Shortcut Shadowing"
 msgstr "Тугмалар бирикмаси"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:145
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:147
 #, kde-format
 msgid "The '%1' key combination is shadowed by following global actions:\n"
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:147
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:153
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:149
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:155
 #, fuzzy, kde-format
 #| msgid "Content information: %1\n"
 msgid "Action '%1' in context '%2'\n"
 msgstr "Маълумот: %1\n"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:151
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:153
 #, kde-format
 msgid "The '%1' key combination shadows following global actions:\n"
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:190
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:193
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "Дастурнинг андоза тугмалар бирикмаси билан муаммо"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:192
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:195
 #, fuzzy, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -114,7 +133,7 @@ msgstr ""
 "\"%1\" тугма бирикмаси аллақачон \"%2\" андоза амали билан боғланган.\n"
 "Уни жорий амал билан боғлашни истайсизми?"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:198
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:201
 #, kde-format
 msgid "Reassign"
 msgstr ""

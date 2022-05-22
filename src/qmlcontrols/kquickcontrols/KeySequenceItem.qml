@@ -1,16 +1,18 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.12
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 
 import org.kde.private.kquickcontrols 2.0 as KQuickControlsPrivate
 
 RowLayout {
     id: root
+
     property alias showClearButton: clearButton.visible
-    property alias modifierlessAllowed: _helper.modifierlessAllowed
-    property alias multiKeyShortcutsAllowed: _helper.multiKeyShortcutsAllowed
-    property var keySequence
+    property alias modifierlessAllowed: helper.modifierlessAllowed
+    property alias multiKeyShortcutsAllowed: helper.multiKeyShortcutsAllowed
+    // Can't use proper types for QGadgets
+    property var/*QKeySequence*/ keySequence: helper.fromString()
 
     /**
      * This property controls which types of shortcuts are checked for conflicts when the keySequence
@@ -23,7 +25,7 @@ RowLayout {
      * The default is `ShortcutType.GlobalShortcuts | ShortcutType.StandardShortcut`
      * @since 5.74
      */
-    property alias checkForConflictsAgainst: _helper.checkAgainstShortcutTypes
+    property alias checkForConflictsAgainst: helper.checkAgainstShortcutTypes
 
     /**
      * This signal is emitted after the user introduces a new key sequence
@@ -41,10 +43,10 @@ RowLayout {
     }
 
     KQuickControlsPrivate.KeySequenceHelper {
-        id: _helper
-        onGotKeySequence: {
+        id: helper
+        onGotKeySequence: keySequence => {
             if (isKeySequenceAvailable(keySequence)) {
-                root.keySequence = keySequence
+                root.keySequence = keySequence;
             }
             mainButton.checked = false;
             root.captureFinished();
@@ -56,8 +58,7 @@ RowLayout {
         domain: "kdeclarative5"
     }
 
-    Button
-    {
+    Button {
         id: mainButton
 
         icon.name: "configure"
@@ -68,35 +69,31 @@ RowLayout {
         hoverEnabled: true
 
         text: {
-            const keys = _helper.isRecording ? _helper.currentKeySequence : parent.keySequence
-            let text = " " // This space is intentional
-            if (keys == undefined || _helper.keySequenceIsEmpty(keys)) {
-                if (_helper.isRecording) {
-                    text += _tr.i18nc("What the user inputs now will be taken as the new shortcut", "Input")
-                } else {
-                     text += _tr.i18nc("No shortcut defined", "None");
-                }
-            } else {
+            const keys = helper.isRecording ? helper.currentKeySequence : root.keySequence
+            const text = helper.keySequenceIsEmpty(keys)
+                ? (helper.isRecording
+                    ? _tr.i18nc("What the user inputs now will be taken as the new shortcut", "Input")
+                    : _tr.i18nc("No shortcut defined", "None"))
                 // Single ampersand gets interpreted by the button as a mnemonic
                 // and removed; replace it with a double ampersand so that it
                 // will be displayed by the button as a single ampersand, or
                 // else shortcuts with the actual ampersand character will
                 // appear to be partially empty.
-                text += _helper.keySequenceNativeText(keys).replace('&', '&&')
-            }
-            return _helper.isRecording ? text.concat(" ... ") : text.concat(" ")
+                : helper.keySequenceNativeText(keys).replace('&', '&&');
+            // These spaces are intentional
+            return " " + text + (helper.isRecording ? " ... " : " ")
         }
 
         ToolTip.visible: hovered
         ToolTip.delay: 1000
-        ToolTip.text:  _tr.i18n("Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A.")
+        ToolTip.text: _tr.i18n("Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A.")
         ToolTip.timeout: 5000
 
         onCheckedChanged: {
             if (checked) {
-                _helper.window = _helper.renderWindow(parent.Window.window)
+                helper.window = helper.renderWindow(parent.Window.window)
                 mainButton.forceActiveFocus()
-                _helper.startRecording()
+                helper.startRecording()
             }
         }
 
@@ -111,9 +108,9 @@ RowLayout {
         id: clearButton
         Layout.fillHeight: true
         Layout.preferredWidth: height
-        onClicked: root.keySequence = ""
+        onClicked: root.keySequence = helper.fromString()
 
-        //icon name determines the direction of the arrow, NOT the direction of the app layout
-        icon.name: Qt.application.layoutDirection == Qt.LeftToRight ? "edit-clear-locationbar-rtl" : "edit-clear-locationbar-ltr"
+        // icon name determines the direction of the arrow, NOT the direction of the app layout
+        icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl" : "edit-clear-locationbar-ltr"
     }
 }

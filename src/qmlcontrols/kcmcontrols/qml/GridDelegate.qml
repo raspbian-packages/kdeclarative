@@ -59,6 +59,7 @@ T2.ItemDelegate {
     hoverEnabled: !Kirigami.Settings.isMobile
 
     Keys.onEnterPressed: menu.trigger()
+    Keys.onMenuPressed: menu.trigger()
     Keys.onSpacePressed: menu.trigger()
 
     QQC2.Menu {
@@ -71,7 +72,7 @@ T2.ItemDelegate {
             }
         }
 
-        onClosed: view.forceActiveFocus()
+        onClosed: delegate.forceActiveFocus()
 
         Repeater {
             model: delegate.actions

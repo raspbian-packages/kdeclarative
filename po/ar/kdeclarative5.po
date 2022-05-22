@@ -13,7 +13,7 @@
 # Khaled Hosny <khaledhosny@eglug.org>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
 # zayed <zayed.alsaidi@gmail.com>, 2008, 2009.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2009, 2021.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2009, 2021, 2022.
 # hanny <hannysabbagh@hotmail.com>, 2012.
 # Abderrahim Kitouni <a.kitouni@gmail.com>, 2012.
 # Safa Alfulaij <safaalfulaij@hotmail.com>, 2013, 2017, 2018.
@@ -21,10 +21,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-18 00:40+0000\n"
-"PO-Revision-Date: 2021-07-13 23:06+0400\n"
+"POT-Creation-Date: 2022-02-04 00:41+0000\n"
+"PO-Revision-Date: 2022-02-17 17:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,19 +60,37 @@ msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "اعرض المساعدة السياقية"
 
+#: qmlcontrols/kquickcontrols/ColorButton.qml:63
+#, kde-format
+msgctxt "@info:whatsthis for a button"
+msgid "Color button"
+msgstr "زر لون"
+
+#: qmlcontrols/kquickcontrols/ColorButton.qml:65
+#, kde-format
+msgctxt "@info:whatsthis for a button of current color code %1"
+msgid "Current color is %1. This button will open a color chooser dialog."
+msgstr "اللون الحالي %1. هذا الزر سيفتح حواري اختيار اللون."
+
+#: qmlcontrols/kquickcontrols/ColorButton.qml:66
+#, kde-format
+msgctxt "@info:whatsthis for a button of current color code %1"
+msgid "Current color is %1."
+msgstr "اللون الحالي %1."
+
 #: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "الدخل"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:77
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "بلا"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:92
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -81,12 +99,12 @@ msgstr ""
 "انقر الزر ثمّ أدخل الاختصار الذي تريد في البرنامج.\n"
 "فمثلًا إن أردت Ctrl+A: أبقِ مفتاح Ctrl مضغوطًا واضغط A."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:115
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
 msgid "Reserved Shortcut"
 msgstr "اختصار محجوز"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:117
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:120
 #, kde-format
 msgid ""
 "The F12 key is reserved on Windows, so cannot be used for a global "
@@ -96,41 +114,33 @@ msgstr ""
 "مفتاح F12 محجوز في «وندوز»، لذا لا يمكن استخدامه كاختصار عمومي.\n"
 "رجاءً اختر غيره."
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:142
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:144
 #, kde-format
 msgid "Global Shortcut Shadowing"
-msgstr ""
-
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:145
-#, fuzzy, kde-format
-#| msgid ""
-#| "The '%1' key combination is registered by application %2 for action %3:"
-msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr "مجموعة المفاتيح '%1'  مسجلة للتطبيق %2 للإجراء %3:"
+msgstr "حجب الاختصارات العامة"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:147
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:153
-#, fuzzy, kde-format
-#| msgid "In context '%1' for action '%2'\n"
+#, kde-format
+msgid "The '%1' key combination is shadowed by following global actions:\n"
+msgstr "مجموعة المفاتيح '%1' محجوبة بواسطة الإجراءات العامة التالية:\n"
+
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:149
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:155
+#, kde-format
 msgid "Action '%1' in context '%2'\n"
-msgstr "في السياق '%1' للإجراء '%2'\n"
+msgstr "الإجراء '%1' في سياق '%2'\n"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:151
-#, fuzzy, kde-format
-#| msgid ""
-#| "The '%1' key combination is registered by application %2.\n"
-#| "%3"
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:153
+#, kde-format
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
-"مجموعة المفاتيح '%1' مسجلة للتطبيق %2.\n"
-"%3"
+msgstr "مجموعة المفاتيح '%1' تحجب الإجراءات العامة التالية:\n"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:190
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:193
 #, kde-format
 msgid "Conflict with Standard Application Shortcut"
 msgstr "تضارب مع اختصار تطبيق قياسي"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:192
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:195
 #, kde-format
 msgid ""
 "The '%1' key combination is also used for the standard action \"%2\" that "
@@ -141,7 +151,7 @@ msgstr ""
 "التطبيقات.\n"
 "أمتأكّد من استخدامه كاختصار عمومي أيضًا؟"
 
-#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:198
+#: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:201
 #, kde-format
 msgid "Reassign"
 msgstr "أعد التعيين"
