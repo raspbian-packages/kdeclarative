@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
 "PO-Revision-Date: 2012-03-25 21:39+0530\n"
 "Last-Translator: Sri Ramadoss M <amachu@yavarkkum.org>\n"
 "Language-Team: Tamil <podhu@madaladal.yavarkkum.org>\n"
@@ -45,6 +45,12 @@ msgstr "நிரலின் மின்னெழுத்தை வரைய�
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr ""
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, fuzzy, kde-format
+#| msgid "Not found"
+msgid "No items found"
+msgstr "கிடைக்கவில்லை"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, fuzzy, kde-format

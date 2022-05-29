@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
-"PO-Revision-Date: 2022-02-19 12:00+0000\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"PO-Revision-Date: 2022-04-23 13:25+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
 "Language: en_GB\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,6 +43,11 @@ msgstr "The unique name of the application (mandatory)"
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "Show Contextual Help"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, kde-format
+msgid "No items found"
+msgstr "No items found"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format

@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
-"PO-Revision-Date: 2022-03-31 13:30\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"PO-Revision-Date: 2022-04-26 15:18\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -55,6 +55,11 @@ msgstr "应用程序唯一名称 (必须)"
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "显示相关帮助"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, kde-format
+msgid "No items found"
+msgstr "未找到项目"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -39,6 +39,11 @@ msgstr "definieër die program skrif tipe."
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr ""
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, fuzzy, kde-format
+msgid "No items found"
+msgstr "1 ooreenstem gevind."
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format

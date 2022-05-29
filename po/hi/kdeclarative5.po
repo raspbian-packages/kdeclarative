@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
 "PO-Revision-Date: 2022-02-10 11:37+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -47,6 +47,12 @@ msgstr "अनुप्रयोग का अनोखा नाम (अनि�
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "प्रासंगिक मदद दिखाएँ"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, fuzzy, kde-format
+#| msgid "Not found"
+msgid "No items found"
+msgstr "नहीं मिला"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format

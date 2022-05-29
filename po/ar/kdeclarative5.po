@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
-"PO-Revision-Date: 2022-02-17 17:20+0400\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"PO-Revision-Date: 2022-04-28 12:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
 "Language: ar\n"
@@ -59,6 +59,11 @@ msgstr "اسم التطبيق الفريد (إلزامي)"
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "اعرض المساعدة السياقية"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, kde-format
+msgid "No items found"
+msgstr "لم يُعثر على عناصر"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
 "PO-Revision-Date: 2014-03-16 23:21-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -52,6 +52,12 @@ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਫੋਂਟ ਪਰਭਾਸ਼ਿਤ ਕਰੋ
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr ""
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, fuzzy, kde-format
+#| msgid "Not found"
+msgid "No items found"
+msgstr "ਨਹੀਂ ਲੱਭੀ"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, fuzzy, kde-format

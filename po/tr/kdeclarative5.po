@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
-"PO-Revision-Date: 2022-03-29 19:24+0300\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"PO-Revision-Date: 2022-04-13 12:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -36,14 +36,15 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Serdar Soytetir, Görkem Çetin, H. İbrahim Güngör, Volkan Gezer"
+msgstr ""
+"Serdar Soytetir, Görkem Çetin, H. İbrahim Güngör, Volkan Gezer, Emir SARI"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "tulliana@gmail.com, gorkem@kde.org, ibrahim@pardus.org.tr, volkangezer@gmail."
-"com"
+"com, emir_sari@icloud.com"
 
 #: kpackagelauncherqml/main.cpp:30
 #, kde-format
@@ -60,6 +61,11 @@ msgstr "Uygulamanın benzersiz adı (zorunlu)"
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "Bağlamsal Yardımı Göster"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, kde-format
+msgid "No items found"
+msgstr "Öge bulunamadı"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format

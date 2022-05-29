@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
-"PO-Revision-Date: 2022-02-03 11:03+0100\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"PO-Revision-Date: 2022-04-12 10:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -50,6 +50,11 @@ msgstr "El nom únic de l'aplicació (obligatori)"
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "Mostra l'ajuda contextual"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, kde-format
+msgid "No items found"
+msgstr "No s'ha trobat cap element"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format
@@ -105,9 +110,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"La tecla «F12» està reservada a Windows, no es pot usar com a drecera "
+"La tecla «F12» està reservada a Windows, no es pot utilitzar com a drecera "
 "global.\n"
-"Seleccioneu-ne una altra."
+"Seleccioneu-ne una atra."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:144
 #, kde-format
@@ -146,7 +151,7 @@ msgid ""
 msgstr ""
 "La combinació de tecla «%1» ja s'ha assignat a l'acció estàndard «%2» que "
 "usen algunes aplicacions.\n"
-"Segur que també voleu usar-la com a drecera global?"
+"Segur que també voleu utilitzar-la com a drecera global?"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:201
 #, kde-format

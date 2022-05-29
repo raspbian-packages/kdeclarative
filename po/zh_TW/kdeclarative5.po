@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
 "PO-Revision-Date: 2020-01-09 18:07+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -51,6 +51,11 @@ msgstr "應用程式的名稱(主要)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Contextual Help"
+msgstr ""
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, kde-format
+msgid "No items found"
 msgstr ""
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63

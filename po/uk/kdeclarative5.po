@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
-"PO-Revision-Date: 2022-02-03 08:59+0200\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"PO-Revision-Date: 2022-04-12 08:40+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -48,6 +48,11 @@ msgstr "Унікальна назва програми (обов’язкова)
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "Показати контекстну довідку"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, kde-format
+msgid "No items found"
+msgstr "Нічого не знайдено"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format

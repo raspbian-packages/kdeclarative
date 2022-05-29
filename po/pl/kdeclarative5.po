@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
-"PO-Revision-Date: 2022-03-13 11:14+0100\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"PO-Revision-Date: 2022-04-30 21:02+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -137,6 +137,11 @@ msgstr "Niepowtarzalna nazwa aplikacji (obowiązkowo)"
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "Pokaż pomoc podręczną"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, kde-format
+msgid "No items found"
+msgstr "Nie znaleziono żadnych rzeczy"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, kde-format

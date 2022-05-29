@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:41+0000\n"
+"POT-Creation-Date: 2022-04-12 00:40+0000\n"
 "PO-Revision-Date: 2021-09-05 20:28+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -44,6 +44,12 @@ msgstr "Programmets unikke navn (obligatorisk)"
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "Vis kontekstafhængig hjælp"
+
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#, fuzzy, kde-format
+#| msgid "Not found"
+msgid "No items found"
+msgstr "Ikke fundet"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
 #, fuzzy, kde-format
