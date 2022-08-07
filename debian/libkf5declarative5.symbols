@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.78.0 armel armhf riscv64
+# SymbolsHelper-Confirmed: 5.94.0 alpha amd64 armel i386 riscv64
 libKF5Declarative.so.5 libkf5declarative5 #MINVER#
 * Build-Depends-Package: libkf5declarative-dev
  _ZN12KDeclarative12KDeclarative10initializeEv@Base 4.96.0
@@ -85,8 +85,10 @@ libKF5Declarative.so.5 libkf5declarative5 #MINVER#
  (arch=armel riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
  (arch=!armel !riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
  (arch=armel armhf)_ZTISt19_Sp_make_shared_tag@Base 5.78.0
- (arch=armel riscv64)_ZTISt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
- (arch=!armel !riscv64)_ZTISt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
+ (arch=riscv64)_ZTISt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
+ (arch=alpha)_ZTISt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
+ (arch=armel)_ZTISt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIvELN9__gnu_cxx12_Lock_policyE1EE@Base 5.94.0
+ (arch=amd64 i386)_ZTISt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIvELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
  _ZTSN12KDeclarative17ConfigPropertyMapE@Base 4.96.0
  _ZTSN12KDeclarative21QmlObjectSharedEngineE@Base 5.12.0
  _ZTSN12KDeclarative9QmlObjectE@Base 4.96.0
@@ -96,11 +98,15 @@ libKF5Declarative.so.5 libkf5declarative5 #MINVER#
  (arch=armel riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
  (arch=!armel !riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
  _ZTSSt19_Sp_make_shared_tag@Base 5.12.0
- (arch=armel riscv64)_ZTSSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
- (arch=!armel !riscv64)_ZTSSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
+ (arch=riscv64)_ZTSSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
+ (arch=alpha)_ZTSSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
+ (arch=armel)_ZTSSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIvELN9__gnu_cxx12_Lock_policyE1EE@Base 5.94.0
+ (arch=amd64 i386)_ZTSSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIvELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
  _ZTVN12KDeclarative17ConfigPropertyMapE@Base 4.96.0
  _ZTVN12KDeclarative21QmlObjectSharedEngineE@Base 5.12.0
  _ZTVN12KDeclarative9QmlObjectE@Base 4.96.0
- (arch=armel riscv64)_ZTVSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
- (arch=!armel !riscv64)_ZTVSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.12.0
+ (arch=riscv64)_ZTVSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.12.0
+ (arch=alpha)_ZTVSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
+ (arch=armel)_ZTVSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIvELN9__gnu_cxx12_Lock_policyE1EE@Base 5.94.0
+ (arch=amd64 i386)_ZTVSt23_Sp_counted_ptr_inplaceI10QQmlEngineSaIvELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
  _ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag@Base 5.51.0
