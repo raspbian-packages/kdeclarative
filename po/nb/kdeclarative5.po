@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"POT-Creation-Date: 2022-06-30 00:41+0000\n"
 "PO-Revision-Date: 2015-04-28 08:55+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -86,7 +86,7 @@ msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Ingen"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -95,6 +95,12 @@ msgstr ""
 "Trykk på knappen, og tast inn snarveien slik du ville gjort det i "
 "programmet.\n"
 "Eksempel for CTRL+A: Hold CTRL-tasten og trykk A."
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr ""
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format

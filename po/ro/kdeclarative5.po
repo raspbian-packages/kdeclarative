@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"POT-Creation-Date: 2022-06-30 00:41+0000\n"
 "PO-Revision-Date: 2021-05-03 15:50+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -83,7 +83,7 @@ msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Niciuna"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -92,6 +92,12 @@ msgstr ""
 "Apăsați butonul, apoi introduceți scurtătura la fel cum ați face în "
 "aplicație.\n"
 "Exemplu pentru Ctrl+A: tineți tasta Ctrl și apăsați A."
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr ""
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format

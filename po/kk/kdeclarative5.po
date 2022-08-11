@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"POT-Creation-Date: 2022-06-30 00:41+0000\n"
 "PO-Revision-Date: 2013-11-08 01:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -90,7 +90,7 @@ msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Жоқ"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
 #, fuzzy, kde-format
 #| msgid ""
 #| "Click on the button, then enter the shortcut like you would in the "
@@ -103,6 +103,12 @@ msgstr ""
 "Осы батырманы басыңыз да, қалаған тіркесімді келтіріңіз.\n"
 "Мысалы, Ctrl+a: дегенді келтіру үшін 'Ctrl' пернені басып тұрып \n"
 "'a' пернесін басыңыз."
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr ""
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format

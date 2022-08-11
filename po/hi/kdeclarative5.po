@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-12 00:40+0000\n"
+"POT-Creation-Date: 2022-06-30 00:41+0000\n"
 "PO-Revision-Date: 2022-02-10 11:37+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -84,7 +84,7 @@ msgctxt "No shortcut defined"
 msgid "None"
 msgstr "कुछ नहीं"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -92,6 +92,12 @@ msgid ""
 msgstr ""
 "बटन पर क्लिक करें, फिर शॉर्टकट दर्ज करें जैसे आप अनुप्रयोग में आम तौर पर करतें हैं।\n"
 " उदाहरण के तौर पर, Ctrl+A के लिए: Ctrl कुंजी दबाए रखें और A दबाएं।"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr ""
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format

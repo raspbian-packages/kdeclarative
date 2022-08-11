@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-12 00:40+0000\n"
-"PO-Revision-Date: 2022-04-12 11:44+0200\n"
+"POT-Creation-Date: 2022-06-30 00:41+0000\n"
+"PO-Revision-Date: 2022-06-30 09:55+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Files: kfarch.cpp kfdird.cpp kfind.cpp kfindtop.cpp kfoptions.cpp kfsave.cpp "
 "kftabdlg.cpp kftypes.cpp kfwin.cpp main.cpp mkfdird.cpp mkfind.cpp\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -78,7 +78,7 @@ msgstr "Kleurenknop"
 msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1. This button will open a color chooser dialog."
 msgstr ""
-"Huidige kleur is %1. Deze knop zal een dialoog met kleurenkiezer openen."
+"Huidige kleur is %1. Deze knop zal een dialoog met de kleurenkiezer openen."
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:66
 #, kde-format
@@ -98,7 +98,7 @@ msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Geen"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -107,6 +107,12 @@ msgstr ""
 "Klik op de knop, voer dan de sneltoets in zoals u zou doen in het "
 "programma.\n"
 "Voorbeeld voor Ctrl+A: houdt de Ctrl-toets in en druk op A."
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr "Toetsenreeks wissen"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format

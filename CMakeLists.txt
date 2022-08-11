@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_VERSION "5.94.0") # handled by release scripts
-set(KF_DEP_VERSION "5.93.0") # handled by release scripts
+set(KF_VERSION "5.96.0") # handled by release scripts
+set(KF_DEP_VERSION "5.96.0") # handled by release scripts
 project(KDeclarative VERSION ${KF_VERSION})
 
 # Dependencies
 include(FeatureSummary)
-find_package(ECM 5.93.0  NO_MODULE)
+find_package(ECM 5.96.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -20,6 +20,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED Qml
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(KDEGitCommitHooks)
+include(ECMDeprecationSettings)
 
 find_package(KF5Config ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5I18n ${KF_DEP_VERSION} REQUIRED)
@@ -36,9 +37,6 @@ if(NOT WIN32)
     find_package(KF5GlobalAccel ${KF_DEP_VERSION} REQUIRED)
 endif()
 #########################################################################
-
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
 
 #add_definitions(-Wno-deprecated)
 
@@ -67,6 +65,11 @@ ecm_setup_version(
 
 # Subdirectories
 add_definitions(-DTRANSLATION_DOMAIN=\"kdeclarative5\")
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF 5.95
+)
+
 ki18n_install(po)
 
 if (QT_MAJOR_VERSION STREQUAL "5")

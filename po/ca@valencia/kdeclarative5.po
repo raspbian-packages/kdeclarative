@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-12 00:40+0000\n"
-"PO-Revision-Date: 2022-04-12 10:12+0200\n"
+"POT-Creation-Date: 2022-06-30 00:41+0000\n"
+"PO-Revision-Date: 2022-06-30 10:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -87,7 +87,7 @@ msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Cap"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -97,6 +97,12 @@ msgstr ""
 "programa.\n"
 "Exemple per a «Ctrl+a»: manteniu premuda la tecla «Ctrl» mentre premeu la "
 "«A»."
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr "Seqüència de tecles de neteja"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
@@ -112,7 +118,7 @@ msgid ""
 msgstr ""
 "La tecla «F12» està reservada a Windows, no es pot utilitzar com a drecera "
 "global.\n"
-"Seleccioneu-ne una atra."
+"Seleccioneu-ne una altra."
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:144
 #, kde-format
@@ -150,7 +156,7 @@ msgid ""
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
 "La combinació de tecla «%1» ja s'ha assignat a l'acció estàndard «%2» que "
-"usen algunes aplicacions.\n"
+"utilitzen algunes aplicacions.\n"
 "Segur que també voleu utilitzar-la com a drecera global?"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:201

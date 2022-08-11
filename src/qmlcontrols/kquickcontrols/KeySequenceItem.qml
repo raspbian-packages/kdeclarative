@@ -84,10 +84,12 @@ RowLayout {
             return " " + text + (helper.isRecording ? " ... " : " ")
         }
 
-        ToolTip.visible: hovered
-        ToolTip.delay: 1000
-        ToolTip.text: _tr.i18n("Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A.")
-        ToolTip.timeout: 5000
+        Accessible.description: _tr.i18n("Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A.")
+
+        ToolTip {
+            visible: mainButton.hovered
+            text: mainButton.Accessible.description
+        }
 
         onCheckedChanged: {
             if (checked) {
@@ -110,7 +112,15 @@ RowLayout {
         Layout.preferredWidth: height
         onClicked: root.keySequence = helper.fromString()
 
+        hoverEnabled: true
         // icon name determines the direction of the arrow, NOT the direction of the app layout
         icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl" : "edit-clear-locationbar-ltr"
+
+        Accessible.name: _tr.i18nc("@info:tooltip", "Clear Key Sequence")
+
+        ToolTip {
+            visible: clearButton.hovered
+            text: clearButton.Accessible.name
+        }
     }
 }

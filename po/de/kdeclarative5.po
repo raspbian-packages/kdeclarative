@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-12 00:40+0000\n"
-"PO-Revision-Date: 2022-04-15 04:28+0200\n"
+"POT-Creation-Date: 2022-06-30 00:41+0000\n"
+"PO-Revision-Date: 2022-06-10 00:30+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 21.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -56,12 +56,10 @@ msgid "No items found"
 msgstr "Keine Elemente gefunden"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:63
-#, fuzzy, kde-format
-#| msgctxt "left mouse button"
-#| msgid "left button"
+#, kde-format
 msgctxt "@info:whatsthis for a button"
 msgid "Color button"
-msgstr "linke Maustaste"
+msgstr "Farbknopf"
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:65
 #, kde-format
@@ -73,7 +71,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1."
-msgstr ""
+msgstr "Aktuelle Farbe ist %1."
 
 #: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
 #, kde-format
@@ -87,7 +85,7 @@ msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Keiner"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -97,6 +95,12 @@ msgstr ""
 "auf der Tastatur.\n"
 "Beispielsweise für Strg+A: Halten Sie die Strg-Taste gedrückt und drücken "
 "Sie dann „A“."
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr ""
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
