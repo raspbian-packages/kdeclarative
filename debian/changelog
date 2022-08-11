@@ -6,7 +6,10 @@ kdeclarative (5.96.0-3+rpi1) bookworm-staging; urgency=medium
   [changes introduced in version 5.27.0-1+rpi1 by Peter Michael Green]
   * Disable testsuite.
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 11 Aug 2022 01:42:08 +0000
+  [changes introduced in version 5.96.0-3+rpi1 by Peter Michael Green]
+  * Extend symbols file hack.
+
+ -- Peter Michael Green <plugwash@raspbian.org>  Thu, 11 Aug 2022 03:03:20 +0000
 
 kdeclarative (5.96.0-3) unstable; urgency=medium
 
