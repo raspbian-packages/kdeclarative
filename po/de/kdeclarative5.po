@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-30 00:41+0000\n"
-"PO-Revision-Date: 2022-06-10 00:30+0200\n"
+"PO-Revision-Date: 2022-07-11 23:45+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -65,7 +65,7 @@ msgstr "Farbknopf"
 #, kde-format
 msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1. This button will open a color chooser dialog."
-msgstr ""
+msgstr "Aktuelle Farbe ist %1. Dieser Knopf öffnet einen Farbauswahldialog."
 
 #: qmlcontrols/kquickcontrols/ColorButton.qml:66
 #, kde-format
@@ -100,7 +100,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Tastenfolge löschen"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
@@ -121,33 +121,26 @@ msgstr ""
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:144
 #, kde-format
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Überschrieben durch globalen Kurzbefehl"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:147
-#, fuzzy, kde-format
-#| msgid ""
-#| "The '%1' key combination is registered by application %2 for action %3:"
+#, kde-format
 msgid "The '%1' key combination is shadowed by following global actions:\n"
 msgstr ""
-"Der Kurzbefehl „%1“ wird bereits von der Anwendung „%2“ für die Aktion „%3“ "
-"verwendet:"
+"Die Tastenkombination „%1“ wird von den folgenden globalen Aktionen "
+"überschrieben:\n"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:149
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:155
-#, fuzzy, kde-format
-#| msgid "In context '%1' for action '%2'\n"
+#, kde-format
 msgid "Action '%1' in context '%2'\n"
-msgstr "Im Zusammenhang „%1“ für die Aktion „%2“\n"
+msgstr "Aktion „%1“ in Zusammenhang „%2“\n"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:153
-#, fuzzy, kde-format
-#| msgid ""
-#| "The '%1' key combination is registered by application %2.\n"
-#| "%3"
+#, kde-format
 msgid "The '%1' key combination shadows following global actions:\n"
 msgstr ""
-"Der Kurzbefehl „%1“ wird bereits von der Anwendung „%2“ verwendet.\n"
-"%3"
+"Die Tastenkombination „%1“ überschreibt die folgenden globalen Aktionen:\n"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:193
 #, kde-format
