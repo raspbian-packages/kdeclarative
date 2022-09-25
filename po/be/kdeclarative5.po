@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:41+0000\n"
+"POT-Creation-Date: 2022-08-31 00:42+0000\n"
 "PO-Revision-Date: 2009-09-06 15:21+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -23,8 +23,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -164,13 +165,13 @@ msgstr ""
 msgid "Reassign"
 msgstr "Пераназначыць"
 
-#: quickaddons/configmodule.cpp:187
+#: quickaddons/configmodule.cpp:189
 #, fuzzy, kde-format
 #| msgid "Invalid Filenames"
 msgid "Invalid KPackage '%1'"
 msgstr "Недапушчальныя назвы файлаў"
 
-#: quickaddons/configmodule.cpp:193
+#: quickaddons/configmodule.cpp:195
 #, kde-format
 msgid "No QML file provided"
 msgstr ""

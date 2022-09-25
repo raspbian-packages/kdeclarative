@@ -1,4 +1,4 @@
-kdeclarative (5.97.0-1+rpi1) bookworm-staging; urgency=medium
+kdeclarative (5.98.0-2+rpi1) bookworm-staging; urgency=medium
 
   [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
   * Add symbols file hack for raspbian.
@@ -9,7 +9,29 @@ kdeclarative (5.97.0-1+rpi1) bookworm-staging; urgency=medium
   [changes introduced in version 5.96.0-3+rpi1 by Peter Michael Green]
   * Extend symbols file hack.
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 01 Sep 2022 23:07:34 +0000
+ -- Peter Michael Green <plugwash@raspbian.org>  Sun, 25 Sep 2022 18:40:25 +0000
+
+kdeclarative (5.98.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols files from the logs of buildds.
+  * Modernize the building more:
+    - add the dh-sequence-pkgkde-symbolshelper build dependency to use the
+      pkgkde_symbolshelper automatically
+    - drop the manually specified pkgkde_symbolshelper addon for dh
+  * Tighten the inter-library dependencies.
+
+ -- Pino Toscano <pino@debian.org>  Wed, 21 Sep 2022 01:03:29 +0200
+
+kdeclarative (5.98.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.98.0).
+  * Update build-deps and deps with the info from cmake.
+  * Update symbols from build for 5.98.0.
+  * Review copyright information.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 18 Sep 2022 23:11:49 +0200
 
 kdeclarative (5.97.0-1) unstable; urgency=medium
 

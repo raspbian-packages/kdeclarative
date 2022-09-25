@@ -6,7 +6,6 @@
 
 #include "kdeclarative.h"
 #include "private/kdeclarative_p.h"
-#include "private/kiconprovider_p.h"
 #include "private/kioaccessmanagerfactory_p.h"
 #include "qmlobject.h"
 
@@ -15,6 +14,7 @@
 #include <QQmlDebuggingEnabler>
 
 #include <KConfigGroup>
+#include <KQuickIconProvider>
 #include <KSharedConfig>
 
 namespace KDeclarative
@@ -89,6 +89,7 @@ void KDeclarative::setupContext()
 }
 #endif
 
+#if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 98)
 void KDeclarative::setupEngine(QQmlEngine *engine)
 {
 #ifndef Q_OS_ANDROID
@@ -118,8 +119,9 @@ void KDeclarative::setupEngine(QQmlEngine *engine)
     }
 
     // setup ImageProvider for KDE icons
-    engine->addImageProvider(QStringLiteral("icon"), new KIconProvider);
+    engine->addImageProvider(QStringLiteral("icon"), new KQuickIconProvider);
 }
+#endif
 
 #if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 75)
 void KDeclarative::setTranslationDomain(const QString &translationDomain)
@@ -138,6 +140,7 @@ QString KDeclarative::translationDomain() const
 }
 #endif
 
+#if KDECLARATIVE_BUILD_DEPRECATED_SINCE(5, 98)
 void KDeclarative::setupQmlJsDebugger()
 {
 #if QT_CONFIG(qml_debug)
@@ -180,5 +183,5 @@ void KDeclarative::setRuntimePlatform(const QStringList &platform)
 {
     KDeclarativePrivate::s_runtimePlatform = platform;
 }
-
+#endif
 }

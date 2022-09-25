@@ -5,8 +5,6 @@ set(kdeclarative_SRCS
     kdeclarative.cpp
     kdeclarative.h
     private/kdeclarative_p.h
-    private/kiconprovider.cpp
-    private/kiconprovider_p.h
     qmlobject.cpp
     qmlobject.h
     qmlobjectsharedengine.cpp
@@ -25,7 +23,7 @@ ecm_generate_export_header(KF5Declarative
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS 5.0 5.45 5.75 5.91 5.95
+    DEPRECATION_VERSIONS 5.0 5.45 5.75 5.91 5.95 5.98
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 

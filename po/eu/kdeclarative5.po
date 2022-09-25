@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:41+0000\n"
+"POT-Creation-Date: 2022-08-31 00:42+0000\n"
 "PO-Revision-Date: 2022-07-30 22:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -161,12 +161,12 @@ msgstr ""
 msgid "Reassign"
 msgstr "Lotu"
 
-#: quickaddons/configmodule.cpp:187
+#: quickaddons/configmodule.cpp:189
 #, kde-format
 msgid "Invalid KPackage '%1'"
 msgstr "KPackage baliogabea '%1'"
 
-#: quickaddons/configmodule.cpp:193
+#: quickaddons/configmodule.cpp:195
 #, kde-format
 msgid "No QML file provided"
 msgstr "Ez da QML fitxategirik hornitu"

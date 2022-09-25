@@ -147,12 +147,15 @@ public:
     QString translationDomain() const;
 #endif
 
+#if KDECLARATIVE_ENABLE_DEPRECATED_SINCE(5, 98)
     /**
      * This method must be called very early at startup time to ensure the
      * QQuickDebugger is enabled. Ideally it should be called in main(),
      * after command-line options are defined.
      * @since 5.0
+     * @deprecated Since 5.98, deprecated for lack of usage. Set the debugger manually up
      */
+    KDECLARATIVE_DEPRECATED_VERSION(5, 98, "Deprecated for lack of usage. Set the debugger manually up")
     static void setupQmlJsDebugger();
 
     /**
@@ -161,27 +164,35 @@ public:
      *         specialization. If the string is empty, there is no specified runtime platform
      *         and a traditional desktop environment may be assumed
      * @since 4.10
+     * @deprecated Since 5.98, use KRuntimePlatform::runtimePlatform instead
      */
+    KDECLARATIVE_DEPRECATED_VERSION(5, 98, "Use KRuntimePlatform::runtimePlatform instead")
     static QStringList runtimePlatform();
 
     /**
      * Sets the runtime platform from now on, globally to the process.
      * Already loaded QML components won't be affected.
      * @since 5.0
+     * @deprecated Since 5.98, deprecated for lack of usage, set PLASMA_PLATFORM ENV variable instead
      */
+    KDECLARATIVE_DEPRECATED_VERSION(5, 98, "Deprecated for lack of usage, set PLASMA_PLATFORM ENV variable instead")
     static void setRuntimePlatform(const QStringList &platform);
 
     /**
      * @return the QML components target, based on the runtime platform. e.g. touch or desktop
      * @since 4.10
+     * @deprecated Since 5.98, deprecated for lack of usage, use last value from KRuntimePlatform::runtimePlatform instead
      */
+    KDECLARATIVE_DEPRECATED_VERSION(5, 98, "Deprecated for lack of usage, use last value from KRuntimePlatform::runtimePlatform instead")
     static QString componentsTarget();
 
     /**
      * @return the default components target; can be used to compare against the returned value
      *         from @see componentsTarget()
      * @since 4.10
+     * @deprecated Since 5.98, deprecated for lack of usage, use "desktop" as hardcoded value instead
      */
+    KDECLARATIVE_DEPRECATED_VERSION(5, 98, "Deprecated for lack of usage, use \"desktop\" as hardcoded value instead")
     static QString defaultComponentsTarget();
 
     /**
@@ -198,8 +209,12 @@ public:
      * @param engine the engine to setup
      * @sa setupContext(), componentsTarget()
      * @since 5.45
+     * @deprecated Since 5.98, set up the KQuickIconProvider from KIconThemes and the QQmlNetworkAccessManagerFactory creating a KIO::Integration::AccessManager
+     * mnually up with if needed
      */
+    KDECLARATIVE_DEPRECATED_VERSION(5, 98, "See API docs")
     static void setupEngine(QQmlEngine *engine);
+#endif
 
 private:
     KDeclarativePrivate *const d;

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:41+0000\n"
+"POT-Creation-Date: 2022-08-31 00:42+0000\n"
 "PO-Revision-Date: 2022-07-11 23:45+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -163,12 +163,12 @@ msgstr ""
 msgid "Reassign"
 msgstr "Neu zuordnen"
 
-#: quickaddons/configmodule.cpp:187
+#: quickaddons/configmodule.cpp:189
 #, kde-format
 msgid "Invalid KPackage '%1'"
 msgstr "Ungültiges KPackage „%1“"
 
-#: quickaddons/configmodule.cpp:193
+#: quickaddons/configmodule.cpp:195
 #, kde-format
 msgid "No QML file provided"
 msgstr "Keine QML-Datei angegeben"
