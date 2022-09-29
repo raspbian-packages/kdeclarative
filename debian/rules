@@ -10,14 +10,14 @@ include /usr/share/pkg-kde-tools/qt-kde-team/2/library-packages.mk
 	dh $@
 
 override_dh_auto_build:
-	sed -i s/arch=!armel/optional=meh/ debian/libkf5declarative5.symbols
-	sed -i 's/arch=alpha amd64 arm64 armhf hppa i386 mips64el mipsel powerpc ppc64 ppc64el s390x sh4/optional=meh2/' debian/libkf5declarative5.symbols
+	sed -i s/arch=!armel/optional=meh/ debian/*.symbols
+	sed -i 's/arch=alpha amd64 arm64 armhf hppa i386 mips64el mipsel powerpc ppc64 ppc64el s390x sh4/optional=meh2/' debian/*.symbols
 	dh_auto_build
 
 override_dh_auto_clean:
 	dh_auto_clean
-	sed -i s/optional=meh/arch=!armel/ debian/libkf5declarative5.symbols
-	sed -i 's/optional=meh2/arch=alpha amd64 arm64 armhf hppa i386 mips64el mipsel powerpc ppc64 ppc64el s390x sh4/' debian/libkf5declarative5.symbols
+	sed -i 's/optional=meh2/arch=alpha amd64 arm64 armhf hppa i386 mips64el mipsel powerpc ppc64 ppc64el s390x sh4/' debian/*.symbols
+	sed -i s/optional=meh/arch=!armel/ debian/*.symbols
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DBUILD_QCH=ON

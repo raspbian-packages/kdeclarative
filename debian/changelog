@@ -9,6 +9,9 @@ kdeclarative (5.98.0-2+rpi1) bookworm-staging; urgency=medium
   [changes introduced in version 5.96.0-3+rpi1 by Peter Michael Green]
   * Extend symbols file hack.
 
+  [changes introduced in version 5.98.0-2+rpi1 by Peter Michael Green]
+  * Further extend and fix symbols file hack.
+
  -- Peter Michael Green <plugwash@raspbian.org>  Sun, 25 Sep 2022 18:40:25 +0000
 
 kdeclarative (5.98.0-2) unstable; urgency=medium
