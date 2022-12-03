@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-31 00:42+0000\n"
-"PO-Revision-Date: 2022-06-30 09:15+0300\n"
+"POT-Creation-Date: 2022-09-29 00:42+0000\n"
+"PO-Revision-Date: 2022-09-15 08:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -72,19 +72,19 @@ msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1."
 msgstr "Поточним кольором є %1."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ввід"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:90
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Немає"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:101
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -94,11 +94,17 @@ msgstr ""
 "використовувати у програмі.\n"
 "Наприклад, для Ctrl+A: натисніть клавішу Ctrl, а потім клавішу «A»."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "Вилучити клавіатурне скорочення"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:165
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "Скасувати запис послідовності клавіш"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
@@ -167,3 +173,36 @@ msgstr "Некоректний KPackage «%1»"
 #, kde-format
 msgid "No QML file provided"
 msgstr "Не надано файла QML"
+
+#~ msgid "The key you just pressed is not supported by Qt."
+#~ msgstr "Клавіша, яку ви тільки-но використали, не підтримується Qt."
+
+#~ msgid "Unsupported Key"
+#~ msgstr "Непідтримувана клавіша"
+
+#~ msgid "None"
+#~ msgstr "Немає"
+
+#~ msgid "Undo"
+#~ msgstr "Вернути"
+
+#~ msgid "Redo"
+#~ msgstr "Повторити"
+
+#~ msgid "Cut"
+#~ msgstr "Вирізати"
+
+#~ msgid "Copy"
+#~ msgstr "Копіювати"
+
+#~ msgid "Paste"
+#~ msgstr "Вставити"
+
+#~ msgid "Delete"
+#~ msgstr "Вилучити"
+
+#~ msgid "Clear"
+#~ msgstr "Спорожнити"
+
+#~ msgid "Select All"
+#~ msgstr "Позначити усе"

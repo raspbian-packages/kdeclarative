@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-31 00:42+0000\n"
+"POT-Creation-Date: 2022-09-29 00:42+0000\n"
 "PO-Revision-Date: 2020-01-09 18:07+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -76,19 +76,19 @@ msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "輸入"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:90
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "無"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:101
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -97,10 +97,16 @@ msgstr ""
 "點擊此按鍵，並輸入您要在程式裡做的動作。\n"
 "例如 Ctrl+A：按住 Ctrl 鍵並按 A。"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
+msgstr ""
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:165
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
 msgstr ""
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
@@ -168,3 +174,9 @@ msgstr "「%1」KPackage 無效"
 #, kde-format
 msgid "No QML file provided"
 msgstr "未提供 QML 檔案"
+
+#~ msgid "The key you just pressed is not supported by Qt."
+#~ msgstr "您剛才按的鍵並未被 Qt 所支援。"
+
+#~ msgid "Unsupported Key"
+#~ msgstr "不支援的按鍵。"

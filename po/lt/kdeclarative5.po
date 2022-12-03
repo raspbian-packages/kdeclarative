@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-31 00:42+0000\n"
+"POT-Creation-Date: 2022-09-29 00:42+0000\n"
 "PO-Revision-Date: 2020-01-11 23:54+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -73,19 +73,19 @@ msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Įvestis"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:90
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Nėra"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:101
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -95,10 +95,16 @@ msgstr ""
 "būtumėte programoje.\n"
 "Pavyzdžiui kombinacijai Vald+A: laikykite Vald klavišą ir paspauskite A."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
+msgstr ""
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:165
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
 msgstr ""
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
@@ -168,3 +174,39 @@ msgstr "Neteisingas KPackage \"%1\""
 #, kde-format
 msgid "No QML file provided"
 msgstr "Nepateikta jokio QML failo"
+
+#~ msgid "The key you just pressed is not supported by Qt."
+#~ msgstr "Klavišas, kurį ką tik paspaudėte, nepalaikomas Qt sistemoje."
+
+#~ msgid "Unsupported Key"
+#~ msgstr "Nepalaikomas klavišas"
+
+#, fuzzy
+#~| msgctxt "No shortcut defined"
+#~| msgid "None"
+#~ msgid "None"
+#~ msgstr "Jokio"
+
+#~ msgid "Undo"
+#~ msgstr "Atšaukti"
+
+#~ msgid "Redo"
+#~ msgstr "Pakartoti"
+
+#~ msgid "Cut"
+#~ msgstr "Iškirpti"
+
+#~ msgid "Copy"
+#~ msgstr "Kopijuoti"
+
+#~ msgid "Paste"
+#~ msgstr "Padėti"
+
+#~ msgid "Delete"
+#~ msgstr "Trinti"
+
+#~ msgid "Clear"
+#~ msgstr "Išvalyti"
+
+#~ msgid "Select All"
+#~ msgstr "Pažymėti viską"

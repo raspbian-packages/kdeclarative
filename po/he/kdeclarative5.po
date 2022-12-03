@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-31 00:42+0000\n"
+"POT-Creation-Date: 2022-09-29 00:42+0000\n"
 "PO-Revision-Date: 2017-05-16 06:49-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -81,19 +81,19 @@ msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1."
 msgstr ""
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "קלט"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:90
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "ללא"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:101
 #, fuzzy, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -102,10 +102,16 @@ msgstr ""
 "לחץ על הכפתור, ואז תוכל ליצור קיצור מקשים לשימוש בתוכנית.\n"
 "דוגמא: לקיצור Ctrl+a: לחץ על המקש Ctrl ועל המקש a"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
+msgstr ""
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:165
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
 msgstr ""
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
@@ -174,3 +180,15 @@ msgstr ""
 #, kde-format
 msgid "No QML file provided"
 msgstr ""
+
+#~ msgid "The key you just pressed is not supported by Qt."
+#~ msgstr "המקש שלחצת אינו נתמך על ידי Qt."
+
+#~ msgid "Unsupported Key"
+#~ msgstr "מקש לא נתמך"
+
+#, fuzzy
+#~| msgctxt "No shortcut defined"
+#~| msgid "None"
+#~ msgid "None"
+#~ msgstr "ללא"

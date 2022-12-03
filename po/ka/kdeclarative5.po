@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeclarative\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-31 00:42+0000\n"
-"PO-Revision-Date: 2022-05-22 06:36+0200\n"
+"POT-Creation-Date: 2022-09-29 00:42+0000\n"
+"PO-Revision-Date: 2022-09-15 08:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -67,19 +67,19 @@ msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1."
 msgstr "მიმდინარე ფერია %1."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "შეტანის ფაილი"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:90
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "არაა"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:101
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -88,11 +88,17 @@ msgstr ""
 "დააჭირეთ ღილაკს და და შეიყვანეთ მალსახმობი, როგორც პროგრამაში.\n"
 "მაგალითად Ctrl+A: დააჭირეთ Ctrl-ს და A-ს."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "ღილაკების მიმდევრობის გასუფთავება"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:165
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "ღილაკების მიმდევრობის ჩაწერის გაუქმება"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format

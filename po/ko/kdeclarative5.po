@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-31 00:42+0000\n"
-"PO-Revision-Date: 2022-07-13 14:08+0200\n"
+"POT-Creation-Date: 2022-09-29 00:42+0000\n"
+"PO-Revision-Date: 2022-10-03 16:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language-Team: Korean <kde-i18n-doc@kde.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,19 +68,19 @@ msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1."
 msgstr "현재 색상은 %1입니다."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "입력"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:90
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "없음"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:101
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -89,11 +89,17 @@ msgstr ""
 "단추를 클릭한 다음 프로그램에 사용할 단축키를 누르십시오.\n"
 "Ctrl+A를 사용하려면 Ctrl 키를 누르면서 A 키를 누르십시오."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "키 배열 비우기"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:165
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "키 배열 기록 취소"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
@@ -161,3 +167,36 @@ msgstr "잘못된 KPackage '%1'"
 #, kde-format
 msgid "No QML file provided"
 msgstr "QML 파일을 지정하지 않았음"
+
+#~ msgid "The key you just pressed is not supported by Qt."
+#~ msgstr "Qt에서 방금 누른 키를 지원하지 않습니다."
+
+#~ msgid "Unsupported Key"
+#~ msgstr "지원하지 않는 키"
+
+#~ msgid "None"
+#~ msgstr "없음"
+
+#~ msgid "Undo"
+#~ msgstr "실행 취소"
+
+#~ msgid "Redo"
+#~ msgstr "다시 실행"
+
+#~ msgid "Cut"
+#~ msgstr "잘라내기"
+
+#~ msgid "Copy"
+#~ msgstr "복사"
+
+#~ msgid "Paste"
+#~ msgstr "붙여넣기"
+
+#~ msgid "Delete"
+#~ msgstr "삭제"
+
+#~ msgid "Clear"
+#~ msgstr "지우기"
+
+#~ msgid "Select All"
+#~ msgstr "모두 선택"

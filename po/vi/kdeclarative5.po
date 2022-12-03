@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-31 00:42+0000\n"
-"PO-Revision-Date: 2022-07-11 20:37+0200\n"
+"POT-Creation-Date: 2022-09-29 00:42+0000\n"
+"PO-Revision-Date: 2022-09-28 18:34+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -71,19 +71,19 @@ msgctxt "@info:whatsthis for a button of current color code %1"
 msgid "Current color is %1."
 msgstr "Màu hiện tại là %1."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:75
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:89
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Nhập"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:76
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:90
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Không"
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:87
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:101
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -92,11 +92,17 @@ msgstr ""
 "Bấm nút, sau đó nhập phím tắt bạn muốn dùng.\n"
 "Ví dụ cho Ctrl+A: giữ phím Ctrl và nhấn A."
 
-#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:119
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:149
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "Xoá chuỗi phím"
+
+#: qmlcontrols/kquickcontrols/KeySequenceItem.qml:165
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "Huỷ ghi chuỗi phím"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
@@ -165,3 +171,9 @@ msgstr "KPackage không hợp lệ '%1'"
 #, kde-format
 msgid "No QML file provided"
 msgstr "Không nhận được tệp QML nào"
+
+#~ msgid "The key you just pressed is not supported by Qt."
+#~ msgstr "Phím bạn vừa nhấn không được Qt hỗ trợ."
+
+#~ msgid "Unsupported Key"
+#~ msgstr "Phím không được hỗ trợ"
