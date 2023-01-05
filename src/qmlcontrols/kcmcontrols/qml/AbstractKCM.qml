@@ -48,9 +48,6 @@ Kirigami.Page {
     property bool framedView: true
 
     /**
-     * TODO KF6: remove this property and always have System Settings itself add
-     * appropriate padding above its footer, so individual KCMs don't have to
-     *
      * extraFooterTopPadding: bool
      * Whether to add extra top padding to an empty footer when framedView is
      * false. Use the default value of true for KCMs in System Settings, because
@@ -135,7 +132,7 @@ Kirigami.Page {
 
     Component.onCompleted: {
         if (footer && footer != footerParent) {
-            var f = footer
+            let f = footer
 
             footerParent.contentItem = f
             footer = footerParent
@@ -144,7 +141,7 @@ Kirigami.Page {
         }
 
         if (header && header != headerParent) {
-            var h = header
+            let h = header
 
             headerParent.contentItem = h
             header = headerParent
@@ -153,8 +150,8 @@ Kirigami.Page {
         }
 
         //Search overlaysheets in contentItem, parent to root if found
-        for (let i in contentItem.data) {
-            let child = contentItem.data[i];
+        for (const i in contentItem.data) {
+            const child = contentItem.data[i];
             if (child instanceof Kirigami.OverlaySheet) {
                 if (!child.parent) {
                     child.parent = root;
