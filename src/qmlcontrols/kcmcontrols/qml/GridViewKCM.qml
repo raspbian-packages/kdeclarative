@@ -5,10 +5,9 @@
 */
 
 import QtQuick 2.7
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.2 as QtControls
+import QtQuick.Controls 2.2 as QQC2
 import org.kde.kirigami 2.2 as Kirigami
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.4 as KCM
 
 /**
  * This component is intended to be used as the root item for KCMs that are based upon
@@ -25,7 +24,7 @@ import org.kde.kcm 1.1 as KCM
  * }
  * @endcode
  */
-AbstractKCM {
+KCM.AbstractKCM {
     id: root
 
     /**
@@ -59,7 +58,7 @@ AbstractKCM {
         // Show three columns at once, every column occupies implicitCellWidth + Units.gridUnit
         width += 3 * (view.implicitCellWidth + Kirigami.Units.gridUnit);
 
-        const scrollBar = scroll.QtControls.ScrollBar.vertical;
+        const scrollBar = scroll.QQC2.ScrollBar.vertical;
         width += scrollBar.width + scrollBar.leftPadding + scrollBar.rightPadding;
 
         width += scroll.leftPadding + scroll.rightPadding

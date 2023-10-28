@@ -5,9 +5,8 @@
 */
 
 import QtQuick 2.7
-import QtQuick.Controls 2.2 as QtControls
+import QtQuick.Controls 2.2 as QQC2
 import org.kde.kirigami 2.14 as Kirigami
-import org.kde.kcm 1.1 as KCM
 
 /**
  * This component is intended to be used as root item for
@@ -67,12 +66,12 @@ Kirigami.Page {
     // Make pages fill the whole view by default
     Kirigami.ColumnView.fillWidth: true
 
+    topPadding: root.framedView && !headerParent.contentVisible ? root.margins : 0
     leftPadding: root.framedView ? root.margins : 0
-    topPadding: headerParent.contentVisible || !root.framedView ? 0 : root.margins
     rightPadding: root.framedView ? root.margins : 0
-    bottomPadding: footerParent.contentVisible || !root.framedView ? 0 : root.margins
+    bottomPadding: root.framedView && !footerParent.contentVisible ? root.margins : 0
 
-    header: QtControls.Control {
+    header: QQC2.Control {
         id: headerParent
         readonly property bool contentVisible: contentItem && contentItem.visible && contentItem.implicitHeight
         height: contentVisible ? implicitHeight : 0
@@ -103,7 +102,7 @@ Kirigami.Page {
         color: Kirigami.Theme.backgroundColor
     }
 
-    footer: QtControls.Control {
+    footer: QQC2.Control {
         id: footerParent
         readonly property bool contentVisible: contentItem && contentItem.visible && contentItem.implicitHeight
 

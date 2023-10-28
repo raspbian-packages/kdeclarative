@@ -107,11 +107,13 @@ ConfigModule::ConfigModule(const KPluginMetaData &metaData, QObject *parent, con
 }
 #endif
 
+#if QUICKADDONS_BUILD_DEPRECATED_SINCE(5, 104)
 ConfigModule::ConfigModule(QObject *parent, const QVariantList &)
     : QObject(parent)
     , d(new ConfigModulePrivate(this))
 {
 }
+#endif
 
 ConfigModule::ConfigModule(QObject *parent, const KPluginMetaData &metaData, const QVariantList &)
     : QObject(parent)
@@ -443,10 +445,12 @@ const KAboutData *ConfigModule::aboutData() const
 }
 #endif
 
+#if QUICKADDONS_ENABLE_DEPRECATED_SINCE(5, 104)
 void ConfigModule::setAboutData(const KAboutData *about)
 {
     d->_about.reset(about);
 }
+#endif
 
 void ConfigModule::setRootOnlyMessage(const QString &message)
 {

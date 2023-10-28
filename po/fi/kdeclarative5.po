@@ -11,7 +11,7 @@
 # Joonas Niilola <juippis@roskakori.org>, 2006.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011, 2020, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011, 2020, 2022, 2023.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2006, 2010, 2011, 2012, 2013, 2014, 2015.
 #
@@ -25,8 +25,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-16 00:46+0000\n"
-"PO-Revision-Date: 2022-08-05 11:50+0300\n"
+"POT-Creation-Date: 2023-02-18 00:54+0000\n"
+"PO-Revision-Date: 2023-02-23 20:00+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-POT-Import-Date: 2013-01-13 20:43:21+0000\n"
 
 #, kde-format
@@ -57,13 +57,13 @@ msgstr "KPackagen QML-sovelluskuori"
 msgid "The unique name of the application (mandatory)"
 msgstr "Sovelluksen yksilöllinen nimi (pakollinen)"
 
-#: qmlcontrols/kcmcontrols/qml/ContextualHelpButton.qml:62
+#: qmlcontrols/kcmcontrols/qml/ContextualHelpButton.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Contextual Help"
 msgstr "Näytä kontekstiohje"
 
-#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:79
+#: qmlcontrols/kcmcontrols/qml/private/GridViewInternal.qml:78
 #, kde-format
 msgid "No items found"
 msgstr "Kohteita ei löytynyt"
@@ -114,12 +114,10 @@ msgid "Clear Key Sequence"
 msgstr "Tyhjennä näppäinyhdistelmä"
 
 #: qmlcontrols/kquickcontrols/KeySequenceItem.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Clear Key Sequence"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr "Tyhjennä näppäinyhdistelmä"
+msgstr "Peru näppäinyhdistelmän nauhoitus"
 
 #: qmlcontrols/kquickcontrols/private/keysequencehelper.cpp:118
 #, kde-format
@@ -183,12 +181,12 @@ msgstr ""
 msgid "Reassign"
 msgstr "Sijoita uudelleen"
 
-#: quickaddons/configmodule.cpp:189
+#: quickaddons/configmodule.cpp:191
 #, kde-format
 msgid "Invalid KPackage '%1'"
 msgstr "Virheellinen KPackage ”%1”"
 
-#: quickaddons/configmodule.cpp:195
+#: quickaddons/configmodule.cpp:197
 #, kde-format
 msgid "No QML file provided"
 msgstr "QML-tiedostoa ei annettu"

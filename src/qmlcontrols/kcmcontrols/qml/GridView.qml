@@ -5,10 +5,9 @@
 */
 
 import QtQuick 2.7
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.2 as QtControls
+import QtQuick.Controls 2.2 as QQC2
 import org.kde.kirigami 2.3 as Kirigami
-import "private"
+import "private" as P
 
 /**
  * A ScrollView containing a GridView, with the default behavior about
@@ -17,7 +16,7 @@ import "private"
  * component as the root element of your module.
  * @see GridViewKCM
  */
-QtControls.ScrollView {
+QQC2.ScrollView {
     id: scroll
 
     /**
@@ -39,10 +38,14 @@ QtControls.ScrollView {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
 
-    Component.onCompleted: scroll.background.visible = scroll.framedView;
+    Component.onCompleted: {
+        if (background) {
+            background.visible = Qt.binding(() => framedView);
+        }
+    }
 
-    GridViewInternal {
+    P.GridViewInternal {
         id: view
     }
-    QtControls.ScrollBar.horizontal.visible: false
+    QQC2.ScrollBar.horizontal.visible: false
 }

@@ -52,20 +52,14 @@ class ConfigModulePrivate;
  * \code
  * #include <KPluginFactory>
  *
- * K_PLUGIN_FACTORY(MyConfigModuleFactory, registerPlugin<MyConfigModule>() )
+ * K_PLUGIN_CLASS_WITH_JSON(MyConfigModule, "myconfigmodule.json")
  * \endcode
  *
  * The constructor of the ConfigModule then looks like this:
  * \code
- * YourConfigModule::YourConfigModule( QObject* parent )
- *   : ConfigModule( parent )
+ * MyConfigModule::MyConfigModule(QObject* parent, const KPluginMetaData &metaData, const QVariantList &args)
+ *   : ConfigModule(parent, metaData, args)
  * {
- *   KAboutData *about = new KAboutData(
- *     <kcm name>, i18n( "..." ),
- *     KDE_VERSION_STRING, QString(), KAboutLicense::GPL,
- *     i18n( "Copyright 2006 ..." ) );
- *   about->addAuthor( i18n(...) );
- *   setAboutData( about );
  *   .
  *   .
  *   .
@@ -74,15 +68,15 @@ class ConfigModulePrivate;
  *
  * The QML part must be in the KPackage format, installed under share/kpackage/kcms.
  * @see KPackage::Package
- * 
- * The package must have the same name as the KAboutData componentName, to be installed
+ *
+ * The package must have the same name as the C++ plugin, to be installed
  * by CMake with the command:
  * \code
  * kpackage_install_package(packagedir kcm_componentName kcms)
  * \endcode
  * The "packagedir" is the subdirectory in the source tree where the package sources are
- * located, and "kcm_componentName" is the componentname passed to the KAboutData in the
- * C++ part. Finally "kcms" is the literal string "kcms", so that the package is
+ * located, and "kcm_componentName" is the name of the C++ plugin. Finally "kcms" is the literal string "kcms",
+ * so that the package is
  * installed as a configuration module (and not some other kind of package).
  * The main config dialog UI will be the file
  * ui/main.qml from the package (or what X-KPackage-MainScript value is in the
@@ -111,7 +105,7 @@ class ConfigModulePrivate;
  * }
  * \endcode
  *
- * See https://techbase.kde.org/Development/Tutorials/KCM_HowTo
+ * See https://develop.kde.org/docs/extend/kcm/
  * for more detailed documentation.
  *
  */
@@ -186,13 +180,18 @@ public:
      */
     explicit ConfigModule(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args = QVariantList());
 
+#if QUICKADDONS_ENABLE_DEPRECATED_SINCE(5, 104)
     /**
      * Base class for all KControlModules.
      *
      * @note do not emit changed signals here, since they are not yet connected
      *       to any slot.
+     *
+     * @deprecated since 5.104, use ConfigModule(QObject*, KPluginMetaData, QVariantList)
      */
+    QUICKADDONS_DEPRECATED_VERSION(5, 104, "Use ConfigModule(QObject*, KPluginMetaData, QVariantList)")
     explicit ConfigModule(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+#endif
 
     /**
      * Destroys the module.
@@ -212,11 +211,17 @@ public:
     const KAboutData *aboutData() const;
 #endif
 
+#if QUICKADDONS_ENABLE_DEPRECATED_SINCE(5, 104)
     /**
      * This sets the KAboutData returned by aboutData()
      * The about data is now owned by ConfigModule.
+     *
+     * @deprecated since 5.104. Use the ConfigModule(QObject *, const KPluginMetaData &, const QVariantList &) constructor.
+     * Then the metaData is taken from the plugin's JSON file.
      */
+    QUICKADDONS_DEPRECATED_VERSION(5, 104, "See API docs.")
     void setAboutData(const KAboutData *about);
+#endif
 
     /**
      * @brief Set if the module's save() method requires authorization to be executed

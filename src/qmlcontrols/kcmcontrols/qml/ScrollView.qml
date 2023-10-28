@@ -1,12 +1,12 @@
 /*
     SPDX-FileCopyrightText: 2018 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 import QtQuick 2.7
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.2 as QtControls
+import QtQuick.Controls 2.2 as QQC2
 import org.kde.kirigami 2.3 as Kirigami
 
 /**
@@ -24,7 +24,7 @@ import org.kde.kirigami 2.3 as Kirigami
  * @endcode
  * @see GridViewKCM
  */
-QtControls.ScrollView {
+QQC2.ScrollView {
     id: scroll
 
     /**
@@ -43,8 +43,11 @@ QtControls.ScrollView {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
 
-    Component.onCompleted: scroll.background.visible = scroll.framedView;
+    Component.onCompleted: {
+        if (background) {
+            background.visible = Qt.binding(() => framedView);
+        }
+    }
 
-    
-    QtControls.ScrollBar.horizontal.visible: false
+    QQC2.ScrollBar.horizontal.visible: false
 }
