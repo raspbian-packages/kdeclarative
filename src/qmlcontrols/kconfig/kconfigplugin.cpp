@@ -7,7 +7,7 @@
 #include "kconfigplugin.h"
 
 #include <KAuthorized>
-#include <QtQml>
+#include <QQmlEngine>
 
 #include "kauthorizedproxy.h"
 
@@ -32,3 +32,5 @@ void KConfigPlugin::registerTypes(const char *uri)
         return proxy;
     });
 }
+
+#include "moc_kconfigplugin.cpp"

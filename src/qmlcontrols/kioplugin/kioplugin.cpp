@@ -6,7 +6,7 @@
 
 #include "kioplugin.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 #include "krunproxy.h"
 
@@ -16,3 +16,5 @@ void KioPlugin::registerTypes(const char *uri)
 
     qmlRegisterType<KRunProxy>(uri, 1, 0, "KRun");
 }
+
+#include "moc_kioplugin.cpp"
