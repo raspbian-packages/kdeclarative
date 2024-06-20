@@ -12,7 +12,10 @@ kdeclarative (5.115.0-3+rpi1) trixie-staging; urgency=medium
   [changes introduced in version 5.98.0-2+rpi1 by Peter Michael Green]
   * Further extend and fix symbols file hack.
 
- -- Raspbian forward porter <root@raspbian.org>  Wed, 19 Jun 2024 20:19:00 +0000
+  [changes introduced in version 5.115.0-3+rpi1 by Peter Michael Green]
+  * Further extend and fix symbols file hack.
+
+ -- Peter Michael Green <plugwash@raspbian.org>  Thu, 20 Jun 2024 01:28:19 +0000
 
 kdeclarative (5.115.0-3) unstable; urgency=medium
 
