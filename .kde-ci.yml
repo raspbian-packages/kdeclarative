@@ -1,0 +1,17 @@
+Dependencies:
+- 'on': ['Linux', 'FreeBSD', 'Windows', 'macOS']
+  'require':
+    'frameworks/extra-cmake-modules': '@same'
+    'frameworks/kconfig' : '@same'
+    'frameworks/ki18n' : '@same'
+    'frameworks/kiconthemes' : '@same'
+    'frameworks/kio' : '@same'
+    'frameworks/kpackage' : '@same'
+
+- 'on': ['Linux', 'FreeBSD']
+  'require':
+    'frameworks/kglobalaccel' : '@same'
+
+Options:
+  cmake-options: "-DBUILD_EXAMPLES=ON"
+  test-before-installing: True
