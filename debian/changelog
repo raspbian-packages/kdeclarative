@@ -1,4 +1,4 @@
-kdeclarative (5.115.0-3+rpi1) trixie-staging; urgency=medium
+kdeclarative (5.116.0-1+rpi1) trixie-staging; urgency=medium
 
   [changes brought forward from 5.12.0-2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 02:00:18 +0000]
   * Add symbols file hack for raspbian.
@@ -15,12 +15,24 @@ kdeclarative (5.115.0-3+rpi1) trixie-staging; urgency=medium
   [changes introduced in version 5.115.0-3+rpi1 by Peter Michael Green]
   * Further extend and fix symbols file hack.
 
- -- Peter Michael Green <plugwash@raspbian.org>  Thu, 20 Jun 2024 01:28:19 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 30 May 2025 05:34:47 +0000
+
+kdeclarative (5.116.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.116.0).
+  * Update build-deps and deps with the info from cmake.
+  * Bump Standards-Version to 4.7.2, no change required.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 13 Apr 2025 00:43:06 +0200
 
 kdeclarative (5.115.0-3) unstable; urgency=medium
 
   [ Patrick Franz ]
   * Upload to unstable.
+
+  [ Aurélien COUDERC ]
+  * Add/update Nicolas Fella’s key in upstream keyring.
 
  -- Patrick Franz <deltaone@debian.org>  Sun, 05 May 2024 00:16:08 +0200
 
